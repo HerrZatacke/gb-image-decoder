@@ -1,0 +1,18 @@
+# Div...
+logs/
+*.log*
+npm-debug.log*
+lib-cov
+coverage
+*.lcov
+node_modules/
+*.tsbuildinfo
+.npm
+.eslintcache
+*.env*
+dist
+.DS_Store
+
+# IDEs
+.vscode
+.idea

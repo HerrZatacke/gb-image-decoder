@@ -60,13 +60,13 @@ export class RGBNDecoder {
 
     const shouldUpdate = canvasChanged || paletteChanged || lockFrameChanged;
 
-    if (!shouldUpdate) {
-      return;
-    }
-
     const canvases: SourceCanvases = this.setTiles(tiles);
 
     const newHeight = this.getHeight();
+
+    if (!shouldUpdate) {
+      return;
+    }
 
     if (!this.canvas) {
       return;
@@ -182,17 +182,6 @@ export class RGBNDecoder {
   ): HTMLCanvasElement {
     const canvas = document.createElement('canvas');
 
-    const handleFrameMode = (this.maxTiles() === 360) ? handleExportFrame : ExportFrameMode.FRAMEMODE_KEEP;
-    const { initialHeight, initialWidth } = Decoder.getScaledCanvasSize(handleFrameMode, this.getHeight());
-
-    canvas.width = initialWidth * scaleFactor;
-    canvas.height = initialHeight * scaleFactor;
-
-    const context = canvas.getContext('2d');
-
-    if (!context) {
-      throw new Error('no canvas context');
-    }
 
     const canvases: SourceCanvases = channels.reduce((acc: SourceCanvases, key: ChannelKey): SourceCanvases => {
       const channel = this.channels[key];
@@ -203,6 +192,20 @@ export class RGBNDecoder {
         [key]: channelCanvas,
       };
     }, {});
+
+    const { width, height } = Object.values(canvases).reduce((acc, current: HTMLCanvasElement) => ({
+      width: Math.max(current.width, acc.width),
+      height: Math.max(current.height, acc.height),
+    }), { width: 0, height: 0 });
+
+    canvas.width = width;
+    canvas.height = height;
+
+    const context = canvas.getContext('2d');
+
+    if (!context) {
+      throw new Error('no canvas context');
+    }
 
     this.blendCanvases(context, canvases);
 

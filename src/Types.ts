@@ -60,3 +60,7 @@ export type IndexedTilePixels = number[];
   n?: number[],
   blend?: BlendMode,
 }
+
+export interface DecoderOptions {
+   tilesPerLine?: number,
+}

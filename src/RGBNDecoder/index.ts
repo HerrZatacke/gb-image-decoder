@@ -3,11 +3,11 @@ import { BlendMode, blendModeNewName } from '../constants/blendModes';
 import { ChannelKey, channels, ExportFrameMode } from '../constants/enums';
 import { defaultPalette, TILE_PIXEL_HEIGHT, TILES_PER_LINE } from '../constants/base';
 import { paletteTemplates } from '../functions/paletteTemplates';
-import { RGBNPalette, Channel, Channels, RGBNTiles, SourceCanvases } from '../Types';
+import { RGBNPalette, Channel, Channels, RGBNTiles, SourceCanvases, DecoderOptions } from '../Types';
 
-const createChannel = (key: ChannelKey): Channel<Decoder> => {
+const createChannel = (key: ChannelKey, tilesPerLine: number): Channel<Decoder> => {
   const canvas = document.createElement('canvas');
-  const decoder = new Decoder();
+  const decoder = new Decoder({ tilesPerLine });
 
   decoder.update({
     canvas,
@@ -29,17 +29,19 @@ export class RGBNDecoder {
   private palette: RGBNPalette;
   private lockFrame: boolean;
   private channels: Channels<Decoder>;
+  private tilesPerLine: number;
 
-  constructor() {
+  constructor(options: DecoderOptions) {
     this.canvas = null;
     this.palette = defaultPalette;
     this.lockFrame = false;
+    this.tilesPerLine = options?.tilesPerLine || TILES_PER_LINE;
 
     this.channels = {
-      r: createChannel(ChannelKey.R),
-      g: createChannel(ChannelKey.G),
-      b: createChannel(ChannelKey.B),
-      n: createChannel(ChannelKey.N),
+      r: createChannel(ChannelKey.R, this.tilesPerLine),
+      g: createChannel(ChannelKey.G, this.tilesPerLine),
+      b: createChannel(ChannelKey.B, this.tilesPerLine),
+      n: createChannel(ChannelKey.N, this.tilesPerLine),
     };
   }
 
@@ -220,7 +222,7 @@ export class RGBNDecoder {
   }
 
   private getHeight() {
-    return TILE_PIXEL_HEIGHT * Math.ceil(this.maxTiles() / TILES_PER_LINE);
+    return TILE_PIXEL_HEIGHT * Math.ceil(this.maxTiles() / this.tilesPerLine);
   }
 }
 

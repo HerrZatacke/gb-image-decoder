@@ -1,4 +1,4 @@
-import { BWPalette, IndexedTilePixels, ChangedTile, ScaledCanvasSize } from '../Types';
+import { BWPalette, IndexedTilePixels, ChangedTile, ScaledCanvasSize, DecoderOptions } from '../Types';
 import {
   BLACK_LINE,
   BW_PALETTE,
@@ -21,8 +21,9 @@ export class Decoder {
   private lockFrame: boolean;
   private invertPalette: boolean;
   private colorData: BWPalette;
+  private tilesPerLine: number;
 
-  constructor() {
+  constructor(options?: DecoderOptions) {
     this.canvas = null;
     this.tiles = [];
     this.colors = [];
@@ -30,6 +31,7 @@ export class Decoder {
     this.lockFrame = false;
     this.invertPalette = false;
     this.colorData = [...BW_PALETTE];
+    this.tilesPerLine = options?.tilesPerLine || TILES_PER_LINE;
   }
 
   public update({
@@ -106,7 +108,7 @@ export class Decoder {
       initialHeight,
       initialWidth,
       tilesPerLine,
-    } = Decoder.getScaledCanvasSize(handleFrameMode, this.getHeight());
+    } = this.getScaledCanvasSize(handleFrameMode, this.getHeight());
 
     const canvas = document.createElement('canvas');
     const context = canvas.getContext('2d');
@@ -125,7 +127,7 @@ export class Decoder {
     return canvas;
   }
 
-  static getScaledCanvasSize(handleExportFrame: ExportFrameMode, height: number): ScaledCanvasSize {
+  private getScaledCanvasSize(handleExportFrame: ExportFrameMode, height: number): ScaledCanvasSize {
     // 2 tiles top/left/bottom/right -> 4 tiles to each side
     const FRAME_TILES = 4;
 
@@ -133,21 +135,21 @@ export class Decoder {
       case ExportFrameMode.FRAMEMODE_KEEP:
         return {
           initialHeight: height,
-          initialWidth: TILES_PER_LINE * TILE_PIXEL_WIDTH,
-          tilesPerLine: TILES_PER_LINE,
+          initialWidth: this.tilesPerLine * TILE_PIXEL_WIDTH,
+          tilesPerLine: this.tilesPerLine,
         };
       case ExportFrameMode.FRAMEMODE_CROP:
         return {
           initialHeight: height - (TILE_PIXEL_HEIGHT * FRAME_TILES),
-          initialWidth: (TILES_PER_LINE * TILE_PIXEL_WIDTH) - (TILE_PIXEL_WIDTH * FRAME_TILES),
-          tilesPerLine: TILES_PER_LINE - FRAME_TILES,
+          initialWidth: (this.tilesPerLine * TILE_PIXEL_WIDTH) - (TILE_PIXEL_WIDTH * FRAME_TILES),
+          tilesPerLine: this.tilesPerLine - FRAME_TILES,
         };
       case ExportFrameMode.FRAMEMODE_SQUARE_BLACK:
       case ExportFrameMode.FRAMEMODE_SQUARE_WHITE:
         return {
           initialHeight: height + (2 * TILE_PIXEL_HEIGHT),
-          initialWidth: TILES_PER_LINE * TILE_PIXEL_WIDTH,
-          tilesPerLine: TILES_PER_LINE,
+          initialWidth: this.tilesPerLine * TILE_PIXEL_WIDTH,
+          tilesPerLine: this.tilesPerLine,
         };
       default:
         throw new Error(`unknown export mode ${handleExportFrame}`);
@@ -261,8 +263,8 @@ export class Decoder {
       return;
     }
 
-    const tileXOffset = index % TILES_PER_LINE;
-    const tileYOffset = Math.floor(index / TILES_PER_LINE);
+    const tileXOffset = index % this.tilesPerLine;
+    const tileYOffset = Math.floor(index / this.tilesPerLine);
 
     const pixelXOffset = TILE_PIXEL_WIDTH * tileXOffset;
     const pixelYOffset = TILE_PIXEL_HEIGHT * tileYOffset;
@@ -337,6 +339,6 @@ export class Decoder {
   }
 
   private getHeight(): number {
-    return TILE_PIXEL_HEIGHT * Math.ceil(this.tiles.length / TILES_PER_LINE);
+    return TILE_PIXEL_HEIGHT * Math.ceil(this.tiles.length / this.tilesPerLine);
   }
 }

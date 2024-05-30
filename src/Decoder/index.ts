@@ -73,7 +73,7 @@ export class Decoder {
       this.canvas.height = newHeight;
 
       // copy existing image data and add the missing space for additional height
-      const newRawImageData = new Uint8ClampedArray(160 * newHeight * 4);
+      const newRawImageData = new Uint8ClampedArray(this.tilesPerLine * TILE_PIXEL_WIDTH * newHeight * 4);
       this.rawImageData?.forEach((value, index) => {
         newRawImageData[index] = value;
       });
@@ -93,7 +93,7 @@ export class Decoder {
     }
 
     const context = this.canvas.getContext('2d');
-    const imageData = new ImageData(this.rawImageData, 160, newHeight);
+    const imageData = new ImageData(this.rawImageData, this.tilesPerLine * TILE_PIXEL_WIDTH, newHeight);
     context?.putImageData(imageData, 0, 0);
   }
 
@@ -274,7 +274,7 @@ export class Decoder {
       for (let y = 0; y < TILE_PIXEL_HEIGHT; y += 1) {
         // pixels along the tile's y axis
 
-        const rawIndex = (pixelXOffset + x + ((pixelYOffset + y) * 160)) * 4;
+        const rawIndex = (pixelXOffset + x + ((pixelYOffset + y) * this.tilesPerLine * TILE_PIXEL_WIDTH)) * 4;
 
         const color = getRGBValue({
           pixels,

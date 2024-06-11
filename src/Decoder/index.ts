@@ -262,7 +262,7 @@ export class Decoder {
   }
 
   // This paints the tile with a specified offset and pixel width
-  private paintTile(pixels: IndexedTilePixels, index: number) {
+  private paintTile(pixels: IndexedTilePixels | null, index: number) {
     if (!this.rawImageData) {
       return;
     }
@@ -280,20 +280,27 @@ export class Decoder {
 
         const rawIndex = (pixelXOffset + x + ((pixelYOffset + y) * this.tilesPerLine * TILE_PIXEL_WIDTH)) * 4;
 
-        const color = getRGBValue({
-          pixels,
-          index: (y * TILE_PIXEL_WIDTH) + x,
-          tileIndex: index,
-          handleExportFrame: ExportFrameMode.FRAMEMODE_KEEP,
-          invertPalette: this.invertPalette,
-          lockFrame: this.lockFrame,
-          colorData: this.colorData,
-        });
+        if (pixels !== null) {
+          const color = getRGBValue({
+            pixels,
+            index: (y * TILE_PIXEL_WIDTH) + x,
+            tileIndex: index,
+            handleExportFrame: ExportFrameMode.FRAMEMODE_KEEP,
+            invertPalette: this.invertPalette,
+            lockFrame: this.lockFrame,
+            colorData: this.colorData,
+          });
 
-        this.rawImageData[rawIndex] = color.r;
-        this.rawImageData[rawIndex + 1] = color.g;
-        this.rawImageData[rawIndex + 2] = color.b;
-        this.rawImageData[rawIndex + 3] = 255;
+          this.rawImageData[rawIndex] = color.r;
+          this.rawImageData[rawIndex + 1] = color.g;
+          this.rawImageData[rawIndex + 2] = color.b;
+          this.rawImageData[rawIndex + 3] = 255;
+        } else {
+          this.rawImageData[rawIndex] = 0;
+          this.rawImageData[rawIndex + 1] = 0;
+          this.rawImageData[rawIndex + 2] = 0;
+          this.rawImageData[rawIndex + 3] = 0;
+        }
       }
     }
   }

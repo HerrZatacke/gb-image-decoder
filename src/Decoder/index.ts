@@ -254,11 +254,11 @@ export class Decoder {
 
   private renderTile(tileIndex: number, rawLine: string) {
     if (rawLine === SKIP_LINE) {
-      return;
+      this.paintTile(null, tileIndex);
+    } else {
+      const tile = decodeTile(rawLine);
+      this.paintTile(tile, tileIndex);
     }
-
-    const tile = decodeTile(rawLine);
-    this.paintTile(tile, tileIndex);
   }
 
   // This paints the tile with a specified offset and pixel width

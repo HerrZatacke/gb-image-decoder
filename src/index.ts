@@ -6,7 +6,7 @@ export { getRGBValue } from './functions/getRGBValue';
 export { tileIndexIsPartOfFrame } from './functions/tileIndexIsPartOfFrame';
 export { maxTiles } from './functions/maxTiles';
 export { ExportFrameMode } from './constants/enums';
-export { BW_PALETTE } from './constants/base';
+export { BW_PALETTE, SKIP_LINE } from './constants/base';
 export { BlendMode, blendModeNewName } from './constants/blendModes';
 
 export type {

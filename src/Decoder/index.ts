@@ -1,7 +1,7 @@
 import { BWPalette, IndexedTilePixels, ChangedTile, ScaledCanvasSize, DecoderOptions } from '../Types';
 import {
   BLACK_LINE,
-  BW_PALETTE,
+  BW_PALETTE, SKIP_LINE,
   TILE_PIXEL_HEIGHT,
   TILE_PIXEL_WIDTH,
   TILES_PER_LINE,
@@ -253,6 +253,10 @@ export class Decoder {
   }
 
   private renderTile(tileIndex: number, rawLine: string) {
+    if (rawLine === SKIP_LINE) {
+      return;
+    }
+
     const tile = decodeTile(rawLine);
     this.paintTile(tile, tileIndex);
   }

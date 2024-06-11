@@ -5,6 +5,8 @@ import { BlendMode } from './blendModes';
 export const BLACK = 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF';
 export const WHITE = '00000000000000000000000000000000';
 
+export const SKIP_LINE = 'skip';
+
 export const TILE_PIXEL_WIDTH = 8;
 
 export const TILE_PIXEL_HEIGHT = 8;

@@ -31,7 +31,7 @@ export class RGBNDecoder {
   private channels: Channels<Decoder>;
   private tilesPerLine: number;
 
-  constructor(options: DecoderOptions) {
+  constructor(options?: DecoderOptions) {
     this.canvas = null;
     this.palette = defaultPalette;
     this.lockFrame = false;

@@ -54,7 +54,7 @@ export class RGBNDecoder {
     canvas: HTMLCanvasElement | null,
     tiles: RGBNTiles,
     palette: RGBNPalette
-    lockFrame: boolean,
+    lockFrame?: boolean,
   }) {
     const canvasChanged = canvas ? this.setCanvas(canvas) : false;
     const paletteChanged = this.setPalette(palette);

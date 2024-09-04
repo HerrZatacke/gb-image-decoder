@@ -7,6 +7,7 @@ export const getRGBValue = ({
   pixels,
   index,
   tileIndex,
+  imageStartLine,
   handleExportFrame,
   lockFrame,
   invertPalette,
@@ -15,6 +16,7 @@ export const getRGBValue = ({
   pixels: IndexedTilePixels,
   index: number,
   tileIndex: number,
+  imageStartLine: number,
   handleExportFrame: ExportFrameMode,
   lockFrame: boolean,
   invertPalette: boolean,
@@ -23,7 +25,7 @@ export const getRGBValue = ({
   const palette: BWPalette = (
     lockFrame && // Must be actually locked
     handleExportFrame !== ExportFrameMode.FRAMEMODE_CROP &&
-    tileIndexIsPartOfFrame(tileIndex, handleExportFrame) // Current tile must be in a "lockable" position
+    tileIndexIsPartOfFrame(tileIndex, imageStartLine, handleExportFrame) // Current tile must be in a "lockable" position
   ) ? BW_PALETTE : colorData;
   const value: number = invertPalette ? palette[3 - pixels[index]] : palette[pixels[index]];
 

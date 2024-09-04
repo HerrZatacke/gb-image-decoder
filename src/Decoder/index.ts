@@ -22,6 +22,7 @@ export class Decoder {
   private invertPalette: boolean;
   private colorData: BWPalette;
   private tilesPerLine: number;
+  private imageStartLine: number;
 
   constructor(options?: DecoderOptions) {
     this.canvas = null;
@@ -30,6 +31,7 @@ export class Decoder {
     this.rawImageData = null;
     this.lockFrame = false;
     this.invertPalette = false;
+    this.imageStartLine = 2;
     this.colorData = [...BW_PALETTE];
     this.tilesPerLine = options?.tilesPerLine || TILES_PER_LINE;
   }
@@ -40,18 +42,21 @@ export class Decoder {
     palette = [],
     lockFrame = false,
     invertPalette = false,
+    imageStartLine = 2,
   }: {
     canvas: HTMLCanvasElement | null,
     tiles: string[],
     palette: string[],
-    lockFrame: boolean,
-    invertPalette: boolean,
+    lockFrame?: boolean,
+    invertPalette?: boolean,
+    imageStartLine?: number,
   }) {
+    const startLineChanged = this.setImageStartLine(imageStartLine);
     const canvasChanged = canvas ? this.setCanvas(canvas) : false;
     const paletteChanged = palette ? this.setPalette(palette, invertPalette) : false;
     const lockFrameChanged = this.setLockFrame(lockFrame); // true/false
 
-    if (canvasChanged || paletteChanged || lockFrameChanged || !this.tiles.length) {
+    if (startLineChanged || canvasChanged || paletteChanged || lockFrameChanged || !this.tiles.length) {
       this.tiles = [];
     }
 
@@ -85,6 +90,15 @@ export class Decoder {
     });
 
     this.updateCanvas(newHeight);
+  }
+
+  private setImageStartLine(imageStartLine: number): boolean {
+    if (this.imageStartLine === imageStartLine) {
+      return false;
+    }
+
+    this.imageStartLine = imageStartLine;
+    return true;
   }
 
   private updateCanvas(newHeight: number) {
@@ -167,7 +181,7 @@ export class Decoder {
       case ExportFrameMode.FRAMEMODE_CROP:
         return this.tiles
           .reduce((acc: string[], tile: string, index: number) => (
-            tileIndexIsPartOfFrame(index, ExportFrameMode.FRAMEMODE_KEEP) ?
+            tileIndexIsPartOfFrame(index, this.imageStartLine, ExportFrameMode.FRAMEMODE_KEEP) ?
               acc :
               [...acc, tile]
           ), []);
@@ -285,6 +299,7 @@ export class Decoder {
             pixels,
             index: (y * TILE_PIXEL_WIDTH) + x,
             tileIndex: index,
+            imageStartLine: this.imageStartLine,
             handleExportFrame: ExportFrameMode.FRAMEMODE_KEEP,
             invertPalette: this.invertPalette,
             lockFrame: this.lockFrame,
@@ -328,6 +343,7 @@ export class Decoder {
           pixels,
           index: (y * TILE_PIXEL_WIDTH) + x,
           tileIndex: index,
+          imageStartLine: this.imageStartLine,
           handleExportFrame,
           lockFrame: this.lockFrame,
           invertPalette: this.invertPalette,

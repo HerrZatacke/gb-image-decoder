@@ -2,16 +2,17 @@ import { ExportFrameMode } from '../constants/enums';
 
 export const tileIndexIsPartOfFrame = (
   tileIndex: number,
+  imageStartLine: number,
   handleExportFrame: ExportFrameMode = ExportFrameMode.FRAMEMODE_KEEP,
 ): boolean => {
 
   const checkIndex = tileIndex - (handleExportFrame === ExportFrameMode.FRAMEMODE_KEEP ? 0 : 20);
 
-  if (checkIndex < 40) {
+  if (checkIndex < imageStartLine * 20) {
     return true;
   }
 
-  if (checkIndex >= 320) {
+  if (checkIndex >= (imageStartLine * 20) + 280) {
     return true;
   }
 

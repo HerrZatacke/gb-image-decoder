@@ -6,6 +6,11 @@ export const tileIndexIsPartOfFrame = (
   handleExportFrame: ExportFrameMode = ExportFrameMode.FRAMEMODE_KEEP,
 ): boolean => {
 
+  // when cropping the frame, no tile is "part of the frame"
+  if (handleExportFrame === ExportFrameMode.FRAMEMODE_CROP) {
+    return false;
+  }
+
   const checkIndex = tileIndex - (handleExportFrame === ExportFrameMode.FRAMEMODE_KEEP ? 0 : 20);
 
   if (checkIndex < imageStartLine * 20) {

@@ -6,7 +6,7 @@ export { getRGBValue } from './functions/getRGBValue';
 export { tileIndexIsPartOfFrame } from './functions/tileIndexIsPartOfFrame';
 export { maxTiles } from './functions/maxTiles';
 export { ExportFrameMode } from './constants/enums';
-export { BW_PALETTE, SKIP_LINE } from './constants/base';
+export { BW_PALETTE, BW_PALETTE_HEX, SKIP_LINE } from './constants/base';
 export { BlendMode, blendModeNewName } from './constants/blendModes';
 
 export type {
@@ -20,4 +20,7 @@ export type {
   RGBValue,
   ScaledCanvasSize,
   SourceCanvases,
+  DecoderOptions,
+  DecoderUpdateParams,
+  RGBNDecoderUpdateParams,
 } from './Types';

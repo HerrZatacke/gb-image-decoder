@@ -1,7 +1,15 @@
-import { BWPalette, IndexedTilePixels, ChangedTile, ScaledCanvasSize, DecoderOptions } from '../Types';
+import {
+  BWPalette,
+  IndexedTilePixels,
+  ChangedTile,
+  ScaledCanvasSize,
+  DecoderOptions,
+  DecoderUpdateParams,
+} from '../Types';
 import {
   BLACK_LINE,
-  BW_PALETTE, SKIP_LINE,
+  BW_PALETTE,
+  SKIP_LINE,
   TILE_PIXEL_HEIGHT,
   TILE_PIXEL_WIDTH,
   TILES_PER_LINE,
@@ -17,10 +25,11 @@ export class Decoder {
   private canvas: HTMLCanvasElement | null;
   private tiles: string[];
   private colors: string[];
+  private frameColors: string[];
   private rawImageData: Uint8ClampedArray | null;
   private lockFrame: boolean;
-  private invertPalette: boolean;
   private colorData: BWPalette;
+  private frameColorData: BWPalette;
   private tilesPerLine: number;
   private imageStartLine: number;
 
@@ -28,35 +37,27 @@ export class Decoder {
     this.canvas = null;
     this.tiles = [];
     this.colors = [];
+    this.frameColors = [];
     this.rawImageData = null;
     this.lockFrame = false;
-    this.invertPalette = false;
-    this.imageStartLine = 2;
     this.colorData = [...BW_PALETTE];
+    this.frameColorData = [...BW_PALETTE];
     this.tilesPerLine = options?.tilesPerLine || TILES_PER_LINE;
+    this.imageStartLine = 2;
   }
 
   public update({
-    canvas = null,
-    tiles = [],
-    palette = [],
-    lockFrame = false,
-    invertPalette = false,
+    canvas,
+    tiles,
+    palette,
+    framePalette,
     imageStartLine = 2,
-  }: {
-    canvas: HTMLCanvasElement | null,
-    tiles: string[],
-    palette: string[],
-    lockFrame?: boolean,
-    invertPalette?: boolean,
-    imageStartLine?: number,
-  }) {
+  }: DecoderUpdateParams) {
     const startLineChanged = this.setImageStartLine(imageStartLine);
     const canvasChanged = canvas ? this.setCanvas(canvas) : false;
-    const paletteChanged = palette ? this.setPalette(palette, invertPalette) : false;
-    const lockFrameChanged = this.setLockFrame(lockFrame); // true/false
+    const palettesChanged = this.setPalettes(palette, framePalette);
 
-    if (startLineChanged || canvasChanged || paletteChanged || lockFrameChanged || !this.tiles.length) {
+    if (startLineChanged || canvasChanged || palettesChanged || !this.tiles.length) {
       this.tiles = [];
     }
 
@@ -211,19 +212,25 @@ export class Decoder {
     return true;
   }
 
-  private setPalette(palette: string[], invertPalette: boolean): boolean {
+  private setPalettes(
+    palette: string[],
+    framePalette: string[],
+  ): boolean {
     if (
       this.colors[0] === palette[0] &&
       this.colors[1] === palette[1] &&
       this.colors[2] === palette[2] &&
       this.colors[3] === palette[3] &&
-      this.invertPalette === invertPalette
+      this.frameColors[0] === framePalette[0] &&
+      this.frameColors[1] === framePalette[1] &&
+      this.frameColors[2] === framePalette[2] &&
+      this.frameColors[3] === framePalette[3]
     ) {
       return false;
     }
 
     this.colors = palette;
-    this.invertPalette = invertPalette;
+    this.frameColors = framePalette;
 
     this.colors.forEach((color: string, index: number) => {
       this.colorData[index] = (
@@ -231,16 +238,13 @@ export class Decoder {
       );
     });
 
+    this.frameColors.forEach((color: string, index: number) => {
+      this.frameColorData[index] = (
+        color.length !== 7 ? BW_PALETTE[index] : parseInt(color.substring(1), 16)
+      );
+    });
+
     return true;
-  }
-
-  private setLockFrame(lockFrame: boolean): boolean {
-    if (lockFrame !== this.lockFrame) {
-      this.lockFrame = lockFrame;
-      return true;
-    }
-
-    return false;
   }
 
   private setTiles(tiles: string[]): ChangedTile[] {
@@ -301,9 +305,8 @@ export class Decoder {
             tileIndex: index,
             imageStartLine: this.imageStartLine,
             handleExportFrame: ExportFrameMode.FRAMEMODE_KEEP,
-            invertPalette: this.invertPalette,
-            lockFrame: this.lockFrame,
             colorData: this.colorData,
+            frameColorData: this.frameColorData,
           });
 
           this.rawImageData[rawIndex] = color.r;
@@ -345,9 +348,8 @@ export class Decoder {
           tileIndex: index,
           imageStartLine: this.imageStartLine,
           handleExportFrame,
-          lockFrame: this.lockFrame,
-          invertPalette: this.invertPalette,
           colorData: this.colorData,
+          frameColorData: this.frameColorData,
         });
 
 

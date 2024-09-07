@@ -39,8 +39,8 @@ decoder.update({
   canvas: myCanvas,
   tiles: myTiles,
   palette: monoPalette,
+  framePalette: monoPalette,
   lockFrame: false,
-  invertPalette: false,
 });
 ```
 

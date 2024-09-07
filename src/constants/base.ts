@@ -15,6 +15,8 @@ export const TILES_PER_LINE = 20;
 
 export const BW_PALETTE: number[] = [0xffffff, 0xaaaaaa, 0x555555, 0x000000];
 
+export const BW_PALETTE_HEX: string[] = ['#ffffff', '#aaaaaa', '#555555', '#000000'];
+
 export const BLACK_LINE: string[] = [
   BLACK,
   BLACK,

@@ -1,20 +1,27 @@
 import { Decoder } from '../Decoder';
 import { BlendMode, blendModeNewName } from '../constants/blendModes';
 import { ChannelKey, channels, ExportFrameMode } from '../constants/enums';
-import { defaultPalette, TILE_PIXEL_HEIGHT, TILES_PER_LINE } from '../constants/base';
+import { BW_PALETTE_HEX, defaultPalette, TILE_PIXEL_HEIGHT, TILES_PER_LINE } from '../constants/base';
 import { paletteTemplates } from '../functions/paletteTemplates';
-import { RGBNPalette, Channel, Channels, RGBNTiles, SourceCanvases, DecoderOptions } from '../Types';
+import {
+  RGBNPalette,
+  Channel,
+  Channels,
+  RGBNTiles,
+  SourceCanvases,
+  DecoderOptions,
+  RGBNDecoderUpdateParams,
+} from '../Types';
 
 const createChannel = (key: ChannelKey, tilesPerLine: number): Channel<Decoder> => {
   const canvas = document.createElement('canvas');
   const decoder = new Decoder({ tilesPerLine });
 
   decoder.update({
+    framePalette: [],
     canvas,
     tiles: [],
     palette: [],
-    lockFrame: false,
-    invertPalette: false,
   });
 
   return {
@@ -46,16 +53,11 @@ export class RGBNDecoder {
   }
 
   public update({
-    canvas = null,
-    tiles = {},
+    canvas,
+    tiles,
     palette,
     lockFrame = false,
-  }: {
-    canvas: HTMLCanvasElement | null,
-    tiles: RGBNTiles,
-    palette: RGBNPalette
-    lockFrame?: boolean,
-  }) {
+  }: RGBNDecoderUpdateParams) {
     const canvasChanged = canvas ? this.setCanvas(canvas) : false;
     const paletteChanged = this.setPalette(palette);
     const lockFrameChanged = this.setLockFrame(lockFrame); // true/false
@@ -141,10 +143,9 @@ export class RGBNDecoder {
       ];
 
       channel.decoder.update({
-        invertPalette: false,
         canvas: channel.canvas,
         tiles: channel.tiles,
-        lockFrame: this.lockFrame,
+        framePalette: this.lockFrame ? BW_PALETTE_HEX : palette,
         palette,
       });
 

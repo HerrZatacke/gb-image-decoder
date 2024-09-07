@@ -1,4 +1,3 @@
-import { BW_PALETTE } from '../constants/base';
 import { ExportFrameMode } from '../constants/enums';
 import { tileIndexIsPartOfFrame } from './tileIndexIsPartOfFrame';
 import { BWPalette, IndexedTilePixels, RGBValue } from '../Types';
@@ -9,25 +8,23 @@ export const getRGBValue = ({
   tileIndex,
   imageStartLine,
   handleExportFrame,
-  lockFrame,
-  invertPalette,
   colorData,
+  frameColorData,
 }: {
   pixels: IndexedTilePixels,
   index: number,
   tileIndex: number,
   imageStartLine: number,
   handleExportFrame: ExportFrameMode,
-  lockFrame: boolean,
-  invertPalette: boolean,
   colorData: BWPalette,
+  frameColorData: BWPalette,
 }): RGBValue => {
-  const palette: BWPalette = (
-    lockFrame && // Must be actually locked
-    handleExportFrame !== ExportFrameMode.FRAMEMODE_CROP &&
-    tileIndexIsPartOfFrame(tileIndex, imageStartLine, handleExportFrame) // Current tile must be in a "lockable" position
-  ) ? BW_PALETTE : colorData;
-  const value: number = invertPalette ? palette[3 - pixels[index]] : palette[pixels[index]];
+
+  const palette: BWPalette = tileIndexIsPartOfFrame(tileIndex, imageStartLine, handleExportFrame) ?
+    frameColorData :
+    colorData;
+
+  const value: number = palette[pixels[index]];
 
   return {
     // eslint-disable-next-line no-bitwise

@@ -64,3 +64,18 @@ export type IndexedTilePixels = number[];
 export interface DecoderOptions {
    tilesPerLine?: number,
 }
+
+export interface DecoderUpdateParams {
+  canvas: HTMLCanvasElement | null,
+  tiles: string[],
+  palette: string[],
+  framePalette: string[],
+  imageStartLine?: number,
+}
+
+export interface RGBNDecoderUpdateParams {
+  canvas: HTMLCanvasElement | null,
+  tiles: RGBNTiles,
+  palette: RGBNPalette
+  lockFrame?: boolean,
+}

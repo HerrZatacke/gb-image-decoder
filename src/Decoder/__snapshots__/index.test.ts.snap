@@ -1,0 +1,41 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Monochrome Decoder > using '1x1' raw data > renders a scaled canvas with framemode: 'crop' 1`] = `"jwkXkBq86d"`;
+
+exports[`Monochrome Decoder > using '1x1' raw data > renders a scaled canvas with framemode: 'keep' 1`] = `"jwkXkBq86d"`;
+
+exports[`Monochrome Decoder > using '1x1' raw data > renders a scaled canvas with framemode: 'square_black' 1`] = `"jwkXkBq86d"`;
+
+exports[`Monochrome Decoder > using '1x1' raw data > renders a scaled canvas with framemode: 'square_white' 1`] = `"jwkXkBq86d"`;
+
+exports[`Monochrome Decoder > using '1x1' raw data > renders on to a given canvas 1`] = `"HMPDkCwruk"`;
+
+exports[`Monochrome Decoder > using '16x14' raw data > renders a scaled canvas with framemode: 'crop' 1`] = `"vVfl7TJX14"`;
+
+exports[`Monochrome Decoder > using '16x14' raw data > renders a scaled canvas with framemode: 'keep' 1`] = `"vVfl7TJX14"`;
+
+exports[`Monochrome Decoder > using '16x14' raw data > renders a scaled canvas with framemode: 'square_black' 1`] = `"vVfl7TJX14"`;
+
+exports[`Monochrome Decoder > using '16x14' raw data > renders a scaled canvas with framemode: 'square_white' 1`] = `"vVfl7TJX14"`;
+
+exports[`Monochrome Decoder > using '16x14' raw data > renders on to a given canvas 1`] = `"oPjwTsSVGy"`;
+
+exports[`Monochrome Decoder > using '20x18' raw data > renders a scaled canvas with framemode: 'crop' 1`] = `"vVfl7TJX14"`;
+
+exports[`Monochrome Decoder > using '20x18' raw data > renders a scaled canvas with framemode: 'keep' 1`] = `"IUQ1y9uAd6"`;
+
+exports[`Monochrome Decoder > using '20x18' raw data > renders a scaled canvas with framemode: 'square_black' 1`] = `"d5Zw21fWDW"`;
+
+exports[`Monochrome Decoder > using '20x18' raw data > renders a scaled canvas with framemode: 'square_white' 1`] = `"831JE9T3f2"`;
+
+exports[`Monochrome Decoder > using '20x18' raw data > renders on to a given canvas 1`] = `"zHEfqPiH13"`;
+
+exports[`Monochrome Decoder > using '20x86' raw data > renders a scaled canvas with framemode: 'crop' 1`] = `"rSAwi2jhQF"`;
+
+exports[`Monochrome Decoder > using '20x86' raw data > renders a scaled canvas with framemode: 'keep' 1`] = `"rSAwi2jhQF"`;
+
+exports[`Monochrome Decoder > using '20x86' raw data > renders a scaled canvas with framemode: 'square_black' 1`] = `"rSAwi2jhQF"`;
+
+exports[`Monochrome Decoder > using '20x86' raw data > renders a scaled canvas with framemode: 'square_white' 1`] = `"rSAwi2jhQF"`;
+
+exports[`Monochrome Decoder > using '20x86' raw data > renders on to a given canvas 1`] = `"NobxBYWa3H"`;

@@ -5,6 +5,8 @@ import {
   ScaledCanvasSize,
   DecoderOptions,
   DecoderUpdateParams,
+  CanvasCreator,
+  ImageDataCreator,
 } from '../Types';
 import {
   BLACK_LINE,
@@ -18,7 +20,7 @@ import {
 import { ExportFrameMode } from '../constants/enums';
 import { decodeTile } from '../functions/decodeTile';
 import { getRGBValue } from '../functions/getRGBValue';
-
+import { createCanvasElement, createImageData } from '../functions/canvasHelpers';
 import { tileIndexIsPartOfFrame } from '../functions/tileIndexIsPartOfFrame';
 
 export class Decoder {
@@ -32,6 +34,8 @@ export class Decoder {
   private frameColorData: BWPalette;
   private tilesPerLine: number;
   private imageStartLine: number;
+  private canvasCreator: CanvasCreator;
+  private imageDataCreator: ImageDataCreator;
 
   constructor(options?: DecoderOptions) {
     this.canvas = null;
@@ -44,6 +48,8 @@ export class Decoder {
     this.frameColorData = [...BW_PALETTE];
     this.tilesPerLine = options?.tilesPerLine || TILES_PER_LINE;
     this.imageStartLine = 2;
+    this.canvasCreator = options?.canvasCreator || createCanvasElement;
+    this.imageDataCreator = options?.imageDataCreator || createImageData;
   }
 
   public update({
@@ -55,7 +61,9 @@ export class Decoder {
   }: DecoderUpdateParams) {
     const startLineChanged = this.setImageStartLine(imageStartLine);
     const canvasChanged = canvas ? this.setCanvas(canvas) : false;
-    const palettesChanged = this.setPalettes(palette, framePalette);
+    // ignore frame palette for images with non-standard width
+    const usedFramePalette = this.tilesPerLine === TILES_PER_LINE ? framePalette : palette;
+    const palettesChanged = this.setPalettes(palette, usedFramePalette);
 
     if (startLineChanged || canvasChanged || palettesChanged || !this.tiles.length) {
       this.tiles = [];
@@ -64,6 +72,7 @@ export class Decoder {
     const tilesChanged: ChangedTile[] = this.setTiles(tiles); // returns actual list of tiles that have changed
 
     const newHeight = this.getHeight();
+    const newWidth = this.getWidth();
 
     if (!this.canvas) {
       return;
@@ -74,12 +83,16 @@ export class Decoder {
       return;
     }
 
-
-    if (this.canvas.height !== newHeight || !this.rawImageData?.length) {
+    if (
+      this.canvas.height !== newHeight ||
+      this.canvas.width !== newWidth ||
+      !this.rawImageData?.length
+    ) {
       this.canvas.height = newHeight;
+      this.canvas.width = newWidth;
 
       // copy existing image data and add the missing space for additional height
-      const newRawImageData = new Uint8ClampedArray(this.tilesPerLine * TILE_PIXEL_WIDTH * newHeight * 4);
+      const newRawImageData = new Uint8ClampedArray(newWidth * newHeight * 4);
       this.rawImageData?.forEach((value, index) => {
         newRawImageData[index] = value;
       });
@@ -90,7 +103,7 @@ export class Decoder {
       this.renderTile(index, newTile);
     });
 
-    this.updateCanvas(newHeight);
+    this.updateCanvas(newWidth, newHeight);
   }
 
   private setImageStartLine(imageStartLine: number): boolean {
@@ -102,13 +115,14 @@ export class Decoder {
     return true;
   }
 
-  private updateCanvas(newHeight: number) {
+  private updateCanvas(newWidth: number, newHeight: number) {
     if (!this.canvas || !this.rawImageData?.length) {
       return;
     }
 
     const context = this.canvas.getContext('2d');
-    const imageData = new ImageData(this.rawImageData, this.tilesPerLine * TILE_PIXEL_WIDTH, newHeight);
+    const imageData = this.imageDataCreator(this.rawImageData, newWidth, newHeight);
+
     context?.putImageData(imageData, 0, 0);
   }
 
@@ -117,15 +131,27 @@ export class Decoder {
     handleExportFrame: ExportFrameMode = ExportFrameMode.FRAMEMODE_KEEP,
   ): HTMLCanvasElement {
 
+    let handleFrameMode = handleExportFrame;
+
     // crop and square modes are only available for regular "camera" images
-    const handleFrameMode = (this.tiles.length === 360) ? handleExportFrame : ExportFrameMode.FRAMEMODE_KEEP;
+    if (
+      (
+        this.tiles.length !== 360 ||
+        this.tilesPerLine !== TILES_PER_LINE
+      ) &&
+      handleFrameMode !== ExportFrameMode.FRAMEMODE_KEEP
+    ) {
+      // console.warn('irregular image size (not 160x144) - will fall back to FRAMEMODE_KEEP');
+      handleFrameMode = ExportFrameMode.FRAMEMODE_KEEP;
+    }
+
     const {
       initialHeight,
       initialWidth,
       tilesPerLine,
-    } = this.getScaledCanvasSize(handleFrameMode, this.getHeight());
+    } = this.getScaledCanvasSize(handleFrameMode);
 
-    const canvas = document.createElement('canvas');
+    const canvas = this.canvasCreator();
     const context = canvas.getContext('2d');
     if (!context) {
       throw new Error('no canvas context');
@@ -136,34 +162,36 @@ export class Decoder {
 
     this.getExportTiles(handleFrameMode)
       .forEach((tile, index) => {
-        this.paintTileScaled(decodeTile(tile), index, context, scaleFactor, tilesPerLine, handleExportFrame);
+        this.paintTileScaled(decodeTile(tile), index, context, scaleFactor, tilesPerLine, handleFrameMode);
       });
 
     return canvas;
   }
 
-  private getScaledCanvasSize(handleExportFrame: ExportFrameMode, height: number): ScaledCanvasSize {
+  private getScaledCanvasSize(handleExportFrame: ExportFrameMode): ScaledCanvasSize {
     // 2 tiles top/left/bottom/right -> 4 tiles to each side
     const FRAME_TILES = 4;
+    const width = this.getWidth();
+    const height = this.getHeight();
 
     switch (handleExportFrame) {
       case ExportFrameMode.FRAMEMODE_KEEP:
         return {
           initialHeight: height,
-          initialWidth: this.tilesPerLine * TILE_PIXEL_WIDTH,
+          initialWidth: width,
           tilesPerLine: this.tilesPerLine,
         };
       case ExportFrameMode.FRAMEMODE_CROP:
         return {
           initialHeight: height - (TILE_PIXEL_HEIGHT * FRAME_TILES),
-          initialWidth: (this.tilesPerLine * TILE_PIXEL_WIDTH) - (TILE_PIXEL_WIDTH * FRAME_TILES),
+          initialWidth: width - (TILE_PIXEL_WIDTH * FRAME_TILES),
           tilesPerLine: this.tilesPerLine - FRAME_TILES,
         };
       case ExportFrameMode.FRAMEMODE_SQUARE_BLACK:
       case ExportFrameMode.FRAMEMODE_SQUARE_WHITE:
         return {
           initialHeight: height + (2 * TILE_PIXEL_HEIGHT),
-          initialWidth: this.tilesPerLine * TILE_PIXEL_WIDTH,
+          initialWidth: width,
           tilesPerLine: this.tilesPerLine,
         };
       default:
@@ -340,7 +368,7 @@ export class Decoder {
     // pixels along the tile's x axis
     for (let x = 0; x < TILE_PIXEL_WIDTH; x += 1) {
       for (let y = 0; y < TILE_PIXEL_HEIGHT; y += 1) {
-        // pixels along the tile's y axis
+        // pixels along the tile's y-axis
 
         const color = getRGBValue({
           pixels,
@@ -369,5 +397,9 @@ export class Decoder {
 
   private getHeight(): number {
     return TILE_PIXEL_HEIGHT * Math.ceil(this.tiles.length / this.tilesPerLine);
+  }
+
+  private getWidth(): number {
+    return TILE_PIXEL_WIDTH * this.tilesPerLine;
   }
 }

@@ -20,6 +20,10 @@ export type Channels<DecoderType> = Record<ChannelKey, Channel<DecoderType>>;
 
 export type SourceCanvases = Partial<Record<ChannelKey, HTMLCanvasElement>>;
 
+export type CanvasCreator = () => HTMLCanvasElement;
+
+export type ImageDataCreator = (rawImageData: Uint8ClampedArray, width: number, height: number) => ImageData;
+
 export interface ChangedTile {
   index: number,
   newTile: string,
@@ -62,7 +66,9 @@ export type IndexedTilePixels = number[];
 }
 
 export interface DecoderOptions {
-   tilesPerLine?: number,
+  tilesPerLine?: number,
+  canvasCreator?: CanvasCreator
+  imageDataCreator?: ImageDataCreator
 }
 
 export interface DecoderUpdateParams {

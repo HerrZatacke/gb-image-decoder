@@ -10,6 +10,8 @@ export { BW_PALETTE, BW_PALETTE_HEX, SKIP_LINE } from './constants/base';
 export { BlendMode, blendModeNewName } from './constants/blendModes';
 
 export type {
+  CanvasCreator,
+  ImageDataCreator,
   BWPalette,
   ChangedTile,
   Channel,

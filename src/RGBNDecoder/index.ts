@@ -1,7 +1,8 @@
 import { Decoder } from '../Decoder';
 import { BlendMode, blendModeNewName } from '../constants/blendModes';
 import { ChannelKey, channels, ExportFrameMode } from '../constants/enums';
-import { BW_PALETTE_HEX, defaultPalette, TILE_PIXEL_HEIGHT, TILES_PER_LINE } from '../constants/base';
+import { BW_PALETTE_HEX, defaultPalette, TILES_PER_LINE } from '../constants/base';
+import { createCanvasElement, createImageData } from '../functions/canvasHelpers';
 import { paletteTemplates } from '../functions/paletteTemplates';
 import {
   RGBNPalette,
@@ -11,11 +12,16 @@ import {
   SourceCanvases,
   DecoderOptions,
   RGBNDecoderUpdateParams,
+  CanvasCreator,
+  ImageDataCreator,
 } from '../Types';
 
-const createChannel = (key: ChannelKey, tilesPerLine: number): Channel<Decoder> => {
-  const canvas = document.createElement('canvas');
-  const decoder = new Decoder({ tilesPerLine });
+const createChannel = (
+  key: ChannelKey,
+  decoderOptions: Required<DecoderOptions>,
+): Channel<Decoder> => {
+  const canvas = decoderOptions.canvasCreator();
+  const decoder = new Decoder(decoderOptions);
 
   decoder.update({
     framePalette: [],
@@ -37,18 +43,28 @@ export class RGBNDecoder {
   private lockFrame: boolean;
   private channels: Channels<Decoder>;
   private tilesPerLine: number;
+  private canvasCreator: CanvasCreator;
+  private imageDataCreator: ImageDataCreator;
 
   constructor(options?: DecoderOptions) {
     this.canvas = null;
     this.palette = defaultPalette;
     this.lockFrame = false;
     this.tilesPerLine = options?.tilesPerLine || TILES_PER_LINE;
+    this.canvasCreator = options?.canvasCreator || createCanvasElement;
+    this.imageDataCreator = options?.imageDataCreator || createImageData;
+
+    const channelDecoderOptions: Required<DecoderOptions> = {
+      tilesPerLine: this.tilesPerLine,
+      canvasCreator: this.canvasCreator,
+      imageDataCreator: this.imageDataCreator,
+    };
 
     this.channels = {
-      r: createChannel(ChannelKey.R, this.tilesPerLine),
-      g: createChannel(ChannelKey.G, this.tilesPerLine),
-      b: createChannel(ChannelKey.B, this.tilesPerLine),
-      n: createChannel(ChannelKey.N, this.tilesPerLine),
+      r: createChannel(ChannelKey.R, channelDecoderOptions),
+      g: createChannel(ChannelKey.G, channelDecoderOptions),
+      b: createChannel(ChannelKey.B, channelDecoderOptions),
+      n: createChannel(ChannelKey.N, channelDecoderOptions),
     };
   }
 
@@ -66,7 +82,7 @@ export class RGBNDecoder {
 
     const canvases: SourceCanvases = this.setTiles(tiles);
 
-    const newHeight = this.getHeight();
+    const { width: newWidth, height: newHeight } = this.getDimensions(canvases);
 
     if (!shouldUpdate) {
       return;
@@ -83,6 +99,10 @@ export class RGBNDecoder {
 
     if (this.canvas.height !== newHeight) {
       this.canvas.height = newHeight;
+    }
+
+    if (this.canvas.width !== newWidth) {
+      this.canvas.width = newWidth;
     }
 
     const context = this.canvas?.getContext('2d');
@@ -183,7 +203,7 @@ export class RGBNDecoder {
     scaleFactor: number,
     handleExportFrame: ExportFrameMode = ExportFrameMode.FRAMEMODE_KEEP,
   ): HTMLCanvasElement {
-    const canvas = document.createElement('canvas');
+    const canvas = this.canvasCreator();
 
 
     const canvases: SourceCanvases = channels.reduce((acc: SourceCanvases, key: ChannelKey): SourceCanvases => {
@@ -196,10 +216,7 @@ export class RGBNDecoder {
       };
     }, {});
 
-    const { width, height } = Object.values(canvases).reduce((acc, current: HTMLCanvasElement) => ({
-      width: Math.max(current.width, acc.width),
-      height: Math.max(current.height, acc.height),
-    }), { width: 0, height: 0 });
+    const { width, height } = this.getDimensions(canvases);
 
     canvas.width = width;
     canvas.height = height;
@@ -210,20 +227,25 @@ export class RGBNDecoder {
       throw new Error('no canvas context');
     }
 
+    context.fillStyle = '#000000';
+    context.fillRect(0, 0, 500, 500);
+
     this.blendCanvases(context, canvases);
 
     return canvas;
   }
 
-  private maxTiles() {
-    return channels.reduce((acc, key): number => {
-      const channel = this.channels[key];
-      return Math.max(acc, channel.tiles?.length || 0);
-    }, 0);
-  }
+  private getDimensions(canvases: SourceCanvases): { width: number, height: number } {
+    return Object.values(canvases).reduce((acc, current: HTMLCanvasElement) => {
+      if (current.width === 0 || current.height === 0) {
+        return acc;
+      }
 
-  private getHeight() {
-    return TILE_PIXEL_HEIGHT * Math.ceil(this.maxTiles() / this.tilesPerLine);
+      return {
+        width: Math.max(current.width, acc.width),
+        height: Math.max(current.height, acc.height),
+      };
+    }, { width: 0, height: 0 });
   }
 }
 

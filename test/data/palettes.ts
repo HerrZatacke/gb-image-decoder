@@ -8,10 +8,10 @@ export const bw = [
 ];
 
 export const red = [
-  '#ffaaaa',
-  '#bb7777',
-  '#772222',
-  '#220000',
+  '#ffbbbb',
+  '#cc8888',
+  '#885555',
+  '#552222',
 ];
 
 export const rgbMultiply: RGBNPalette = {

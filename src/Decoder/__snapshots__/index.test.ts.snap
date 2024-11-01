@@ -22,20 +22,20 @@ exports[`Monochrome Decoder > using '16x14' raw data > renders on to a given can
 
 exports[`Monochrome Decoder > using '20x18' raw data > renders a scaled canvas with framemode: 'crop' 1`] = `"vVfl7TJX14"`;
 
-exports[`Monochrome Decoder > using '20x18' raw data > renders a scaled canvas with framemode: 'keep' 1`] = `"IUQ1y9uAd6"`;
+exports[`Monochrome Decoder > using '20x18' raw data > renders a scaled canvas with framemode: 'keep' 1`] = `"dobrrcznjp"`;
 
-exports[`Monochrome Decoder > using '20x18' raw data > renders a scaled canvas with framemode: 'square_black' 1`] = `"d5Zw21fWDW"`;
+exports[`Monochrome Decoder > using '20x18' raw data > renders a scaled canvas with framemode: 'square_black' 1`] = `"i3KxHIG14t"`;
 
-exports[`Monochrome Decoder > using '20x18' raw data > renders a scaled canvas with framemode: 'square_white' 1`] = `"831JE9T3f2"`;
+exports[`Monochrome Decoder > using '20x18' raw data > renders a scaled canvas with framemode: 'square_white' 1`] = `"UJzaE6M2OG"`;
 
-exports[`Monochrome Decoder > using '20x18' raw data > renders on to a given canvas 1`] = `"zHEfqPiH13"`;
+exports[`Monochrome Decoder > using '20x18' raw data > renders on to a given canvas 1`] = `"ReaLLisIqq"`;
 
 exports[`Monochrome Decoder > using '20x86' raw data > renders a scaled canvas with framemode: 'crop' 1`] = `"vVfl7TJX14"`;
 
-exports[`Monochrome Decoder > using '20x86' raw data > renders a scaled canvas with framemode: 'keep' 1`] = `"rSAwi2jhQF"`;
+exports[`Monochrome Decoder > using '20x86' raw data > renders a scaled canvas with framemode: 'keep' 1`] = `"XICBvx6tL5"`;
 
-exports[`Monochrome Decoder > using '20x86' raw data > renders a scaled canvas with framemode: 'square_black' 1`] = `"NEe0NAJBDK"`;
+exports[`Monochrome Decoder > using '20x86' raw data > renders a scaled canvas with framemode: 'square_black' 1`] = `"sktk5cS5o0"`;
 
-exports[`Monochrome Decoder > using '20x86' raw data > renders a scaled canvas with framemode: 'square_white' 1`] = `"vEwjOlU8H6"`;
+exports[`Monochrome Decoder > using '20x86' raw data > renders a scaled canvas with framemode: 'square_white' 1`] = `"BmFvSnKQwt"`;
 
-exports[`Monochrome Decoder > using '20x86' raw data > renders on to a given canvas 1`] = `"NobxBYWa3H"`;
+exports[`Monochrome Decoder > using '20x86' raw data > renders on to a given canvas 1`] = `"ifPaBrCMAn"`;

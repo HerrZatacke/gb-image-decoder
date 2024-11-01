@@ -11,9 +11,12 @@ import {
 import {
   BLACK_LINE,
   BW_PALETTE,
+  DEFAULT_FULL_PIXEL_HEIGHT,
+  DEFAULT_FULL_PIXEL_WIDTH, FRAME_SIZE,
+  FRAME_TILES,
   SKIP_LINE,
   TILE_PIXEL_HEIGHT,
-  TILE_PIXEL_WIDTH,
+  TILE_PIXEL_WIDTH, TILES_PER_COLUMN,
   TILES_PER_LINE,
   WHITE_LINE,
 } from '../constants/base';
@@ -135,10 +138,7 @@ export class Decoder {
 
     // crop and square modes are only available for regular "camera" images
     if (
-      (
-        this.tiles.length !== 360 ||
-        this.tilesPerLine !== TILES_PER_LINE
-      ) &&
+      this.tilesPerLine !== TILES_PER_LINE &&
       handleFrameMode !== ExportFrameMode.FRAMEMODE_KEEP
     ) {
       // console.warn('irregular image size (not 160x144) - will fall back to FRAMEMODE_KEEP');
@@ -170,7 +170,6 @@ export class Decoder {
 
   private getScaledCanvasSize(handleExportFrame: ExportFrameMode): ScaledCanvasSize {
     // 2 tiles top/left/bottom/right -> 4 tiles to each side
-    const FRAME_TILES = 4;
     const width = this.getWidth();
     const height = this.getHeight();
 
@@ -183,14 +182,14 @@ export class Decoder {
         };
       case ExportFrameMode.FRAMEMODE_CROP:
         return {
-          initialHeight: height - (TILE_PIXEL_HEIGHT * FRAME_TILES),
-          initialWidth: width - (TILE_PIXEL_WIDTH * FRAME_TILES),
-          tilesPerLine: this.tilesPerLine - FRAME_TILES,
+          initialHeight: DEFAULT_FULL_PIXEL_HEIGHT - (TILE_PIXEL_HEIGHT * FRAME_TILES),
+          initialWidth: DEFAULT_FULL_PIXEL_WIDTH - (TILE_PIXEL_WIDTH * FRAME_TILES),
+          tilesPerLine: TILES_PER_LINE - FRAME_TILES,
         };
       case ExportFrameMode.FRAMEMODE_SQUARE_BLACK:
       case ExportFrameMode.FRAMEMODE_SQUARE_WHITE:
         return {
-          initialHeight: height + (2 * TILE_PIXEL_HEIGHT),
+          initialHeight: width,
           initialWidth: width,
           tilesPerLine: this.tilesPerLine,
         };
@@ -208,27 +207,40 @@ export class Decoder {
       case ExportFrameMode.FRAMEMODE_KEEP:
         return this.tiles;
       case ExportFrameMode.FRAMEMODE_CROP:
-        return this.tiles
-          .reduce((acc: string[], tile: string, index: number) => (
-            tileIndexIsPartOfFrame(index, this.imageStartLine, ExportFrameMode.FRAMEMODE_KEEP) ?
-              acc :
-              [...acc, tile]
-          ), []);
+        return this.getCroppedTiles();
       case ExportFrameMode.FRAMEMODE_SQUARE_BLACK:
         return [
           ...BLACK_LINE,
-          ...this.tiles,
+          ...this.getDefaultImageRange(),
           ...BLACK_LINE,
         ];
       case ExportFrameMode.FRAMEMODE_SQUARE_WHITE:
         return [
           ...WHITE_LINE,
-          ...this.tiles,
+          ...this.getDefaultImageRange(),
           ...WHITE_LINE,
         ];
       default:
         throw new Error(`unknown export mode ${handleExportFrame}`);
     }
+  }
+
+  private getCroppedTiles(): string[] {
+    return this.tiles
+      .reduce((acc: string[], tile: string, index: number) => (
+        tileIndexIsPartOfFrame(index, this.imageStartLine, ExportFrameMode.FRAMEMODE_KEEP) ?
+          acc :
+          [...acc, tile]
+      ), []);
+  }
+
+  // for wild frame image, this returns the part of theimage
+  // which has the image data in the default position by cropping
+  // away part of the wild frame which does not fit into 160x144
+  private getDefaultImageRange(): string[] {
+    const wholeImageStartLine = this.imageStartLine - FRAME_SIZE;
+    const startIndex = wholeImageStartLine * TILES_PER_LINE;
+    return this.tiles.slice(startIndex, startIndex + (TILES_PER_LINE * TILES_PER_COLUMN));
   }
 
   private setCanvas(canvas: HTMLCanvasElement) {

@@ -22,8 +22,9 @@
     "prepack": "npm run eslint && npm run test && npm run build",
     "build": "unbuild",
     "dev": "vitest dev",
-    "test": "rimraf images && vitest run",
-    "test:u": "rimraf images && vitest run -u",
+    "test:clean": "rimraf images/*",
+    "test": "npm run test:clean && vitest run",
+    "test:u": "npm run test:clean && vitest run -u",
     "eslint": "eslint -c .eslintrc --ext .js,.ts ."
   },
   "devDependencies": {

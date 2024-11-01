@@ -108,13 +108,13 @@ exports[`RGBN Decoder > using '20x18' raw data > renders on to a given canvas wi
 
 exports[`RGBN Decoder > using '20x18' raw data > renders on to a given canvas with blendmode: 'softlight' 1`] = `"4Mfdp8JDYF"`;
 
-exports[`RGBN Decoder > using '20x86' raw data > renders a scaled canvas with framemode: 'crop' 1`] = `"Bw38t41P0J"`;
+exports[`RGBN Decoder > using '20x86' raw data > renders a scaled canvas with framemode: 'crop' 1`] = `"0JNZ9K8VK6"`;
 
 exports[`RGBN Decoder > using '20x86' raw data > renders a scaled canvas with framemode: 'keep' 1`] = `"Bw38t41P0J"`;
 
-exports[`RGBN Decoder > using '20x86' raw data > renders a scaled canvas with framemode: 'square_black' 1`] = `"Bw38t41P0J"`;
+exports[`RGBN Decoder > using '20x86' raw data > renders a scaled canvas with framemode: 'square_black' 1`] = `"3EHYgaj46J"`;
 
-exports[`RGBN Decoder > using '20x86' raw data > renders a scaled canvas with framemode: 'square_white' 1`] = `"Bw38t41P0J"`;
+exports[`RGBN Decoder > using '20x86' raw data > renders a scaled canvas with framemode: 'square_white' 1`] = `"43J8hqKMsS"`;
 
 exports[`RGBN Decoder > using '20x86' raw data > renders on to a given canvas with blendmode: 'addition' 1`] = `"qA5WD6FKfx"`;
 

@@ -2,6 +2,21 @@ import { ExportFrameMode } from '../constants/enums';
 import { tileIndexIsPartOfFrame } from './tileIndexIsPartOfFrame';
 import { BWPalette, IndexedTilePixels, RGBValue } from '../Types';
 
+const calculateImageStartLine = (handleExportFrame: ExportFrameMode, imageStartLine: number): number => {
+  switch (handleExportFrame) {
+    case ExportFrameMode.FRAMEMODE_CROP:
+      return 0;
+
+    case ExportFrameMode.FRAMEMODE_SQUARE_WHITE:
+    case ExportFrameMode.FRAMEMODE_SQUARE_BLACK:
+      return 2;
+
+    case ExportFrameMode.FRAMEMODE_KEEP:
+    default:
+      return imageStartLine;
+  }
+};
+
 export const getRGBValue = ({
   pixels,
   index,
@@ -20,7 +35,9 @@ export const getRGBValue = ({
   frameColorData: BWPalette,
 }): RGBValue => {
 
-  const palette: BWPalette = tileIndexIsPartOfFrame(tileIndex, imageStartLine, handleExportFrame) ?
+  const calculatedImageStartLine = calculateImageStartLine(handleExportFrame, imageStartLine);
+
+  const palette: BWPalette = tileIndexIsPartOfFrame(tileIndex, calculatedImageStartLine, handleExportFrame) ?
     frameColorData :
     colorData;
 

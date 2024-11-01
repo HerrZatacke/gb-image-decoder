@@ -30,12 +30,12 @@ exports[`Monochrome Decoder > using '20x18' raw data > renders a scaled canvas w
 
 exports[`Monochrome Decoder > using '20x18' raw data > renders on to a given canvas 1`] = `"zHEfqPiH13"`;
 
-exports[`Monochrome Decoder > using '20x86' raw data > renders a scaled canvas with framemode: 'crop' 1`] = `"rSAwi2jhQF"`;
+exports[`Monochrome Decoder > using '20x86' raw data > renders a scaled canvas with framemode: 'crop' 1`] = `"vVfl7TJX14"`;
 
 exports[`Monochrome Decoder > using '20x86' raw data > renders a scaled canvas with framemode: 'keep' 1`] = `"rSAwi2jhQF"`;
 
-exports[`Monochrome Decoder > using '20x86' raw data > renders a scaled canvas with framemode: 'square_black' 1`] = `"rSAwi2jhQF"`;
+exports[`Monochrome Decoder > using '20x86' raw data > renders a scaled canvas with framemode: 'square_black' 1`] = `"NEe0NAJBDK"`;
 
-exports[`Monochrome Decoder > using '20x86' raw data > renders a scaled canvas with framemode: 'square_white' 1`] = `"rSAwi2jhQF"`;
+exports[`Monochrome Decoder > using '20x86' raw data > renders a scaled canvas with framemode: 'square_white' 1`] = `"vEwjOlU8H6"`;
 
 exports[`Monochrome Decoder > using '20x86' raw data > renders on to a given canvas 1`] = `"NobxBYWa3H"`;

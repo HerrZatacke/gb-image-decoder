@@ -257,7 +257,7 @@ export const scaleRawImageData = (data: Uint8ClampedArray, width: number, height
   };
 };
 
-export const getRawImageData = (params: FullMonochromeImageCreationParams): RawOutput => {
+export const getRawMonochromeImageData = (params: FullMonochromeImageCreationParams): RawOutput => {
   const {
     tiles,
     imageStartLine,
@@ -324,7 +324,7 @@ export const getImageUrl = async (
       width,
       height,
     },
-  } = getRawImageData(fullParams);
+  } = getRawMonochromeImageData(fullParams);
 
   const canvasCreator = creators?.canvasCreator || createCanvasElement;
   const imageDataCreator = creators?.imageDataCreator || createImageData;

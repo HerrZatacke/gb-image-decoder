@@ -1,0 +1,262 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`RGBN image generation > using 16x14 raw data > generates expected dimensions 1`] = `
+{
+  "height": 112,
+  "width": 128,
+}
+`;
+
+exports[`RGBN image generation > using 16x14 raw data > generates expected hash for raw image data 1`] = `"m8OfcUrEDb"`;
+
+exports[`RGBN image generation > with blendmode: 'addition' > with lockFrame: false > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`RGBN image generation > with blendmode: 'addition' > with lockFrame: false > generates expected hash for raw image data 1`] = `"i2JobhyGmn"`;
+
+exports[`RGBN image generation > with blendmode: 'addition' > with lockFrame: true > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`RGBN image generation > with blendmode: 'addition' > with lockFrame: true > generates expected hash for raw image data 1`] = `"cxNIfP0qtH"`;
+
+exports[`RGBN image generation > with blendmode: 'burn' > with lockFrame: false > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`RGBN image generation > with blendmode: 'burn' > with lockFrame: false > generates expected hash for raw image data 1`] = `"W4fVVQGplC"`;
+
+exports[`RGBN image generation > with blendmode: 'burn' > with lockFrame: true > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`RGBN image generation > with blendmode: 'burn' > with lockFrame: true > generates expected hash for raw image data 1`] = `"fC6B2JRAEJ"`;
+
+exports[`RGBN image generation > with blendmode: 'darken' > with lockFrame: false > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`RGBN image generation > with blendmode: 'darken' > with lockFrame: false > generates expected hash for raw image data 1`] = `"vReH12JJYc"`;
+
+exports[`RGBN image generation > with blendmode: 'darken' > with lockFrame: true > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`RGBN image generation > with blendmode: 'darken' > with lockFrame: true > generates expected hash for raw image data 1`] = `"fBaWAHlXF2"`;
+
+exports[`RGBN image generation > with blendmode: 'difference' > with lockFrame: false > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`RGBN image generation > with blendmode: 'difference' > with lockFrame: false > generates expected hash for raw image data 1`] = `"Gk9nmZ07eC"`;
+
+exports[`RGBN image generation > with blendmode: 'difference' > with lockFrame: true > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`RGBN image generation > with blendmode: 'difference' > with lockFrame: true > generates expected hash for raw image data 1`] = `"3TFB9rVaZL"`;
+
+exports[`RGBN image generation > with blendmode: 'dodge' > with lockFrame: false > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`RGBN image generation > with blendmode: 'dodge' > with lockFrame: false > generates expected hash for raw image data 1`] = `"EsGo0r5q28"`;
+
+exports[`RGBN image generation > with blendmode: 'dodge' > with lockFrame: true > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`RGBN image generation > with blendmode: 'dodge' > with lockFrame: true > generates expected hash for raw image data 1`] = `"FtyAe6jilF"`;
+
+exports[`RGBN image generation > with blendmode: 'exclusion' > with lockFrame: false > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`RGBN image generation > with blendmode: 'exclusion' > with lockFrame: false > generates expected hash for raw image data 1`] = `"Ncrdigmkw4"`;
+
+exports[`RGBN image generation > with blendmode: 'exclusion' > with lockFrame: true > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`RGBN image generation > with blendmode: 'exclusion' > with lockFrame: true > generates expected hash for raw image data 1`] = `"Pq68mqo1YH"`;
+
+exports[`RGBN image generation > with blendmode: 'hardlight' > with lockFrame: false > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`RGBN image generation > with blendmode: 'hardlight' > with lockFrame: false > generates expected hash for raw image data 1`] = `"EwE2vLOuy1"`;
+
+exports[`RGBN image generation > with blendmode: 'hardlight' > with lockFrame: true > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`RGBN image generation > with blendmode: 'hardlight' > with lockFrame: true > generates expected hash for raw image data 1`] = `"gUKu6TW6gd"`;
+
+exports[`RGBN image generation > with blendmode: 'lighten' > with lockFrame: false > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`RGBN image generation > with blendmode: 'lighten' > with lockFrame: false > generates expected hash for raw image data 1`] = `"oBmAOMCkfk"`;
+
+exports[`RGBN image generation > with blendmode: 'lighten' > with lockFrame: true > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`RGBN image generation > with blendmode: 'lighten' > with lockFrame: true > generates expected hash for raw image data 1`] = `"XNpPdFYIEa"`;
+
+exports[`RGBN image generation > with blendmode: 'multiply' > with lockFrame: false > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`RGBN image generation > with blendmode: 'multiply' > with lockFrame: false > generates expected hash for raw image data 1`] = `"kTq9nP99Yh"`;
+
+exports[`RGBN image generation > with blendmode: 'multiply' > with lockFrame: true > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`RGBN image generation > with blendmode: 'multiply' > with lockFrame: true > generates expected hash for raw image data 1`] = `"XMwdVyd7bl"`;
+
+exports[`RGBN image generation > with blendmode: 'normal' > with lockFrame: false > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`RGBN image generation > with blendmode: 'normal' > with lockFrame: false > generates expected hash for raw image data 1`] = `"zqYbdqqMe5"`;
+
+exports[`RGBN image generation > with blendmode: 'normal' > with lockFrame: true > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`RGBN image generation > with blendmode: 'normal' > with lockFrame: true > generates expected hash for raw image data 1`] = `"bAzsoNCOh7"`;
+
+exports[`RGBN image generation > with blendmode: 'normal_s' > with lockFrame: false > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`RGBN image generation > with blendmode: 'normal_s' > with lockFrame: false > generates expected hash for raw image data 1`] = `"gLGGbqG1f9"`;
+
+exports[`RGBN image generation > with blendmode: 'normal_s' > with lockFrame: true > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`RGBN image generation > with blendmode: 'normal_s' > with lockFrame: true > generates expected hash for raw image data 1`] = `"ebaGqQLbdO"`;
+
+exports[`RGBN image generation > with blendmode: 'overlay' > with lockFrame: false > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`RGBN image generation > with blendmode: 'overlay' > with lockFrame: false > generates expected hash for raw image data 1`] = `"vn2da1D4tn"`;
+
+exports[`RGBN image generation > with blendmode: 'overlay' > with lockFrame: true > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`RGBN image generation > with blendmode: 'overlay' > with lockFrame: true > generates expected hash for raw image data 1`] = `"o5gQNWFXAx"`;
+
+exports[`RGBN image generation > with blendmode: 'screen' > with lockFrame: false > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`RGBN image generation > with blendmode: 'screen' > with lockFrame: false > generates expected hash for raw image data 1`] = `"6VOI3oz5k5"`;
+
+exports[`RGBN image generation > with blendmode: 'screen' > with lockFrame: true > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`RGBN image generation > with blendmode: 'screen' > with lockFrame: true > generates expected hash for raw image data 1`] = `"4PRJH9hB9G"`;
+
+exports[`RGBN image generation > with blendmode: 'softlight' > with lockFrame: false > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`RGBN image generation > with blendmode: 'softlight' > with lockFrame: false > generates expected hash for raw image data 1`] = `"58E2opFCjW"`;
+
+exports[`RGBN image generation > with blendmode: 'softlight' > with lockFrame: true > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`RGBN image generation > with blendmode: 'softlight' > with lockFrame: true > generates expected hash for raw image data 1`] = `"LVALgrjmzZ"`;

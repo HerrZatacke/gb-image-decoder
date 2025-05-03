@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 import { hash } from 'ohash';
-import { getFullParams, getRawImageData } from '.';
-import { MonochromeImageCreationParams, ExportFrameMode } from '../index';
+import { getFullParams, getRawMonochromeImageData } from '.';
+import { MonochromeImageCreationParams, ExportFrameMode } from '..';
 import tiles1x1 from '../../test/data/tiles/monochrome/1x1';
 import tiles16x14 from '../../test/data/tiles/monochrome/16x14';
 import tiles20x18 from '../../test/data/tiles/monochrome/20x18';
@@ -77,7 +77,7 @@ describe('Monochrome image generation', () => {
     const {
       data: rawData,
       dimensions,
-    } = getRawImageData(fullParams);
+    } = getRawMonochromeImageData(fullParams);
 
 
     test('generates expected hash for fullParams', () => {

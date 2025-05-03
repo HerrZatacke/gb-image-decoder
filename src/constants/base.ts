@@ -25,10 +25,12 @@ export const BLACK_LINE: string[] = Array(TILES_PER_LINE).fill(BLACK);
 
 export const WHITE_LINE: string[] = Array(TILES_PER_LINE).fill(WHITE);
 
+export const RGBN_SHADES = [0, 0x55, 0xaa, 0xff];
+
 export const defaultPalette: RGBNPalette = {
-  r: [0, 84, 172, 255],
-  g: [0, 84, 172, 255],
-  b: [0, 84, 172, 255],
-  n: [0, 85, 170, 255],
+  r: RGBN_SHADES,
+  g: RGBN_SHADES,
+  b: RGBN_SHADES,
+  n: RGBN_SHADES,
   blend: BlendMode.MULTIPLY,
 };

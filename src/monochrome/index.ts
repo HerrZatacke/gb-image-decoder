@@ -1,15 +1,14 @@
 import { objectHash } from 'ohash';
 import {
   BWPalette, Creators, CropResult,
-  FullImageCreationParams,
-  ImageContext,
-  ImageCreationParams,
+  FullMonochromeImageCreationParams,
+  MonochromeImageContext,
+  MonochromeImageCreationParams,
   IndexedTilePixels,
   PixelDimensions, RawOutput,
 } from '../Types';
 import {
   BLACK_LINE,
-  BW_PALETTE,
   FRAME_WIDTH,
   SKIP_LINE,
   TILE_PIXEL_HEIGHT,
@@ -30,31 +29,23 @@ const padLines: Record<string, string[]> = {
 };
 
 const getPalettes = (
-  imagePalette: string[],
-  framePalette: string[],
+  imagePalette: BWPalette,
+  framePalette: BWPalette,
   tilesPerLine: number,
 ): {
   imagePalette: BWPalette,
   framePalette: BWPalette,
 } => {
-  const imageColorData = imagePalette.map((color: string, index: number) => (
-    color.length !== 7 ? BW_PALETTE[index] : parseInt(color.substring(1), 16)
-  ));
-
   if (tilesPerLine !== TILES_PER_LINE) {
     return {
-      imagePalette: imageColorData,
-      framePalette: imageColorData,
+      imagePalette,
+      framePalette: imagePalette,
     };
   }
 
-  const frameColorData = framePalette.map((color: string, index: number) => (
-    color.length !== 7 ? BW_PALETTE[index] : parseInt(color.substring(1), 16)
-  ));
-
   return {
-    imagePalette: imageColorData,
-    framePalette: frameColorData,
+    imagePalette,
+    framePalette,
   };
 };
 
@@ -64,7 +55,10 @@ export const getDimensions = (tilesLength: number, tilesPerLine: number): PixelD
   height: TILE_PIXEL_HEIGHT * Math.ceil(tilesLength / tilesPerLine),
 });
 
-const getCroppedTiles = (tiles: string[], imageContext: ImageContext): CropResult => ({
+const getCroppedTiles = (
+  tiles: string[],
+  imageContext: MonochromeImageContext,
+): CropResult<MonochromeImageContext> => ({
   tiles: tiles
     .reduce((acc: string[], tile: string, index: number) => (
       tileIndexIsPartOfFrame(index, imageContext.imageStartLine, ExportFrameMode.FRAMEMODE_KEEP) ?
@@ -78,7 +72,11 @@ const getCroppedTiles = (tiles: string[], imageContext: ImageContext): CropResul
 // for wild frame image, this returns the part of the image
 // which has the image data in the default position by cropping
 // away part of the wild frame which does not fit into 160x144
-const getPaddedSquare = (tiles: string[], padLine: string[], imageContext: ImageContext): CropResult => {
+const getPaddedSquare = (
+  tiles: string[],
+  padLine: string[],
+  imageContext: MonochromeImageContext,
+): CropResult<MonochromeImageContext> => {
   let wholeImageStartLine = imageContext.imageStartLine - FRAME_WIDTH - 1;
 
   const paddedTiles = [...tiles];
@@ -102,7 +100,7 @@ const getPaddedSquare = (tiles: string[], padLine: string[], imageContext: Image
 };
 
 // Returns the actual tiles to be rendered based on ExportFrameMode
-const applyCrop = (tiles: string[], imageContext: ImageContext): CropResult => {
+const applyCrop = (tiles: string[], imageContext: MonochromeImageContext): CropResult<MonochromeImageContext> => {
   // For ExportFrameMode to have an effect, the base image needs to have 20 tiles horizontally
   const checkFrameMode = imageContext.tilesPerLine !== TILES_PER_LINE ?
     ExportFrameMode.FRAMEMODE_KEEP :
@@ -137,7 +135,7 @@ const paintTile = (
   rawImageData: Uint8ClampedArray,
   pixels: IndexedTilePixels | null,
   index: number,
-  imageContext: ImageContext,
+  imageContext: MonochromeImageContext,
 ) => {
   const tileXOffset = index % imageContext.tilesPerLine;
   const tileYOffset = Math.floor(index / imageContext.tilesPerLine);
@@ -182,7 +180,12 @@ const paintTile = (
   }
 };
 
-const renderTile = (rawImageData: Uint8ClampedArray, rawLine: string, index: number, imageContext: ImageContext) => {
+const renderTile = (
+  rawImageData: Uint8ClampedArray,
+  rawLine: string,
+  index: number,
+  imageContext: MonochromeImageContext,
+) => {
   if (rawLine === SKIP_LINE) {
     paintTile(rawImageData, null, index, imageContext);
   } else {
@@ -208,7 +211,7 @@ const toObjectUrl = async (canvas: HTMLCanvasElement): Promise<string> => (
   })
 );
 
-export const getFullParams = (params: ImageCreationParams): FullImageCreationParams => ({
+export const getFullParams = (params: MonochromeImageCreationParams): FullMonochromeImageCreationParams => ({
   tiles: params.tiles,
   imagePalette: params.imagePalette,
   framePalette: params.framePalette,
@@ -254,7 +257,7 @@ export const scaleRawImageData = (data: Uint8ClampedArray, width: number, height
   };
 };
 
-export const getRawImageData = (params: FullImageCreationParams): RawOutput => {
+export const getRawImageData = (params: FullMonochromeImageCreationParams): RawOutput => {
   const {
     tiles,
     imageStartLine,
@@ -265,7 +268,7 @@ export const getRawImageData = (params: FullImageCreationParams): RawOutput => {
     scaleFactor,
   } = params;
 
-  const imageContext: ImageContext = {
+  const imageContext: MonochromeImageContext = {
     tilesPerLine,
     imageStartLine,
     handleExportFrame,
@@ -300,7 +303,7 @@ export const getRawImageData = (params: FullImageCreationParams): RawOutput => {
 };
 
 export const getImageUrl = async (
-  params: ImageCreationParams,
+  params: MonochromeImageCreationParams,
   creators?: Creators,
 ): Promise<string> => {
   const urlCache = new UrlCache();

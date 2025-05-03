@@ -59,46 +59,57 @@ export type IndexedTilePixels = number[];
   blend?: BlendMode,
 }
 
-export interface ImageCreationParams {
-  tiles: string[],
-  imagePalette: string[],
-  framePalette: string[],
+export interface BaseImageCreationParams<TilesType> {
+  tiles: TilesType,
   imageStartLine?: number,
   tilesPerLine?: number,
   scaleFactor?: number,
   handleExportFrame?: ExportFrameMode,
 }
 
-export type FullImageCreationParams = Required<ImageCreationParams>;
+export interface MonochromeImageCreationParams extends BaseImageCreationParams<string[]>{
+  imagePalette: BWPalette,
+  framePalette: BWPalette,
+}
+
+export type FullMonochromeImageCreationParams = Required<MonochromeImageCreationParams>;
+
+export interface RGBNImageCreationParams extends BaseImageCreationParams<RGBNTiles>{
+  palette: RGBNPalette,
+  lockFrame?: boolean,
+}
+
+export type FullRGBNImageCreationParams = Required<RGBNImageCreationParams>;
 
 export interface PixelDimensions {
   width: number,
   height: number,
 }
 
-export interface ImageContext {
+export interface BaseImageContext {
   tilesPerLine: number,
   imageStartLine: number,
-  imagePalette: BWPalette,
-  framePalette: BWPalette,
   handleExportFrame: ExportFrameMode,
   // Don't include width/height. These may change during image generation
 }
 
-export interface CropResult {
+export interface MonochromeImageContext extends BaseImageContext{
+  imagePalette: BWPalette,
+  framePalette: BWPalette,
+}
+
+export interface RGBNImageContext extends BaseImageContext{
+  palette: RGBNPalette,
+  lockFrame: boolean,
+}
+
+export interface CropResult<ContextType> {
   tiles: string[],
   dimensions: PixelDimensions,
-  contextUpdates: Partial<ImageContext>
+  contextUpdates: Partial<ContextType>
 }
 
 export interface RawOutput {
   data: Uint8ClampedArray,
   dimensions: PixelDimensions
-}
-
-export interface RGBNDecoderUpdateParams {
-  canvas: HTMLCanvasElement | null,
-  tiles: RGBNTiles,
-  palette: RGBNPalette
-  lockFrame?: boolean,
 }

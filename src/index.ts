@@ -21,6 +21,8 @@ export type {
   RGBValue,
   SourceCanvases,
   Creators,
-  ImageCreationParams,
-  RGBNDecoderUpdateParams,
+  MonochromeImageCreationParams,
+  FullMonochromeImageCreationParams,
+  RGBNImageCreationParams,
+  FullRGBNImageCreationParams,
 } from './Types';

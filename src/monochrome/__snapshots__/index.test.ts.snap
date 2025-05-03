@@ -1,0 +1,265 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Monochrome Decoder > using '1x1' raw data scaled by 2 with frameMode 'crop' > generates expected dimensions 1`] = `
+{
+  "height": 16,
+  "width": 16,
+}
+`;
+
+exports[`Monochrome Decoder > using '1x1' raw data scaled by 2 with frameMode 'crop' > generates expected hash for fullParams 1`] = `"ZtepAnH9Hy"`;
+
+exports[`Monochrome Decoder > using '1x1' raw data scaled by 2 with frameMode 'crop' > generates expected hash for raw image data 1`] = `"jwkXkBq86d"`;
+
+exports[`Monochrome Decoder > using '1x1' raw data scaled by 2 with frameMode 'keep' > generates expected dimensions 1`] = `
+{
+  "height": 16,
+  "width": 16,
+}
+`;
+
+exports[`Monochrome Decoder > using '1x1' raw data scaled by 2 with frameMode 'keep' > generates expected hash for fullParams 1`] = `"PfYOCQHfnl"`;
+
+exports[`Monochrome Decoder > using '1x1' raw data scaled by 2 with frameMode 'keep' > generates expected hash for raw image data 1`] = `"jwkXkBq86d"`;
+
+exports[`Monochrome Decoder > using '1x1' raw data scaled by 2 with frameMode 'square_black' > generates expected dimensions 1`] = `
+{
+  "height": 16,
+  "width": 16,
+}
+`;
+
+exports[`Monochrome Decoder > using '1x1' raw data scaled by 2 with frameMode 'square_black' > generates expected hash for fullParams 1`] = `"UvLlwTs2IU"`;
+
+exports[`Monochrome Decoder > using '1x1' raw data scaled by 2 with frameMode 'square_black' > generates expected hash for raw image data 1`] = `"jwkXkBq86d"`;
+
+exports[`Monochrome Decoder > using '1x1' raw data scaled by 2 with frameMode 'square_white' > generates expected dimensions 1`] = `
+{
+  "height": 16,
+  "width": 16,
+}
+`;
+
+exports[`Monochrome Decoder > using '1x1' raw data scaled by 2 with frameMode 'square_white' > generates expected hash for fullParams 1`] = `"gRIPeGNIx9"`;
+
+exports[`Monochrome Decoder > using '1x1' raw data scaled by 2 with frameMode 'square_white' > generates expected hash for raw image data 1`] = `"jwkXkBq86d"`;
+
+exports[`Monochrome Decoder > using '16x14' raw data scaled by 2 with frameMode 'crop' > generates expected dimensions 1`] = `
+{
+  "height": 224,
+  "width": 256,
+}
+`;
+
+exports[`Monochrome Decoder > using '16x14' raw data scaled by 2 with frameMode 'crop' > generates expected hash for fullParams 1`] = `"6VfZOuypN6"`;
+
+exports[`Monochrome Decoder > using '16x14' raw data scaled by 2 with frameMode 'crop' > generates expected hash for raw image data 1`] = `"vVfl7TJX14"`;
+
+exports[`Monochrome Decoder > using '16x14' raw data scaled by 2 with frameMode 'keep' > generates expected dimensions 1`] = `
+{
+  "height": 224,
+  "width": 256,
+}
+`;
+
+exports[`Monochrome Decoder > using '16x14' raw data scaled by 2 with frameMode 'keep' > generates expected hash for fullParams 1`] = `"Rp3ArTgkVf"`;
+
+exports[`Monochrome Decoder > using '16x14' raw data scaled by 2 with frameMode 'keep' > generates expected hash for raw image data 1`] = `"vVfl7TJX14"`;
+
+exports[`Monochrome Decoder > using '16x14' raw data scaled by 2 with frameMode 'square_black' > generates expected dimensions 1`] = `
+{
+  "height": 224,
+  "width": 256,
+}
+`;
+
+exports[`Monochrome Decoder > using '16x14' raw data scaled by 2 with frameMode 'square_black' > generates expected hash for fullParams 1`] = `"Xk4QDeFOFf"`;
+
+exports[`Monochrome Decoder > using '16x14' raw data scaled by 2 with frameMode 'square_black' > generates expected hash for raw image data 1`] = `"vVfl7TJX14"`;
+
+exports[`Monochrome Decoder > using '16x14' raw data scaled by 2 with frameMode 'square_white' > generates expected dimensions 1`] = `
+{
+  "height": 224,
+  "width": 256,
+}
+`;
+
+exports[`Monochrome Decoder > using '16x14' raw data scaled by 2 with frameMode 'square_white' > generates expected hash for fullParams 1`] = `"dRrA0mqOG6"`;
+
+exports[`Monochrome Decoder > using '16x14' raw data scaled by 2 with frameMode 'square_white' > generates expected hash for raw image data 1`] = `"vVfl7TJX14"`;
+
+exports[`Monochrome Decoder > using '20x18' raw data scaled by 2 with frameMode 'crop' > generates expected dimensions 1`] = `
+{
+  "height": 224,
+  "width": 256,
+}
+`;
+
+exports[`Monochrome Decoder > using '20x18' raw data scaled by 2 with frameMode 'crop' > generates expected dimensions 2`] = `
+{
+  "height": 224,
+  "width": 256,
+}
+`;
+
+exports[`Monochrome Decoder > using '20x18' raw data scaled by 2 with frameMode 'crop' > generates expected hash for fullParams 1`] = `"gdlV4jrxgH"`;
+
+exports[`Monochrome Decoder > using '20x18' raw data scaled by 2 with frameMode 'crop' > generates expected hash for fullParams 2`] = `"gdlV4jrxgH"`;
+
+exports[`Monochrome Decoder > using '20x18' raw data scaled by 2 with frameMode 'crop' > generates expected hash for raw image data 1`] = `"vVfl7TJX14"`;
+
+exports[`Monochrome Decoder > using '20x18' raw data scaled by 2 with frameMode 'crop' > generates expected hash for raw image data 2`] = `"vVfl7TJX14"`;
+
+exports[`Monochrome Decoder > using '20x18' raw data scaled by 2 with frameMode 'keep' > generates expected dimensions 1`] = `
+{
+  "height": 288,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome Decoder > using '20x18' raw data scaled by 2 with frameMode 'keep' > generates expected dimensions 2`] = `
+{
+  "height": 288,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome Decoder > using '20x18' raw data scaled by 2 with frameMode 'keep' > generates expected hash for fullParams 1`] = `"RT7adivd4L"`;
+
+exports[`Monochrome Decoder > using '20x18' raw data scaled by 2 with frameMode 'keep' > generates expected hash for fullParams 2`] = `"RT7adivd4L"`;
+
+exports[`Monochrome Decoder > using '20x18' raw data scaled by 2 with frameMode 'keep' > generates expected hash for raw image data 1`] = `"dobrrcznjp"`;
+
+exports[`Monochrome Decoder > using '20x18' raw data scaled by 2 with frameMode 'keep' > generates expected hash for raw image data 2`] = `"dobrrcznjp"`;
+
+exports[`Monochrome Decoder > using '20x18' raw data scaled by 2 with frameMode 'square_black' > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome Decoder > using '20x18' raw data scaled by 2 with frameMode 'square_black' > generates expected dimensions 2`] = `
+{
+  "height": 320,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome Decoder > using '20x18' raw data scaled by 2 with frameMode 'square_black' > generates expected hash for fullParams 1`] = `"OjT6Qozyv7"`;
+
+exports[`Monochrome Decoder > using '20x18' raw data scaled by 2 with frameMode 'square_black' > generates expected hash for fullParams 2`] = `"OjT6Qozyv7"`;
+
+exports[`Monochrome Decoder > using '20x18' raw data scaled by 2 with frameMode 'square_black' > generates expected hash for raw image data 1`] = `"i3KxHIG14t"`;
+
+exports[`Monochrome Decoder > using '20x18' raw data scaled by 2 with frameMode 'square_black' > generates expected hash for raw image data 2`] = `"i3KxHIG14t"`;
+
+exports[`Monochrome Decoder > using '20x18' raw data scaled by 2 with frameMode 'square_white' > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome Decoder > using '20x18' raw data scaled by 2 with frameMode 'square_white' > generates expected dimensions 2`] = `
+{
+  "height": 320,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome Decoder > using '20x18' raw data scaled by 2 with frameMode 'square_white' > generates expected hash for fullParams 1`] = `"5gmp4NXLC2"`;
+
+exports[`Monochrome Decoder > using '20x18' raw data scaled by 2 with frameMode 'square_white' > generates expected hash for fullParams 2`] = `"5gmp4NXLC2"`;
+
+exports[`Monochrome Decoder > using '20x18' raw data scaled by 2 with frameMode 'square_white' > generates expected hash for raw image data 1`] = `"UJzaE6M2OG"`;
+
+exports[`Monochrome Decoder > using '20x18' raw data scaled by 2 with frameMode 'square_white' > generates expected hash for raw image data 2`] = `"UJzaE6M2OG"`;
+
+exports[`Monochrome Decoder > using '20x18_1' raw data scaled by 2 with frameMode 'crop' > generates expected dimensions 1`] = `
+{
+  "height": 224,
+  "width": 256,
+}
+`;
+
+exports[`Monochrome Decoder > using '20x18_1' raw data scaled by 2 with frameMode 'crop' > generates expected hash for fullParams 1`] = `"hkk5nCxxe1"`;
+
+exports[`Monochrome Decoder > using '20x18_1' raw data scaled by 2 with frameMode 'crop' > generates expected hash for raw image data 1`] = `"vVfl7TJX14"`;
+
+exports[`Monochrome Decoder > using '20x18_1' raw data scaled by 2 with frameMode 'keep' > generates expected dimensions 1`] = `
+{
+  "height": 288,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome Decoder > using '20x18_1' raw data scaled by 2 with frameMode 'keep' > generates expected hash for fullParams 1`] = `"CoY9A519lO"`;
+
+exports[`Monochrome Decoder > using '20x18_1' raw data scaled by 2 with frameMode 'keep' > generates expected hash for raw image data 1`] = `"PotL6pdlaS"`;
+
+exports[`Monochrome Decoder > using '20x18_1' raw data scaled by 2 with frameMode 'square_black' > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome Decoder > using '20x18_1' raw data scaled by 2 with frameMode 'square_black' > generates expected hash for fullParams 1`] = `"R7WMWC2lZt"`;
+
+exports[`Monochrome Decoder > using '20x18_1' raw data scaled by 2 with frameMode 'square_black' > generates expected hash for raw image data 1`] = `"dVXXCHqej0"`;
+
+exports[`Monochrome Decoder > using '20x18_1' raw data scaled by 2 with frameMode 'square_white' > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome Decoder > using '20x18_1' raw data scaled by 2 with frameMode 'square_white' > generates expected hash for fullParams 1`] = `"DSdsGxAnVF"`;
+
+exports[`Monochrome Decoder > using '20x18_1' raw data scaled by 2 with frameMode 'square_white' > generates expected hash for raw image data 1`] = `"qpDGmjQS58"`;
+
+exports[`Monochrome Decoder > using '20x86' raw data scaled by 2 with frameMode 'crop' > generates expected dimensions 1`] = `
+{
+  "height": 224,
+  "width": 256,
+}
+`;
+
+exports[`Monochrome Decoder > using '20x86' raw data scaled by 2 with frameMode 'crop' > generates expected hash for fullParams 1`] = `"nktZRWHN3C"`;
+
+exports[`Monochrome Decoder > using '20x86' raw data scaled by 2 with frameMode 'crop' > generates expected hash for raw image data 1`] = `"vVfl7TJX14"`;
+
+exports[`Monochrome Decoder > using '20x86' raw data scaled by 2 with frameMode 'keep' > generates expected dimensions 1`] = `
+{
+  "height": 688,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome Decoder > using '20x86' raw data scaled by 2 with frameMode 'keep' > generates expected hash for fullParams 1`] = `"ibz8vtUlhv"`;
+
+exports[`Monochrome Decoder > using '20x86' raw data scaled by 2 with frameMode 'keep' > generates expected hash for raw image data 1`] = `"XICBvx6tL5"`;
+
+exports[`Monochrome Decoder > using '20x86' raw data scaled by 2 with frameMode 'square_black' > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome Decoder > using '20x86' raw data scaled by 2 with frameMode 'square_black' > generates expected hash for fullParams 1`] = `"sZSvrS7yVa"`;
+
+exports[`Monochrome Decoder > using '20x86' raw data scaled by 2 with frameMode 'square_black' > generates expected hash for raw image data 1`] = `"p8bNTOi7Q0"`;
+
+exports[`Monochrome Decoder > using '20x86' raw data scaled by 2 with frameMode 'square_white' > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome Decoder > using '20x86' raw data scaled by 2 with frameMode 'square_white' > generates expected hash for fullParams 1`] = `"BpJ88Fn9Ui"`;
+
+exports[`Monochrome Decoder > using '20x86' raw data scaled by 2 with frameMode 'square_white' > generates expected hash for raw image data 1`] = `"p8bNTOi7Q0"`;

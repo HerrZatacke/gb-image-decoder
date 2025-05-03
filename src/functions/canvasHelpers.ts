@@ -1,4 +1,4 @@
-import type { CanvasCreator, ImageDataCreator } from '../Types';
+import { CanvasCreator, ImageDataCreator } from '../Types';
 
 export const createCanvasElement: CanvasCreator = (): HTMLCanvasElement => {
   try {

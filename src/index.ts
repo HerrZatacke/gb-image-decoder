@@ -1,5 +1,5 @@
 
-export { Decoder } from './Decoder';
+export { getImageUrl, getRawImageData } from './monochrome';
 export { RGBNDecoder } from './RGBNDecoder';
 export { decodeTile } from './functions/decodeTile';
 export { getRGBValue } from './functions/getRGBValue';
@@ -13,16 +13,14 @@ export type {
   CanvasCreator,
   ImageDataCreator,
   BWPalette,
-  ChangedTile,
   Channel,
   Channels,
   IndexedTilePixels,
   RGBNPalette,
   RGBNTiles,
   RGBValue,
-  ScaledCanvasSize,
   SourceCanvases,
-  DecoderOptions,
-  DecoderUpdateParams,
+  Creators,
+  ImageCreationParams,
   RGBNDecoderUpdateParams,
 } from './Types';

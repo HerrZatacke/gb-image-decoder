@@ -15,13 +15,7 @@ export const TILES_PER_LINE = 20;
 
 export const TILES_PER_COLUMN = 18;
 
-export const FRAME_SIZE = 2;
-
-export const FRAME_TILES = FRAME_SIZE * 2;
-
-export const DEFAULT_FULL_PIXEL_HEIGHT = TILES_PER_COLUMN * TILE_PIXEL_HEIGHT;
-
-export const DEFAULT_FULL_PIXEL_WIDTH = TILES_PER_LINE * TILE_PIXEL_WIDTH;
+export const FRAME_WIDTH = 2;
 
 export const BW_PALETTE: number[] = [0xffffff, 0xaaaaaa, 0x555555, 0x000000];
 

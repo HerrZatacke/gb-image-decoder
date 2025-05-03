@@ -1,5 +1,5 @@
 import { BlendMode } from './constants/blendModes';
-import { ChannelKey } from './constants/enums';
+import { ChannelKey, ExportFrameMode } from './constants/enums';
 
 export interface Channel<DecoderType> {
   key: ChannelKey,
@@ -24,15 +24,9 @@ export type CanvasCreator = () => HTMLCanvasElement;
 
 export type ImageDataCreator = (rawImageData: Uint8ClampedArray, width: number, height: number) => ImageData;
 
-export interface ChangedTile {
-  index: number,
-  newTile: string,
-}
-
-export interface ScaledCanvasSize {
-  initialHeight: number,
-  initialWidth: number,
-  tilesPerLine: number,
+export interface Creators {
+  canvasCreator?: CanvasCreator,
+  imageDataCreator?: ImageDataCreator,
 }
 
 /*
@@ -65,18 +59,41 @@ export type IndexedTilePixels = number[];
   blend?: BlendMode,
 }
 
-export interface DecoderOptions {
-  tilesPerLine?: number,
-  canvasCreator?: CanvasCreator
-  imageDataCreator?: ImageDataCreator
-}
-
-export interface DecoderUpdateParams {
-  canvas: HTMLCanvasElement | null,
+export interface ImageCreationParams {
   tiles: string[],
-  palette: string[],
+  imagePalette: string[],
   framePalette: string[],
   imageStartLine?: number,
+  tilesPerLine?: number,
+  scaleFactor?: number,
+  handleExportFrame?: ExportFrameMode,
+}
+
+export type FullImageCreationParams = Required<ImageCreationParams>;
+
+export interface PixelDimensions {
+  width: number,
+  height: number,
+}
+
+export interface ImageContext {
+  tilesPerLine: number,
+  imageStartLine: number,
+  imagePalette: BWPalette,
+  framePalette: BWPalette,
+  handleExportFrame: ExportFrameMode,
+  // Don't include width/height. These may change during image generation
+}
+
+export interface CropResult {
+  tiles: string[],
+  dimensions: PixelDimensions,
+  contextUpdates: Partial<ImageContext>
+}
+
+export interface RawOutput {
+  data: Uint8ClampedArray,
+  dimensions: PixelDimensions
 }
 
 export interface RGBNDecoderUpdateParams {

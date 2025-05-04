@@ -7,7 +7,7 @@ exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with fra
 }
 `;
 
-exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'crop' > generates expected hash for fullParams 1`] = `"V7OE2XtPvm"`;
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'crop' > generates expected hash for fullParams 1`] = `"XBaXZGeDgd"`;
 
 exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'crop' > generates expected hash for raw image data 1`] = `"jwkXkBq86d"`;
 
@@ -18,7 +18,7 @@ exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with fra
 }
 `;
 
-exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'keep' > generates expected hash for fullParams 1`] = `"WdWBpk6qCh"`;
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'keep' > generates expected hash for fullParams 1`] = `"JAWnl69cG0"`;
 
 exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'keep' > generates expected hash for raw image data 1`] = `"jwkXkBq86d"`;
 
@@ -29,7 +29,7 @@ exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with fra
 }
 `;
 
-exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_black' > generates expected hash for fullParams 1`] = `"ilTUpUmtMx"`;
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_black' > generates expected hash for fullParams 1`] = `"7gvFmxFMQC"`;
 
 exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_black' > generates expected hash for raw image data 1`] = `"jwkXkBq86d"`;
 
@@ -40,7 +40,7 @@ exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with fra
 }
 `;
 
-exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_white' > generates expected hash for fullParams 1`] = `"VHlNQWRoKf"`;
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_white' > generates expected hash for fullParams 1`] = `"5Sw8LOvIXA"`;
 
 exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_white' > generates expected hash for raw image data 1`] = `"jwkXkBq86d"`;
 

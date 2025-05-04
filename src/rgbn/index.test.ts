@@ -12,7 +12,7 @@ const canvasCreator: CanvasCreator = () => (createCanvas(0, 0) as unknown as HTM
 
 describe('RGBN image generation', () => {
   describe('using 16x14 raw data', async () => {
-    const decoderUpdateParams: FullRGBNImageCreationParams = {
+    const fullParams: FullRGBNImageCreationParams = {
       palette: rgbnDefault,
       lockFrame: false,
       tiles: tiles16x14,
@@ -25,7 +25,7 @@ describe('RGBN image generation', () => {
     const {
       data: rawData,
       dimensions,
-    } = getRawRGBNImageData(decoderUpdateParams, canvasCreator);
+    } = getRawRGBNImageData(fullParams, canvasCreator);
 
     test('generates expected dimensions', () => {
       expect(dimensions).toMatchSnapshot();
@@ -63,7 +63,7 @@ describe('RGBN image generation', () => {
 
     describe.each([{ lockFrame: true }, { lockFrame: false }])('with lockFrame: $lockFrame', async ({ lockFrame }) => {
 
-      const decoderUpdateParams: FullRGBNImageCreationParams = {
+      const fullParams: FullRGBNImageCreationParams = {
         palette: {
           ...rgbnSoft,
           blend: blendMode,
@@ -79,7 +79,7 @@ describe('RGBN image generation', () => {
       const {
         data: rawData,
         dimensions,
-      } = getRawRGBNImageData(decoderUpdateParams, canvasCreator);
+      } = getRawRGBNImageData(fullParams, canvasCreator);
 
       test('generates expected dimensions', () => {
         expect(dimensions).toMatchSnapshot();

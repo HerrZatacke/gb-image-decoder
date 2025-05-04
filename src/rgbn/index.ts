@@ -1,16 +1,31 @@
+import { objectHash } from 'ohash';
 import {
   BWPalette,
   CanvasCreator,
+  Creators,
   FullRGBNImageCreationParams,
+  RGBNImageCreationParams,
   PixelDimensions,
   RawOutput,
   SourceCanvases,
 } from '../Types';
-import { ChannelKey, channels } from '../constants/enums';
+import { ChannelKey, channels, ExportFrameMode } from '../constants/enums';
 import { getRawMonochromeImageData } from '../monochrome';
-import { RGBN_SHADES } from '../constants/base';
+import { FRAME_WIDTH, RGBN_SHADES, TILES_PER_LINE } from '../constants/base';
 import { BlendMode, blendModeNewName } from '../constants/blendModes';
 import { createCanvasElement } from '../functions/canvasHelpers';
+import { UrlCache } from '../UrlCache';
+import { dataUrlFromRawOutput } from '../functions/dataUrlFromRawOutput';
+
+const getFullParams = (params: RGBNImageCreationParams): FullRGBNImageCreationParams => ({
+  tiles: params.tiles,
+  palette: params.palette,
+  lockFrame: params.lockFrame || false,
+  imageStartLine: typeof params.imageStartLine === 'number' ? params.imageStartLine : FRAME_WIDTH,
+  tilesPerLine: params.tilesPerLine || TILES_PER_LINE,
+  scaleFactor: params.scaleFactor || 1,
+  handleExportFrame: params.handleExportFrame || ExportFrameMode.FRAMEMODE_KEEP,
+});
 
 const singleChannelPalette = (palette: number[], channelKey: ChannelKey): BWPalette => {
   switch (channelKey) {
@@ -106,14 +121,6 @@ export const getRawRGBNImageData = (
     scaleFactor,
   } = params;
 
-  // const imageContext: RGBNImageContext = {
-  //   tilesPerLine,
-  //   imageStartLine,
-  //   handleExportFrame,
-  //   palette,
-  //   lockFrame,
-  // };
-
   const canvases: SourceCanvases = Object.entries(tiles)
     .reduce((acc, [key, channelTiles]): SourceCanvases => {
       const channelKey = key as ChannelKey;
@@ -149,4 +156,23 @@ export const getRawRGBNImageData = (
     }, {});
 
   return blendCanvases(canvases, palette.blend || BlendMode.NORMAL, canvasCreator);
+};
+
+export const getRGBNImageUrl = async (
+  params: RGBNImageCreationParams,
+  creators?: Creators,
+): Promise<string> => {
+  const urlCache = new UrlCache();
+
+  const fullParams = getFullParams(params);
+  const hash = objectHash(fullParams);
+
+  const cachedUrl = await urlCache.getUrl(hash);
+  if (cachedUrl) {
+    return cachedUrl;
+  }
+
+  const rawOutput = getRawRGBNImageData(fullParams);
+
+  return dataUrlFromRawOutput(rawOutput, fullParams.scaleFactor, hash, creators);
 };

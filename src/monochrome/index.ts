@@ -22,6 +22,7 @@ import { getRGBValue } from '../functions/getRGBValue';
 import { tileIndexIsPartOfFrame } from '../functions/tileIndexIsPartOfFrame';
 import { createCanvasElement, createImageData } from '../functions/canvasHelpers';
 import { UrlCache } from '../UrlCache';
+import { dataUrlFromRawOutput } from '../functions/dataUrlFromRawOutput';
 
 const padLines: Record<string, string[]> = {
   [ExportFrameMode.FRAMEMODE_SQUARE_BLACK]: BLACK_LINE,
@@ -194,28 +195,11 @@ const renderTile = (
   }
 };
 
-const toObjectUrl = async (canvas: HTMLCanvasElement): Promise<string> => (
-  new Promise((resolve, reject) => {
-    canvas.toBlob((blob) => {
-      if (!blob) {
-        reject(new Error('Could not generate Blob from canvas'));
-        return;
-      }
-
-      try {
-        resolve(URL.createObjectURL(blob));
-      } catch (error) {
-        reject(error);
-      }
-    });
-  })
-);
-
-export const getFullParams = (params: MonochromeImageCreationParams): FullMonochromeImageCreationParams => ({
+const getFullParams = (params: MonochromeImageCreationParams): FullMonochromeImageCreationParams => ({
   tiles: params.tiles,
   imagePalette: params.imagePalette,
   framePalette: params.framePalette,
-  imageStartLine: params.imageStartLine || FRAME_WIDTH,
+  imageStartLine: typeof params.imageStartLine === 'number' ? params.imageStartLine : FRAME_WIDTH,
   tilesPerLine: params.tilesPerLine || TILES_PER_LINE,
   scaleFactor: params.scaleFactor || 1,
   handleExportFrame: params.handleExportFrame || ExportFrameMode.FRAMEMODE_KEEP,
@@ -302,7 +286,7 @@ export const getRawMonochromeImageData = (params: FullMonochromeImageCreationPar
   return scaleRawImageData(rawImageData, width, height, scaleFactor);
 };
 
-export const getImageUrl = async (
+export const getMonochromeImageUrl = async (
   params: MonochromeImageCreationParams,
   creators?: Creators,
 ): Promise<string> => {
@@ -316,27 +300,7 @@ export const getImageUrl = async (
     return cachedUrl;
   }
 
-  const { scaleFactor } = fullParams;
+  const rawOutput = getRawMonochromeImageData(fullParams);
 
-  const {
-    data: rawImageData,
-    dimensions: {
-      width,
-      height,
-    },
-  } = getRawMonochromeImageData(fullParams);
-
-  const canvasCreator = creators?.canvasCreator || createCanvasElement;
-  const imageDataCreator = creators?.imageDataCreator || createImageData;
-
-  const canvas = canvasCreator();
-  canvas.width = width * scaleFactor;
-  canvas.height = height * scaleFactor;
-  const context = canvas.getContext('2d') as CanvasRenderingContext2D;
-  const imageData = imageDataCreator(rawImageData, canvas.width, canvas.height);
-  context?.putImageData(imageData, 0, 0);
-
-  const dataUrl = await toObjectUrl(canvas);
-  urlCache.setUrl(hash, dataUrl);
-  return dataUrl;
+  return dataUrlFromRawOutput(rawOutput, fullParams.scaleFactor, hash, creators);
 };

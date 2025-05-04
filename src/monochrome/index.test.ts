@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 import { hash } from 'ohash';
-import { getFullParams, getRawMonochromeImageData } from '.';
-import { MonochromeImageCreationParams, ExportFrameMode } from '..';
+import { getRawMonochromeImageData } from '.';
+import { FullMonochromeImageCreationParams, ExportFrameMode } from '..';
 import tiles1x1 from '../../test/data/tiles/monochrome/1x1';
 import tiles16x14 from '../../test/data/tiles/monochrome/16x14';
 import tiles20x18 from '../../test/data/tiles/monochrome/20x18';
@@ -63,7 +63,7 @@ const options: TestOption[] = [
 
 describe('Monochrome image generation', () => {
   describe.each(options)('using $tileKey raw data scaled by $scaleFactor with frameMode $handleExportFrame', async ({ tileKey, tilesPerLine, imageStartLine, scaleFactor, handleExportFrame }) => {
-    const decoderUpdateParams: MonochromeImageCreationParams = {
+    const fullParams: FullMonochromeImageCreationParams = {
       framePalette: red,
       imagePalette: bw,
       tiles: tileSets[tileKey],
@@ -73,7 +73,6 @@ describe('Monochrome image generation', () => {
       handleExportFrame,
     };
 
-    const fullParams = getFullParams(decoderUpdateParams);
     const {
       data: rawData,
       dimensions,

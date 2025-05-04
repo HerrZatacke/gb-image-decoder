@@ -98,11 +98,6 @@ export interface MonochromeImageContext extends BaseImageContext{
   framePalette: BWPalette,
 }
 
-export interface RGBNImageContext extends BaseImageContext{
-  palette: RGBNPalette,
-  lockFrame: boolean,
-}
-
 export interface CropResult<ContextType> {
   tiles: string[],
   dimensions: PixelDimensions,

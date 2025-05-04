@@ -1,7 +1,7 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test, vi } from 'vitest';
 import { hash } from 'ohash';
 import { getMonochromeImageUrl, getRawMonochromeImageData } from '.';
-import { FullMonochromeImageCreationParams, ExportFrameMode } from '..';
+import { FullMonochromeImageCreationParams, ExportFrameMode, CanvasCreator } from '..';
 import tiles1x1 from '../../test/data/tiles/monochrome/1x1';
 import tiles16x14 from '../../test/data/tiles/monochrome/16x14';
 import tiles20x18 from '../../test/data/tiles/monochrome/20x18';
@@ -9,8 +9,6 @@ import tiles20x18l1 from '../../test/data/tiles/monochrome/20x18_1';
 import tiles20x86 from '../../test/data/tiles/monochrome/20x86';
 import { bw, red } from '../../test/data/palettes';
 import { writeImageFileFromImageData } from '../../test/helpers/writeImageFileFromImageData';
-import { createImageData } from '../functions/canvasHelpers';
-import { canvasCreator } from '../../test/helpers/canvasCreator';
 
 const tileSets: Record<string, string[]> = {
   '1x1': tiles1x1,
@@ -102,16 +100,28 @@ describe('Monochrome image generation', () => {
     });
   });
 
-  test('generate and return a URL', async () => {
+  test('getMonochromeImageUrl', async () => {
+    const toBlob = vi.fn((cb: (n: any) => void) => {
+      cb({});
+    });
+    const putImageData = vi.fn(() => {});
+
+    const mockCanvasCreator = vi.fn(() => ({
+      getContext: () => ({
+        putImageData,
+      }),
+      toBlob,
+    }));
+
     const generatedUrl = await getMonochromeImageUrl({
       framePalette: red,
       imagePalette: bw,
-      tiles: tiles1x1,
-    }, {
-      canvasCreator,
-      imageDataCreator: createImageData,
-    });
+      tiles: tiles16x14,
+      tilesPerLine: 16,
+    }, mockCanvasCreator as unknown as CanvasCreator);
 
-    expect(generatedUrl).toMatchSnapshot();
+    expect(generatedUrl).toBe('blob:fake:blob');
+    expect(putImageData).toHaveBeenCalledTimes(1);
+    expect(toBlob).toHaveBeenCalledTimes(1);
   });
 });

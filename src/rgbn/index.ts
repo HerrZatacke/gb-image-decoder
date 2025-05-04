@@ -2,7 +2,6 @@ import { objectHash } from 'ohash';
 import {
   BWPalette,
   CanvasCreator,
-  Creators,
   FullRGBNImageCreationParams,
   RGBNImageCreationParams,
   PixelDimensions,
@@ -160,7 +159,7 @@ export const getRawRGBNImageData = (
 
 export const getRGBNImageUrl = async (
   params: RGBNImageCreationParams,
-  creators?: Creators,
+  canvasCreator = createCanvasElement,
 ): Promise<string> => {
   const urlCache = new UrlCache();
 
@@ -172,7 +171,7 @@ export const getRGBNImageUrl = async (
     return cachedUrl;
   }
 
-  const rawOutput = getRawRGBNImageData(fullParams, creators?.canvasCreator || createCanvasElement);
+  const rawOutput = getRawRGBNImageData(fullParams, canvasCreator);
 
-  return dataUrlFromRawOutput(rawOutput, fullParams.scaleFactor, hash, creators);
+  return dataUrlFromRawOutput(rawOutput, fullParams.scaleFactor, hash, canvasCreator);
 };

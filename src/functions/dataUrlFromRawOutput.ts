@@ -1,6 +1,6 @@
 import { UrlCache } from '../UrlCache';
-import { Creators, RawOutput } from '../Types';
-import { createCanvasElement, createImageData } from './canvasHelpers';
+import { CanvasCreator, RawOutput } from '../Types';
+import { createCanvasElement } from './canvasHelpers';
 
 const toObjectUrl = async (canvas: HTMLCanvasElement): Promise<string> => (
   new Promise((resolve, reject) => {
@@ -26,19 +26,16 @@ export const dataUrlFromRawOutput = async (
   }: RawOutput,
   scaleFactor: number,
   hash: string,
-  creators?: Creators,
+  canvasCreator: CanvasCreator,
 ): Promise<string> => {
   const urlCache = new UrlCache();
 
   urlCache.setUrl(hash, new Promise((resolve) => {
-    const canvasCreator = creators?.canvasCreator || createCanvasElement;
-    const imageDataCreator = creators?.imageDataCreator || createImageData;
-
     const canvas = canvasCreator();
     canvas.width = width * scaleFactor;
     canvas.height = height * scaleFactor;
     const context = canvas.getContext('2d') as CanvasRenderingContext2D;
-    const imageData = imageDataCreator(data, canvas.width, canvas.height);
+    const imageData = new ImageData(data, canvas.width, canvas.height);
     context?.putImageData(imageData, 0, 0);
 
     resolve(toObjectUrl(canvas));

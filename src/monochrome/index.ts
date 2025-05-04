@@ -1,11 +1,13 @@
 import { objectHash } from 'ohash';
 import {
-  BWPalette, Creators, CropResult,
+  BWPalette,
+  CropResult,
   FullMonochromeImageCreationParams,
   MonochromeImageContext,
   MonochromeImageCreationParams,
   IndexedTilePixels,
-  PixelDimensions, RawOutput,
+  PixelDimensions,
+  RawOutput,
 } from '../Types';
 import {
   BLACK_LINE,
@@ -22,6 +24,7 @@ import { getRGBValue } from '../functions/getRGBValue';
 import { tileIndexIsPartOfFrame } from '../functions/tileIndexIsPartOfFrame';
 import { UrlCache } from '../UrlCache';
 import { dataUrlFromRawOutput } from '../functions/dataUrlFromRawOutput';
+import { createCanvasElement } from '../functions/canvasHelpers';
 
 const padLines: Record<string, string[]> = {
   [ExportFrameMode.FRAMEMODE_SQUARE_BLACK]: BLACK_LINE,
@@ -197,7 +200,7 @@ const renderTile = (
 const getFullParams = (params: MonochromeImageCreationParams): FullMonochromeImageCreationParams => ({
   tiles: params.tiles,
   imagePalette: params.imagePalette,
-  framePalette: params.framePalette,
+  framePalette: params.framePalette || params.imagePalette,
   imageStartLine: typeof params.imageStartLine === 'number' ? params.imageStartLine : FRAME_WIDTH,
   tilesPerLine: params.tilesPerLine || TILES_PER_LINE,
   scaleFactor: params.scaleFactor || 1,
@@ -287,7 +290,7 @@ export const getRawMonochromeImageData = (params: FullMonochromeImageCreationPar
 
 export const getMonochromeImageUrl = async (
   params: MonochromeImageCreationParams,
-  creators?: Creators,
+  canvasCreator = createCanvasElement,
 ): Promise<string> => {
   const urlCache = new UrlCache();
 
@@ -301,5 +304,5 @@ export const getMonochromeImageUrl = async (
 
   const rawOutput = getRawMonochromeImageData(fullParams);
 
-  return dataUrlFromRawOutput(rawOutput, fullParams.scaleFactor, hash, creators);
+  return dataUrlFromRawOutput(rawOutput, fullParams.scaleFactor, hash, canvasCreator);
 };

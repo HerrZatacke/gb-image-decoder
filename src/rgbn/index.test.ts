@@ -1,12 +1,11 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test, vi } from 'vitest';
 import { hash } from 'ohash';
 import { getRawRGBNImageData } from '.';
-import { BlendMode, ExportFrameMode, FullRGBNImageCreationParams, getRGBNImageUrl } from '..';
+import { BlendMode, CanvasCreator, ExportFrameMode, FullRGBNImageCreationParams, getRGBNImageUrl } from '..';
 import tiles16x14 from '../../test/data/tiles/rgbn/16x14';
 import tiles20x18 from '../../test/data/tiles/rgbn/20x18';
 import { rgbnSoft, rgbnDefault } from '../../test/data/palettes';
 import { writeImageFileFromImageData } from '../../test/helpers/writeImageFileFromImageData';
-import { createImageData } from '../functions/canvasHelpers';
 import { canvasCreator } from '../../test/helpers/canvasCreator';
 
 describe('RGBN image generation', () => {
@@ -98,15 +97,34 @@ describe('RGBN image generation', () => {
     });
   });
 
-  test('generate and return a URL', async () => {
+  test('getRGBNImageUrl', async () => {
+    const toBlob = vi.fn((cb: (n: any) => void) => {
+      cb({});
+    });
+    const putImageData = vi.fn(() => {});
+    const drawImage = vi.fn(() => {});
+    const getImageData = vi.fn(() => (new ImageData(new Uint8ClampedArray([0]), 1, 1)));
+
+    const mockCanvasCreator = vi.fn(() => ({
+      getContext: () => ({
+        putImageData,
+        drawImage,
+        getImageData,
+      }),
+      toBlob,
+    }));
+
     const generatedUrl = await getRGBNImageUrl({
       palette: rgbnDefault,
       tiles: tiles16x14,
-    }, {
-      canvasCreator,
-      imageDataCreator: createImageData,
-    });
+      tilesPerLine: 16,
+      scaleFactor: 2,
+    }, mockCanvasCreator as unknown as CanvasCreator);
 
-    expect(generatedUrl).toMatchSnapshot();
+    expect(generatedUrl).toBe('blob:fake:blob');
+    expect(getImageData).toHaveBeenCalledTimes(1);
+    expect(putImageData).toHaveBeenCalledTimes(4);
+    expect(drawImage).toHaveBeenCalledTimes(3);
+    expect(toBlob).toHaveBeenCalledTimes(1);
   });
 });

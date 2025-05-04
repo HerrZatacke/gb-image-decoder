@@ -1,13 +1,6 @@
 import { BlendMode } from './constants/blendModes';
 import { ChannelKey, ExportFrameMode } from './constants/enums';
 
-export interface Channel<DecoderType> {
-  key: ChannelKey,
-  tiles?: string[],
-  decoder: DecoderType,
-  canvas: HTMLCanvasElement,
-}
-
 /*
   Each channel should contain 360 tiles for a 160x144 image
   Each channel is optional
@@ -16,18 +9,9 @@ export interface Channel<DecoderType> {
  */
 export type RGBNTiles = Partial<Record<ChannelKey, string[]>>;
 
-export type Channels<DecoderType> = Record<ChannelKey, Channel<DecoderType>>;
-
 export type SourceCanvases = Partial<Record<ChannelKey, HTMLCanvasElement>>;
 
 export type CanvasCreator = () => HTMLCanvasElement;
-
-export type ImageDataCreator = (rawImageData: Uint8ClampedArray, width: number, height: number) => ImageData;
-
-export interface Creators {
-  canvasCreator?: CanvasCreator,
-  imageDataCreator?: ImageDataCreator,
-}
 
 /*
   Basic representation of a color value
@@ -69,7 +53,7 @@ export interface BaseImageCreationParams<TilesType> {
 
 export interface MonochromeImageCreationParams extends BaseImageCreationParams<string[]>{
   imagePalette: BWPalette,
-  framePalette: BWPalette,
+  framePalette?: BWPalette,
 }
 
 export type FullMonochromeImageCreationParams = Required<MonochromeImageCreationParams>;

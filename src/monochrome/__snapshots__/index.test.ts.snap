@@ -1,7 +1,5 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Monochrome image generation > generate and return a URL 1`] = `"blob:nodedata:nz3DzwYJye"`;
-
 exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'crop' > generates expected dimensions 1`] = `
 {
   "height": 16,

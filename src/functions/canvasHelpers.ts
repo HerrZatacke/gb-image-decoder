@@ -1,4 +1,4 @@
-import { CanvasCreator, ImageDataCreator } from '../Types';
+import { CanvasCreator } from '../Types';
 
 export const createCanvasElement: CanvasCreator = (): HTMLCanvasElement => {
   try {
@@ -7,11 +7,3 @@ export const createCanvasElement: CanvasCreator = (): HTMLCanvasElement => {
     throw new Error('cannot create canvas element');
   }
 };
-
-export const createImageData: ImageDataCreator = (
-  rawImageData: Uint8ClampedArray,
-  width: number,
-  height: number,
-): ImageData => (
-  new ImageData(rawImageData, width, height)
-);

@@ -1,7 +1,7 @@
 import fs, { promises as fsp } from 'fs';
 import path from 'path';
 import { createCanvas, createImageData } from 'canvas';
-import { PixelDimensions } from '../../src/Types';
+import { PixelDimensions } from '../../src';
 
 const OUT_DIR = path.join(process.cwd(), 'images');
 

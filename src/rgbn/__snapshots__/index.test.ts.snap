@@ -1,7 +1,5 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`RGBN image generation > generate and return a URL 1`] = `"blob:nodedata:nz3DzwYJye"`;
-
 exports[`RGBN image generation > using 16x14 raw data > generates expected dimensions 1`] = `
 {
   "height": 112,

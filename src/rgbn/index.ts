@@ -13,9 +13,9 @@ import { ChannelKey, channels, ExportFrameMode } from '../constants/enums';
 import { getRawMonochromeImageData } from '../monochrome';
 import { FRAME_WIDTH, RGBN_SHADES, TILES_PER_LINE } from '../constants/base';
 import { BlendMode, blendModeNewName } from '../constants/blendModes';
-import { createCanvasElement } from '../functions/canvasHelpers';
 import { UrlCache } from '../UrlCache';
 import { dataUrlFromRawOutput } from '../functions/dataUrlFromRawOutput';
+import { createCanvasElement } from '../functions/canvasHelpers';
 
 const getFullParams = (params: RGBNImageCreationParams): FullRGBNImageCreationParams => ({
   tiles: params.tiles,
@@ -109,7 +109,7 @@ const blendCanvases = (
 
 export const getRawRGBNImageData = (
   params: FullRGBNImageCreationParams,
-  canvasCreator = createCanvasElement,
+  canvasCreator: CanvasCreator,
 ): RawOutput => {
   const {
     tiles,
@@ -172,7 +172,7 @@ export const getRGBNImageUrl = async (
     return cachedUrl;
   }
 
-  const rawOutput = getRawRGBNImageData(fullParams);
+  const rawOutput = getRawRGBNImageData(fullParams, creators?.canvasCreator || createCanvasElement);
 
   return dataUrlFromRawOutput(rawOutput, fullParams.scaleFactor, hash, creators);
 };

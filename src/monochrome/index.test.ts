@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 import { hash } from 'ohash';
-import { getRawMonochromeImageData } from '.';
+import { getMonochromeImageUrl, getRawMonochromeImageData } from '.';
 import { FullMonochromeImageCreationParams, ExportFrameMode } from '..';
 import tiles1x1 from '../../test/data/tiles/monochrome/1x1';
 import tiles16x14 from '../../test/data/tiles/monochrome/16x14';
@@ -9,6 +9,8 @@ import tiles20x18l1 from '../../test/data/tiles/monochrome/20x18_1';
 import tiles20x86 from '../../test/data/tiles/monochrome/20x86';
 import { bw, red } from '../../test/data/palettes';
 import { writeImageFileFromImageData } from '../../test/helpers/writeImageFileFromImageData';
+import { createImageData } from '../functions/canvasHelpers';
+import { canvasCreator } from '../../test/helpers/canvasCreator';
 
 const tileSets: Record<string, string[]> = {
   '1x1': tiles1x1,
@@ -98,5 +100,18 @@ describe('Monochrome image generation', () => {
         dimensions,
       );
     });
+  });
+
+  test('generate and return a URL', async () => {
+    const generatedUrl = await getMonochromeImageUrl({
+      framePalette: red,
+      imagePalette: bw,
+      tiles: tiles1x1,
+    }, {
+      canvasCreator,
+      imageDataCreator: createImageData,
+    });
+
+    expect(generatedUrl).toMatchSnapshot();
   });
 });

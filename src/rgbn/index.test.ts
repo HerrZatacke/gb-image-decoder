@@ -1,14 +1,13 @@
 import { describe, expect, test } from 'vitest';
 import { hash } from 'ohash';
-import { createCanvas } from 'canvas';
 import { getRawRGBNImageData } from '.';
-import { BlendMode, CanvasCreator, ExportFrameMode, FullRGBNImageCreationParams } from '..';
+import { BlendMode, ExportFrameMode, FullRGBNImageCreationParams, getRGBNImageUrl } from '..';
 import tiles16x14 from '../../test/data/tiles/rgbn/16x14';
 import tiles20x18 from '../../test/data/tiles/rgbn/20x18';
 import { rgbnSoft, rgbnDefault } from '../../test/data/palettes';
 import { writeImageFileFromImageData } from '../../test/helpers/writeImageFileFromImageData';
-
-const canvasCreator: CanvasCreator = () => (createCanvas(0, 0) as unknown as HTMLCanvasElement);
+import { createImageData } from '../functions/canvasHelpers';
+import { canvasCreator } from '../../test/helpers/canvasCreator';
 
 describe('RGBN image generation', () => {
   describe('using 16x14 raw data', async () => {
@@ -97,5 +96,17 @@ describe('RGBN image generation', () => {
         );
       });
     });
+  });
+
+  test('generate and return a URL', async () => {
+    const generatedUrl = await getRGBNImageUrl({
+      palette: rgbnDefault,
+      tiles: tiles16x14,
+    }, {
+      canvasCreator,
+      imageDataCreator: createImageData,
+    });
+
+    expect(generatedUrl).toMatchSnapshot();
   });
 });

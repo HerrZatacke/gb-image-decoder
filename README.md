@@ -36,7 +36,7 @@ const imageSrc = await getMonochromeImageUrl({
 the `RGBNTiles` type contains the four possible channels (`r`, `g`, `b`, `n`)  
 The optional neutral layer will be overlayed on the previously combined rgb image.
 ```typescript
-import { getRGBNImageUrl, ExportFrameMode, RGBNTiles, RGBNPalette, defaultPalette } from 'gb-image-decoder';
+import { getRGBNImageUrl, ExportFrameMode, RGBNTiles, RGBNPalette, defaultRGBNPalette } from 'gb-image-decoder';
 
 const tiles: RGBNTiles = {
   r: ['7D FF 0A FF 7D FF FF FF 5F FF BB FF 5D FF FF FF', '75 FF A2 FF 44 FF FF FF 5D FF FF FF FF FF FF FF', '55 FF 1F FF 57 FF FF FF 7D FF FF FF FF FF FF FF', '77 FF FD FF 57 FF FF FF 75 FF FF FF DF FF FF FF'],
@@ -46,7 +46,7 @@ const tiles: RGBNTiles = {
 };
 
 const imageSrc = await getRGBNImageUrl({
-  palette: defaultPalette,
+  palette: defaultRGBNPalette,
   tiles,
   
   // Optional parameters (with it's defaults):
@@ -84,12 +84,12 @@ const { data, dimensions } = getRawMonochromeImageData(fullParams);
 
 #### RGB(N) images
 ```typescript
-import { getRawRGBNImageData, FullRGBNImageCreationParams, defaultPalette, ExportFrameMode } from 'gb-image-decoder';
+import { getRawRGBNImageData, FullRGBNImageCreationParams, defaultRGBNPalette, ExportFrameMode } from 'gb-image-decoder';
 
 const monoPalette = ['#ffffff', '#aaaaaa', '#555555', '#000000'];
 
 const fullParams: FullRGBNImageCreationParams = {
-  palette: defaultPalette,
+  palette: defaultRGBNPalette,
   tiles, // as in browser example
   imageStartLine: 2,
   tilesPerLine: 20,

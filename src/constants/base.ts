@@ -27,7 +27,7 @@ export const WHITE_LINE: string[] = Array(TILES_PER_LINE).fill(WHITE);
 
 export const RGBN_SHADES = [0, 0x55, 0xaa, 0xff];
 
-export const defaultPalette: RGBNPalette = {
+export const defaultRGBNPalette: RGBNPalette = {
   r: RGBN_SHADES,
   g: RGBN_SHADES,
   b: RGBN_SHADES,

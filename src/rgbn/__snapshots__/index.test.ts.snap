@@ -7,7 +7,7 @@ exports[`RGBN image generation > using 16x14 raw data > generates expected dimen
 }
 `;
 
-exports[`RGBN image generation > using 16x14 raw data > generates expected hash for raw image data 1`] = `"m8OfcUrEDb"`;
+exports[`RGBN image generation > using 16x14 raw data > generates expected hash for raw image data 1`] = `"lRPAnTcp9GgcjczAV-S1b5kn_L8GlmPHR-Wc-0lWjcw"`;
 
 exports[`RGBN image generation > with blendmode: 'addition' > with lockFrame: false > generates expected dimensions 1`] = `
 {
@@ -16,7 +16,7 @@ exports[`RGBN image generation > with blendmode: 'addition' > with lockFrame: fa
 }
 `;
 
-exports[`RGBN image generation > with blendmode: 'addition' > with lockFrame: false > generates expected hash for raw image data 1`] = `"i2JobhyGmn"`;
+exports[`RGBN image generation > with blendmode: 'addition' > with lockFrame: false > generates expected hash for raw image data 1`] = `"WR7V17Yhywwr3S0UY0Vb7duNmVZHcltb6JCsXCkBglU"`;
 
 exports[`RGBN image generation > with blendmode: 'addition' > with lockFrame: true > generates expected dimensions 1`] = `
 {
@@ -25,7 +25,7 @@ exports[`RGBN image generation > with blendmode: 'addition' > with lockFrame: tr
 }
 `;
 
-exports[`RGBN image generation > with blendmode: 'addition' > with lockFrame: true > generates expected hash for raw image data 1`] = `"cxNIfP0qtH"`;
+exports[`RGBN image generation > with blendmode: 'addition' > with lockFrame: true > generates expected hash for raw image data 1`] = `"T_uzjlzuSEDmenURu2kyOlqSj8CLSH4q97KO5Haj-SY"`;
 
 exports[`RGBN image generation > with blendmode: 'burn' > with lockFrame: false > generates expected dimensions 1`] = `
 {
@@ -34,7 +34,7 @@ exports[`RGBN image generation > with blendmode: 'burn' > with lockFrame: false 
 }
 `;
 
-exports[`RGBN image generation > with blendmode: 'burn' > with lockFrame: false > generates expected hash for raw image data 1`] = `"W4fVVQGplC"`;
+exports[`RGBN image generation > with blendmode: 'burn' > with lockFrame: false > generates expected hash for raw image data 1`] = `"STSzi3krjvrtr4Cj5w6avIFMV95kUShKDSxCYbO5nE8"`;
 
 exports[`RGBN image generation > with blendmode: 'burn' > with lockFrame: true > generates expected dimensions 1`] = `
 {
@@ -43,7 +43,7 @@ exports[`RGBN image generation > with blendmode: 'burn' > with lockFrame: true >
 }
 `;
 
-exports[`RGBN image generation > with blendmode: 'burn' > with lockFrame: true > generates expected hash for raw image data 1`] = `"fC6B2JRAEJ"`;
+exports[`RGBN image generation > with blendmode: 'burn' > with lockFrame: true > generates expected hash for raw image data 1`] = `"jUkUAVvM00XrWk34TB09e-n4ATpyMaEdn9sJEUJoMG8"`;
 
 exports[`RGBN image generation > with blendmode: 'darken' > with lockFrame: false > generates expected dimensions 1`] = `
 {
@@ -52,7 +52,7 @@ exports[`RGBN image generation > with blendmode: 'darken' > with lockFrame: fals
 }
 `;
 
-exports[`RGBN image generation > with blendmode: 'darken' > with lockFrame: false > generates expected hash for raw image data 1`] = `"vReH12JJYc"`;
+exports[`RGBN image generation > with blendmode: 'darken' > with lockFrame: false > generates expected hash for raw image data 1`] = `"RkZKcuRnlvMBlhlJRfOBvGzp1gK14nXNNcKWW8-L5mo"`;
 
 exports[`RGBN image generation > with blendmode: 'darken' > with lockFrame: true > generates expected dimensions 1`] = `
 {
@@ -61,7 +61,7 @@ exports[`RGBN image generation > with blendmode: 'darken' > with lockFrame: true
 }
 `;
 
-exports[`RGBN image generation > with blendmode: 'darken' > with lockFrame: true > generates expected hash for raw image data 1`] = `"fBaWAHlXF2"`;
+exports[`RGBN image generation > with blendmode: 'darken' > with lockFrame: true > generates expected hash for raw image data 1`] = `"ZcwxT8b8vzd6_Ju6JZhJ8YZP8KnH2CNXMa7QkLeJW9g"`;
 
 exports[`RGBN image generation > with blendmode: 'difference' > with lockFrame: false > generates expected dimensions 1`] = `
 {
@@ -70,7 +70,7 @@ exports[`RGBN image generation > with blendmode: 'difference' > with lockFrame: 
 }
 `;
 
-exports[`RGBN image generation > with blendmode: 'difference' > with lockFrame: false > generates expected hash for raw image data 1`] = `"Gk9nmZ07eC"`;
+exports[`RGBN image generation > with blendmode: 'difference' > with lockFrame: false > generates expected hash for raw image data 1`] = `"GWayRCBLKMgPcNSAQDeJS4ohR9Ejr-elbtg0LO0wbzQ"`;
 
 exports[`RGBN image generation > with blendmode: 'difference' > with lockFrame: true > generates expected dimensions 1`] = `
 {
@@ -79,7 +79,7 @@ exports[`RGBN image generation > with blendmode: 'difference' > with lockFrame: 
 }
 `;
 
-exports[`RGBN image generation > with blendmode: 'difference' > with lockFrame: true > generates expected hash for raw image data 1`] = `"3TFB9rVaZL"`;
+exports[`RGBN image generation > with blendmode: 'difference' > with lockFrame: true > generates expected hash for raw image data 1`] = `"F5phTVPOlbfmK6kr8wEFKYLg3aUH53gboNPCU5wE8DQ"`;
 
 exports[`RGBN image generation > with blendmode: 'dodge' > with lockFrame: false > generates expected dimensions 1`] = `
 {
@@ -88,7 +88,7 @@ exports[`RGBN image generation > with blendmode: 'dodge' > with lockFrame: false
 }
 `;
 
-exports[`RGBN image generation > with blendmode: 'dodge' > with lockFrame: false > generates expected hash for raw image data 1`] = `"EsGo0r5q28"`;
+exports[`RGBN image generation > with blendmode: 'dodge' > with lockFrame: false > generates expected hash for raw image data 1`] = `"2JLhRViaPNRqjdrYhsm_9xOuVtZtojfGTaH3oe1jRQo"`;
 
 exports[`RGBN image generation > with blendmode: 'dodge' > with lockFrame: true > generates expected dimensions 1`] = `
 {
@@ -97,7 +97,7 @@ exports[`RGBN image generation > with blendmode: 'dodge' > with lockFrame: true 
 }
 `;
 
-exports[`RGBN image generation > with blendmode: 'dodge' > with lockFrame: true > generates expected hash for raw image data 1`] = `"FtyAe6jilF"`;
+exports[`RGBN image generation > with blendmode: 'dodge' > with lockFrame: true > generates expected hash for raw image data 1`] = `"NNv_MPoXLEuWNchRBkzgisVB1BtUHI1j2vELlhshmog"`;
 
 exports[`RGBN image generation > with blendmode: 'exclusion' > with lockFrame: false > generates expected dimensions 1`] = `
 {
@@ -106,7 +106,7 @@ exports[`RGBN image generation > with blendmode: 'exclusion' > with lockFrame: f
 }
 `;
 
-exports[`RGBN image generation > with blendmode: 'exclusion' > with lockFrame: false > generates expected hash for raw image data 1`] = `"Ncrdigmkw4"`;
+exports[`RGBN image generation > with blendmode: 'exclusion' > with lockFrame: false > generates expected hash for raw image data 1`] = `"Kkl78XEGTOATtZsmVWGNXYR4fx6kOO8-sPB_Q8vvjnk"`;
 
 exports[`RGBN image generation > with blendmode: 'exclusion' > with lockFrame: true > generates expected dimensions 1`] = `
 {
@@ -115,7 +115,7 @@ exports[`RGBN image generation > with blendmode: 'exclusion' > with lockFrame: t
 }
 `;
 
-exports[`RGBN image generation > with blendmode: 'exclusion' > with lockFrame: true > generates expected hash for raw image data 1`] = `"Pq68mqo1YH"`;
+exports[`RGBN image generation > with blendmode: 'exclusion' > with lockFrame: true > generates expected hash for raw image data 1`] = `"BdFkrwUWWtS3MsPEAdjOV3Js2f2cCpOg2OR1Slu5hcY"`;
 
 exports[`RGBN image generation > with blendmode: 'hardlight' > with lockFrame: false > generates expected dimensions 1`] = `
 {
@@ -124,7 +124,7 @@ exports[`RGBN image generation > with blendmode: 'hardlight' > with lockFrame: f
 }
 `;
 
-exports[`RGBN image generation > with blendmode: 'hardlight' > with lockFrame: false > generates expected hash for raw image data 1`] = `"EwE2vLOuy1"`;
+exports[`RGBN image generation > with blendmode: 'hardlight' > with lockFrame: false > generates expected hash for raw image data 1`] = `"Vo_TouSW_liWvDK9QndY1yixIwtCuVr04hd-sqMWk38"`;
 
 exports[`RGBN image generation > with blendmode: 'hardlight' > with lockFrame: true > generates expected dimensions 1`] = `
 {
@@ -133,7 +133,7 @@ exports[`RGBN image generation > with blendmode: 'hardlight' > with lockFrame: t
 }
 `;
 
-exports[`RGBN image generation > with blendmode: 'hardlight' > with lockFrame: true > generates expected hash for raw image data 1`] = `"gUKu6TW6gd"`;
+exports[`RGBN image generation > with blendmode: 'hardlight' > with lockFrame: true > generates expected hash for raw image data 1`] = `"PW2z9lThLwLwnZox8qdeBNv6448slyWIvIOhrWmum0s"`;
 
 exports[`RGBN image generation > with blendmode: 'lighten' > with lockFrame: false > generates expected dimensions 1`] = `
 {
@@ -142,7 +142,7 @@ exports[`RGBN image generation > with blendmode: 'lighten' > with lockFrame: fal
 }
 `;
 
-exports[`RGBN image generation > with blendmode: 'lighten' > with lockFrame: false > generates expected hash for raw image data 1`] = `"oBmAOMCkfk"`;
+exports[`RGBN image generation > with blendmode: 'lighten' > with lockFrame: false > generates expected hash for raw image data 1`] = `"RhXuVENQNuW3Z6kgW5NVn76MhZ7HzNzqDiVBkjM4J-U"`;
 
 exports[`RGBN image generation > with blendmode: 'lighten' > with lockFrame: true > generates expected dimensions 1`] = `
 {
@@ -151,7 +151,7 @@ exports[`RGBN image generation > with blendmode: 'lighten' > with lockFrame: tru
 }
 `;
 
-exports[`RGBN image generation > with blendmode: 'lighten' > with lockFrame: true > generates expected hash for raw image data 1`] = `"XNpPdFYIEa"`;
+exports[`RGBN image generation > with blendmode: 'lighten' > with lockFrame: true > generates expected hash for raw image data 1`] = `"qvhkfpWW9pgWuPdWXGB-ROCUHjBZmPA9CK4kzTsUCe0"`;
 
 exports[`RGBN image generation > with blendmode: 'multiply' > with lockFrame: false > generates expected dimensions 1`] = `
 {
@@ -160,7 +160,7 @@ exports[`RGBN image generation > with blendmode: 'multiply' > with lockFrame: fa
 }
 `;
 
-exports[`RGBN image generation > with blendmode: 'multiply' > with lockFrame: false > generates expected hash for raw image data 1`] = `"kTq9nP99Yh"`;
+exports[`RGBN image generation > with blendmode: 'multiply' > with lockFrame: false > generates expected hash for raw image data 1`] = `"57XbUtmbZcfKRgA8dCNor-cvRB1vtxrulauBnhDy5B8"`;
 
 exports[`RGBN image generation > with blendmode: 'multiply' > with lockFrame: true > generates expected dimensions 1`] = `
 {
@@ -169,7 +169,7 @@ exports[`RGBN image generation > with blendmode: 'multiply' > with lockFrame: tr
 }
 `;
 
-exports[`RGBN image generation > with blendmode: 'multiply' > with lockFrame: true > generates expected hash for raw image data 1`] = `"XMwdVyd7bl"`;
+exports[`RGBN image generation > with blendmode: 'multiply' > with lockFrame: true > generates expected hash for raw image data 1`] = `"fwLtegSCtGBAawPsjx344bg8QHZa90QBJYdr8S_n6Ok"`;
 
 exports[`RGBN image generation > with blendmode: 'normal' > with lockFrame: false > generates expected dimensions 1`] = `
 {
@@ -178,7 +178,7 @@ exports[`RGBN image generation > with blendmode: 'normal' > with lockFrame: fals
 }
 `;
 
-exports[`RGBN image generation > with blendmode: 'normal' > with lockFrame: false > generates expected hash for raw image data 1`] = `"zqYbdqqMe5"`;
+exports[`RGBN image generation > with blendmode: 'normal' > with lockFrame: false > generates expected hash for raw image data 1`] = `"Ywmcvo9VzkvbM3ThuNpe6Ij9Y2u9rJWsVXF1cqQtDy0"`;
 
 exports[`RGBN image generation > with blendmode: 'normal' > with lockFrame: true > generates expected dimensions 1`] = `
 {
@@ -187,7 +187,7 @@ exports[`RGBN image generation > with blendmode: 'normal' > with lockFrame: true
 }
 `;
 
-exports[`RGBN image generation > with blendmode: 'normal' > with lockFrame: true > generates expected hash for raw image data 1`] = `"bAzsoNCOh7"`;
+exports[`RGBN image generation > with blendmode: 'normal' > with lockFrame: true > generates expected hash for raw image data 1`] = `"N89wwmI7ub1RQDAnKl5gHSCu8a8IRtoouN5IkuNfgVI"`;
 
 exports[`RGBN image generation > with blendmode: 'normal_s' > with lockFrame: false > generates expected dimensions 1`] = `
 {
@@ -196,7 +196,7 @@ exports[`RGBN image generation > with blendmode: 'normal_s' > with lockFrame: fa
 }
 `;
 
-exports[`RGBN image generation > with blendmode: 'normal_s' > with lockFrame: false > generates expected hash for raw image data 1`] = `"gLGGbqG1f9"`;
+exports[`RGBN image generation > with blendmode: 'normal_s' > with lockFrame: false > generates expected hash for raw image data 1`] = `"YyQJI00ctSeeeYOQVCcgJzDu2RBu-CJdJ0uVg_BXJXo"`;
 
 exports[`RGBN image generation > with blendmode: 'normal_s' > with lockFrame: true > generates expected dimensions 1`] = `
 {
@@ -205,7 +205,7 @@ exports[`RGBN image generation > with blendmode: 'normal_s' > with lockFrame: tr
 }
 `;
 
-exports[`RGBN image generation > with blendmode: 'normal_s' > with lockFrame: true > generates expected hash for raw image data 1`] = `"ebaGqQLbdO"`;
+exports[`RGBN image generation > with blendmode: 'normal_s' > with lockFrame: true > generates expected hash for raw image data 1`] = `"oWe1KcZqG4W-uRA_yYZYxhdA7pgFWgXwOwdTdwyj_Sk"`;
 
 exports[`RGBN image generation > with blendmode: 'overlay' > with lockFrame: false > generates expected dimensions 1`] = `
 {
@@ -214,7 +214,7 @@ exports[`RGBN image generation > with blendmode: 'overlay' > with lockFrame: fal
 }
 `;
 
-exports[`RGBN image generation > with blendmode: 'overlay' > with lockFrame: false > generates expected hash for raw image data 1`] = `"vn2da1D4tn"`;
+exports[`RGBN image generation > with blendmode: 'overlay' > with lockFrame: false > generates expected hash for raw image data 1`] = `"glnY5AYbDY7WM9tFxobfw68dGGeQ84J0yrYlNxQ6zGg"`;
 
 exports[`RGBN image generation > with blendmode: 'overlay' > with lockFrame: true > generates expected dimensions 1`] = `
 {
@@ -223,7 +223,7 @@ exports[`RGBN image generation > with blendmode: 'overlay' > with lockFrame: tru
 }
 `;
 
-exports[`RGBN image generation > with blendmode: 'overlay' > with lockFrame: true > generates expected hash for raw image data 1`] = `"o5gQNWFXAx"`;
+exports[`RGBN image generation > with blendmode: 'overlay' > with lockFrame: true > generates expected hash for raw image data 1`] = `"99K0vMs9QYwh9LFslbbwwiRMmw8eALXKXodIDjm708s"`;
 
 exports[`RGBN image generation > with blendmode: 'screen' > with lockFrame: false > generates expected dimensions 1`] = `
 {
@@ -232,7 +232,7 @@ exports[`RGBN image generation > with blendmode: 'screen' > with lockFrame: fals
 }
 `;
 
-exports[`RGBN image generation > with blendmode: 'screen' > with lockFrame: false > generates expected hash for raw image data 1`] = `"6VOI3oz5k5"`;
+exports[`RGBN image generation > with blendmode: 'screen' > with lockFrame: false > generates expected hash for raw image data 1`] = `"RU1IZtbY0tsPnS1EY58yA30I_-0m2UnDrld-AgsJp2s"`;
 
 exports[`RGBN image generation > with blendmode: 'screen' > with lockFrame: true > generates expected dimensions 1`] = `
 {
@@ -241,7 +241,7 @@ exports[`RGBN image generation > with blendmode: 'screen' > with lockFrame: true
 }
 `;
 
-exports[`RGBN image generation > with blendmode: 'screen' > with lockFrame: true > generates expected hash for raw image data 1`] = `"4PRJH9hB9G"`;
+exports[`RGBN image generation > with blendmode: 'screen' > with lockFrame: true > generates expected hash for raw image data 1`] = `"iYzAqvHQqDC7Ncjk6kfe3D5aXNnhx-08BK40qpV3smY"`;
 
 exports[`RGBN image generation > with blendmode: 'softlight' > with lockFrame: false > generates expected dimensions 1`] = `
 {
@@ -250,7 +250,7 @@ exports[`RGBN image generation > with blendmode: 'softlight' > with lockFrame: f
 }
 `;
 
-exports[`RGBN image generation > with blendmode: 'softlight' > with lockFrame: false > generates expected hash for raw image data 1`] = `"58E2opFCjW"`;
+exports[`RGBN image generation > with blendmode: 'softlight' > with lockFrame: false > generates expected hash for raw image data 1`] = `"nl0O7ZFWw_KUe6nr3avwRsILYkAria9t7SGg6Ku275w"`;
 
 exports[`RGBN image generation > with blendmode: 'softlight' > with lockFrame: true > generates expected dimensions 1`] = `
 {
@@ -259,4 +259,4 @@ exports[`RGBN image generation > with blendmode: 'softlight' > with lockFrame: t
 }
 `;
 
-exports[`RGBN image generation > with blendmode: 'softlight' > with lockFrame: true > generates expected hash for raw image data 1`] = `"LVALgrjmzZ"`;
+exports[`RGBN image generation > with blendmode: 'softlight' > with lockFrame: true > generates expected hash for raw image data 1`] = `"MJzOPfQAwfWb4tcNbYggKmuHccaluLXvaOsnHAUrvOQ"`;

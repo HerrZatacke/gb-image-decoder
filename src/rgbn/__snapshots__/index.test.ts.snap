@@ -1,13 +1,67 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`RGBN image generation > using 16x14 raw data > generates expected dimensions 1`] = `
+exports[`RGBN image generation > using 16x14b raw tile data > generates expected dimensions 1`] = `
 {
   "height": 112,
   "width": 128,
 }
 `;
 
-exports[`RGBN image generation > using 16x14 raw data > generates expected hash for raw image data 1`] = `"lRPAnTcp9GgcjczAV-S1b5kn_L8GlmPHR-Wc-0lWjcw"`;
+exports[`RGBN image generation > using 16x14b raw tile data > generates expected hash for raw image data 1`] = `"tpQxUeZM2itr8vKKRTgeoCpiUGoGQPUbYoIxDwTBx0U"`;
+
+exports[`RGBN image generation > using 16x14rgb raw tile data > generates expected dimensions 1`] = `
+{
+  "height": 112,
+  "width": 128,
+}
+`;
+
+exports[`RGBN image generation > using 16x14rgb raw tile data > generates expected hash for raw image data 1`] = `"lRPAnTcp9GgcjczAV-S1b5kn_L8GlmPHR-Wc-0lWjcw"`;
+
+exports[`RGBN image generation > using 16x14rgbn raw tile data > generates expected dimensions 1`] = `
+{
+  "height": 112,
+  "width": 128,
+}
+`;
+
+exports[`RGBN image generation > using 16x14rgbn raw tile data > generates expected hash for raw image data 1`] = `"ACpGe5Bb5Ty04KOhgthEBSEA2zHzlTRg0txcubASzio"`;
+
+exports[`RGBN image generation > using 16x14rgbx raw tile data > generates expected dimensions 1`] = `
+{
+  "height": 112,
+  "width": 128,
+}
+`;
+
+exports[`RGBN image generation > using 16x14rgbx raw tile data > generates expected hash for raw image data 1`] = `"lRPAnTcp9GgcjczAV-S1b5kn_L8GlmPHR-Wc-0lWjcw"`;
+
+exports[`RGBN image generation > using 16x14rgn raw tile data > generates expected dimensions 1`] = `
+{
+  "height": 112,
+  "width": 128,
+}
+`;
+
+exports[`RGBN image generation > using 16x14rgn raw tile data > generates expected hash for raw image data 1`] = `"5ZKeRa6IM0pkizuqQvVgapq7a5nUdrJKavZExIih1bE"`;
+
+exports[`RGBN image generation > using 16x14rn raw tile data > generates expected dimensions 1`] = `
+{
+  "height": 112,
+  "width": 128,
+}
+`;
+
+exports[`RGBN image generation > using 16x14rn raw tile data > generates expected hash for raw image data 1`] = `"7jyMzLn0fG8wp8yhbWlkFsFGNGksTtAPkZyYYtbx1NE"`;
+
+exports[`RGBN image generation > using 16x14xgb raw tile data > generates expected dimensions 1`] = `
+{
+  "height": 112,
+  "width": 128,
+}
+`;
+
+exports[`RGBN image generation > using 16x14xgb raw tile data > generates expected hash for raw image data 1`] = `"Ko7e2o7lX8zqXqrxE7T5RRG8C23ComQfBLd0VZ-80m4"`;
 
 exports[`RGBN image generation > with blendmode: 'addition' > with lockFrame: false > generates expected dimensions 1`] = `
 {

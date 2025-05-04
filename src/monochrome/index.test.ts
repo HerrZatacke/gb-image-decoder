@@ -18,8 +18,8 @@ const tileSets: Record<string, string[]> = {
   '20x86': tiles20x86,
 };
 
-// const testScaleFactors = [1, 2];
-const testScaleFactors = [2];
+const testScaleFactors = [1, 2];
+
 const testFrameModes: ExportFrameMode[] = [
   ExportFrameMode.FRAMEMODE_KEEP,
   ExportFrameMode.FRAMEMODE_CROP,

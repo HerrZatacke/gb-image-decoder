@@ -122,6 +122,10 @@ export const getRawRGBNImageData = (
 
   const canvases: SourceCanvases = Object.entries(tiles)
     .reduce((acc, [key, channelTiles]): SourceCanvases => {
+      if (!channelTiles?.length) {
+        return acc;
+      }
+
       const channelKey = key as ChannelKey;
 
       const channelShades = palette[channelKey] || RGBN_SHADES;

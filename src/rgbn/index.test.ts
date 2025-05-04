@@ -1,19 +1,40 @@
 import { describe, expect, test, vi } from 'vitest';
 import { hash } from 'ohash';
 import { getRawRGBNImageData } from '.';
-import { BlendMode, CanvasCreator, ExportFrameMode, FullRGBNImageCreationParams, getRGBNImageUrl } from '..';
-import tiles16x14 from '../../test/data/tiles/rgbn/16x14';
+import { BlendMode, CanvasCreator, ExportFrameMode, FullRGBNImageCreationParams, getRGBNImageUrl, RGBNTiles } from '..';
+import tiles16x14b from '../../test/data/tiles/rgbn/16x14b';
+import tiles16x14rgn from '../../test/data/tiles/rgbn/16x14rgn';
+import tiles16x14rgb from '../../test/data/tiles/rgbn/16x14rgb';
+import tiles16x14rgbn from '../../test/data/tiles/rgbn/16x14rgbn';
+import tiles16x14rgbx from '../../test/data/tiles/rgbn/16x14rgbx';
+import tiles16x14rn from '../../test/data/tiles/rgbn/16x14rn';
+import tiles16x14xgb from '../../test/data/tiles/rgbn/16x14xgb';
 import tiles20x18 from '../../test/data/tiles/rgbn/20x18';
-import { rgbnSoft, rgbnDefault } from '../../test/data/palettes';
+import { rgbnDefault, rgbnSoft } from '../../test/data/palettes';
 import { writeImageFileFromImageData } from '../../test/helpers/writeImageFileFromImageData';
 import { canvasCreator } from '../../test/helpers/canvasCreator';
 
+const tileSets: Record<string, RGBNTiles> = {
+  '16x14b': tiles16x14b,
+  '16x14rgn': tiles16x14rgn,
+  '16x14rgb': tiles16x14rgb,
+  '16x14rgbn': tiles16x14rgbn,
+  '16x14rgbx': tiles16x14rgbx,
+  '16x14rn': tiles16x14rn,
+  '16x14xgb': tiles16x14xgb,
+};
+
 describe('RGBN image generation', () => {
-  describe('using 16x14 raw data', async () => {
+  describe.each(Object.keys(tileSets))('using %s raw tile data', async (tileKey: string) => {
+    const tiles = tileSets[tileKey];
+
     const fullParams: FullRGBNImageCreationParams = {
-      palette: rgbnDefault,
+      palette: {
+        ...rgbnDefault,
+        blend: BlendMode.MULTIPLY,
+      },
       lockFrame: false,
-      tiles: tiles16x14,
+      tiles,
       imageStartLine: 0,
       tilesPerLine: 16,
       scaleFactor: 1,
@@ -35,7 +56,7 @@ describe('RGBN image generation', () => {
 
     test('writes image file without error', async () => {
       await writeImageFileFromImageData(
-        'rgbn_16x14.png',
+        `rgbn_${tileKey}.png`,
         rawData,
         dimensions,
       );
@@ -116,7 +137,7 @@ describe('RGBN image generation', () => {
 
     const generatedUrl = await getRGBNImageUrl({
       palette: rgbnDefault,
-      tiles: tiles16x14,
+      tiles: tiles16x14rgb,
       tilesPerLine: 16,
       scaleFactor: 2,
     }, mockCanvasCreator as unknown as CanvasCreator);

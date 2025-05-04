@@ -1,6 +1,5 @@
 import { UrlCache } from '../UrlCache';
 import { CanvasCreator, RawOutput } from '../Types';
-import { createCanvasElement } from './canvasHelpers';
 
 const toObjectUrl = async (canvas: HTMLCanvasElement): Promise<string> => (
   new Promise((resolve, reject) => {

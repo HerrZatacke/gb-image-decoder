@@ -1,5 +1,5 @@
 import { tileIndexIsPartOfFrame } from './tileIndexIsPartOfFrame';
-import { BWPalette, ImageContext, IndexedTilePixels, RGBValue } from '../Types';
+import { BWPalette, MonochromeImageContext, IndexedTilePixels, RGBValue } from '../Types';
 
 export const getRGBValue = ({
   pixels,
@@ -15,7 +15,7 @@ export const getRGBValue = ({
   pixels: IndexedTilePixels,
   index: number,
   tileIndex: number,
-  imageContext: ImageContext,
+  imageContext: MonochromeImageContext,
 }): RGBValue => {
   const palette: BWPalette = tileIndexIsPartOfFrame(tileIndex, imageStartLine, handleExportFrame) ?
     framePalette :

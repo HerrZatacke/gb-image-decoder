@@ -1,4 +1,4 @@
-import { objectHash } from 'ohash';
+import { hash as objectHash } from 'ohash';
 import {
   BWPalette,
   CropResult,

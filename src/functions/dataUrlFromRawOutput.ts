@@ -28,18 +28,27 @@ export const dataUrlFromRawOutput = async (
   hash: string,
   creators?: Creators,
 ): Promise<string> => {
-  const canvasCreator = creators?.canvasCreator || createCanvasElement;
-  const imageDataCreator = creators?.imageDataCreator || createImageData;
   const urlCache = new UrlCache();
 
-  const canvas = canvasCreator();
-  canvas.width = width * scaleFactor;
-  canvas.height = height * scaleFactor;
-  const context = canvas.getContext('2d') as CanvasRenderingContext2D;
-  const imageData = imageDataCreator(data, canvas.width, canvas.height);
-  context?.putImageData(imageData, 0, 0);
+  urlCache.setUrl(hash, new Promise((resolve) => {
+    const canvasCreator = creators?.canvasCreator || createCanvasElement;
+    const imageDataCreator = creators?.imageDataCreator || createImageData;
 
-  const dataUrl = await toObjectUrl(canvas);
-  urlCache.setUrl(hash, dataUrl);
-  return dataUrl;
+    const canvas = canvasCreator();
+    canvas.width = width * scaleFactor;
+    canvas.height = height * scaleFactor;
+    const context = canvas.getContext('2d') as CanvasRenderingContext2D;
+    const imageData = imageDataCreator(data, canvas.width, canvas.height);
+    context?.putImageData(imageData, 0, 0);
+
+    resolve(toObjectUrl(canvas));
+  }));
+
+  const url = await urlCache.getUrl(hash);
+
+  if (!url) {
+    throw new Error('error generating image');
+  }
+
+  return url;
 };

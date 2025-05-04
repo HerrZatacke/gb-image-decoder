@@ -20,7 +20,6 @@ import { ExportFrameMode } from '../constants/enums';
 import { decodeTile } from '../functions/decodeTile';
 import { getRGBValue } from '../functions/getRGBValue';
 import { tileIndexIsPartOfFrame } from '../functions/tileIndexIsPartOfFrame';
-import { createCanvasElement, createImageData } from '../functions/canvasHelpers';
 import { UrlCache } from '../UrlCache';
 import { dataUrlFromRawOutput } from '../functions/dataUrlFromRawOutput';
 

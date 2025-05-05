@@ -2,7 +2,7 @@ import { hash as objectHash } from 'ohash';
 import {
   BWPalette,
   CanvasCreator,
-  FullRGBNImageCreationParams, MonochromeImageCreationParams,
+  FullRGBNImageCreationParams,
   PixelDimensions,
   RawOutput,
   RGBNImageCreationParams,

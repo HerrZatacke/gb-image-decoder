@@ -63,6 +63,42 @@ exports[`RGBN image generation > using 16x14xgb raw tile data > generates expect
 
 exports[`RGBN image generation > using 16x14xgb raw tile data > generates expected hash for raw image data 1`] = `"Ko7e2o7lX8zqXqrxE7T5RRG8C23ComQfBLd0VZ-80m4"`;
 
+exports[`RGBN image generation > using rotation 0 > generates expected dimensions 1`] = `
+{
+  "height": 112,
+  "width": 128,
+}
+`;
+
+exports[`RGBN image generation > using rotation 0 > generates expected hash for raw image data 1`] = `"lRPAnTcp9GgcjczAV-S1b5kn_L8GlmPHR-Wc-0lWjcw"`;
+
+exports[`RGBN image generation > using rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 128,
+  "width": 112,
+}
+`;
+
+exports[`RGBN image generation > using rotation 1 > generates expected hash for raw image data 1`] = `"Okoux0YJfpp0Lc_ZEapa9emW_7ki58_rIZzQ0p-Ud0o"`;
+
+exports[`RGBN image generation > using rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 112,
+  "width": 128,
+}
+`;
+
+exports[`RGBN image generation > using rotation 2 > generates expected hash for raw image data 1`] = `"a3jViax3BdSw2ei16Ms4dd5_070I4jAvslTiDx1yg4w"`;
+
+exports[`RGBN image generation > using rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 128,
+  "width": 112,
+}
+`;
+
+exports[`RGBN image generation > using rotation 3 > generates expected hash for raw image data 1`] = `"ef3wv2Py6cydA2pEq77WRpR2T5WTOGR-T9QbvGvmvL0"`;
+
 exports[`RGBN image generation > with blendmode: 'addition' > with lockFrame: false > generates expected dimensions 1`] = `
 {
   "height": 144,

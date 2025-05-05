@@ -11,7 +11,7 @@ There are a lot more similar projects for aquiring raw tile data.
 ### Browser
 #### Monochrome images
 ```typescript
-import { getMonochromeImageUrl, ExportFrameMode } from 'gb-image-decoder';
+import { getMonochromeImageUrl, ExportFrameMode, Rotation } from 'gb-image-decoder';
 
 const tiles: string[] = [ // need 360 of these for a 160x144 image
   '7D FF 0A FF 7D FF FF FF 5F FF BB FF 5D FF FF FF', '75 FF A2 FF 44 FF FF FF 5D FF FF FF FF FF FF FF', '55 FF 1F FF 57 FF FF FF 7D FF FF FF FF FF FF FF', '77 FF FD FF 57 FF FF FF 75 FF FF FF DF FF FF FF',
@@ -27,6 +27,7 @@ const imageSrc = await getMonochromeImageUrl({
   // imageStartLine: 2,
   // tilesPerLine: 20,
   // scaleFactor: 1,
+  // rotation: Rotation.DEG_0,
   // handleExportFrame: ExportFrameMode.FRAMEMODE_KEEP,
 })
 ```
@@ -53,6 +54,7 @@ const imageSrc = await getRGBNImageUrl({
   // imageStartLine: 2,
   // tilesPerLine: 20,
   // scaleFactor: 1,
+  // rotation: Rotation.DEG_0,
   // handleExportFrame: ExportFrameMode.FRAMEMODE_KEEP,
 })
 ```
@@ -76,6 +78,7 @@ const fullParams: FullMonochromeImageCreationParams = {
   imageStartLine: 2,
   tilesPerLine: 20,
   scaleFactor: 1,
+  rotation: Rotation.DEG_0,
   handleExportFrame: ExportFrameMode.FRAMEMODE_KEEP,
 };
 
@@ -94,6 +97,7 @@ const fullParams: FullRGBNImageCreationParams = {
   imageStartLine: 2,
   tilesPerLine: 20,
   scaleFactor: 1,
+  rotation: Rotation.DEG_0,
   handleExportFrame: ExportFrameMode.FRAMEMODE_KEEP,
 };
 

@@ -3,12 +3,12 @@ import {
   BWPalette,
   CanvasCreator,
   FullRGBNImageCreationParams,
-  RGBNImageCreationParams,
   PixelDimensions,
   RawOutput,
+  RGBNImageCreationParams,
   SourceCanvases,
 } from '../Types';
-import { ChannelKey, channels, ExportFrameMode } from '../constants/enums';
+import { ChannelKey, channels, ExportFrameMode, Rotation } from '../constants/enums';
 import { getRawMonochromeImageData } from '../monochrome';
 import { FRAME_WIDTH, RGBN_SHADES, TILES_PER_LINE } from '../constants/base';
 import { BlendMode, blendModeNewName } from '../constants/blendModes';
@@ -23,6 +23,7 @@ const getFullParams = (params: RGBNImageCreationParams): FullRGBNImageCreationPa
   imageStartLine: typeof params.imageStartLine === 'number' ? params.imageStartLine : FRAME_WIDTH,
   tilesPerLine: params.tilesPerLine || TILES_PER_LINE,
   scaleFactor: params.scaleFactor || 1,
+  rotation: params.rotation || Rotation.DEG_0,
   handleExportFrame: params.handleExportFrame || ExportFrameMode.FRAMEMODE_KEEP,
 });
 
@@ -118,6 +119,7 @@ export const getRawRGBNImageData = (
     tilesPerLine,
     handleExportFrame,
     scaleFactor,
+    rotation,
   } = params;
 
   const canvases: SourceCanvases = Object.entries(tiles)
@@ -141,6 +143,7 @@ export const getRawRGBNImageData = (
         handleExportFrame,
         imageStartLine,
         scaleFactor,
+        rotation,
         tiles: channelTiles,
         tilesPerLine,
       });

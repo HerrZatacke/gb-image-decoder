@@ -1,7 +1,15 @@
 import { describe, expect, test, vi } from 'vitest';
 import { hash } from 'ohash';
 import { getRawRGBNImageData } from '.';
-import { BlendMode, CanvasCreator, ExportFrameMode, FullRGBNImageCreationParams, getRGBNImageUrl, RGBNTiles } from '..';
+import {
+  BlendMode,
+  CanvasCreator,
+  ExportFrameMode,
+  FullRGBNImageCreationParams,
+  getRGBNImageUrl,
+  RGBNTiles,
+  Rotation,
+} from '..';
 import tiles16x14b from '../../test/data/tiles/rgbn/16x14b';
 import tiles16x14rgn from '../../test/data/tiles/rgbn/16x14rgn';
 import tiles16x14rgb from '../../test/data/tiles/rgbn/16x14rgb';
@@ -13,6 +21,13 @@ import tiles20x18 from '../../test/data/tiles/rgbn/20x18';
 import { rgbnDefault, rgbnSoft } from '../../test/data/palettes';
 import { writeImageFileFromImageData } from '../../test/helpers/writeImageFileFromImageData';
 import { canvasCreator } from '../../test/helpers/canvasCreator';
+
+const rotations: Rotation[] = [
+  Rotation.DEG_0,
+  Rotation.DEG_90,
+  Rotation.DEG_180,
+  Rotation.DEG_270,
+];
 
 const tileSets: Record<string, RGBNTiles> = {
   '16x14b': tiles16x14b,
@@ -38,6 +53,7 @@ describe('RGBN image generation', () => {
       imageStartLine: 0,
       tilesPerLine: 16,
       scaleFactor: 1,
+      rotation: 0,
       handleExportFrame: ExportFrameMode.FRAMEMODE_KEEP,
     };
 
@@ -57,6 +73,43 @@ describe('RGBN image generation', () => {
     test('writes image file without error', async () => {
       await writeImageFileFromImageData(
         `rgbn_${tileKey}.png`,
+        rawData,
+        dimensions,
+      );
+    });
+  });
+
+  describe.each(rotations)('using rotation %s', async (rotation: Rotation) => {
+    const fullParams: FullRGBNImageCreationParams = {
+      palette: {
+        ...rgbnDefault,
+        blend: BlendMode.MULTIPLY,
+      },
+      rotation,
+      lockFrame: false,
+      tiles: tiles16x14rgb,
+      imageStartLine: 0,
+      tilesPerLine: 16,
+      scaleFactor: 1,
+      handleExportFrame: ExportFrameMode.FRAMEMODE_KEEP,
+    };
+
+    const {
+      data: rawData,
+      dimensions,
+    } = getRawRGBNImageData(fullParams, canvasCreator);
+
+    test('generates expected dimensions', () => {
+      expect(dimensions).toMatchSnapshot();
+    });
+
+    test('generates expected hash for raw image data', () => {
+      expect(hash(rawData)).toMatchSnapshot();
+    });
+
+    test('writes image file without error', async () => {
+      await writeImageFileFromImageData(
+        `rgbn_rotation${rotation}.png`,
         rawData,
         dimensions,
       );
@@ -92,6 +145,7 @@ describe('RGBN image generation', () => {
         imageStartLine: 2,
         tilesPerLine: 20,
         scaleFactor: 1,
+        rotation: 0,
         handleExportFrame: ExportFrameMode.FRAMEMODE_KEEP,
       };
 

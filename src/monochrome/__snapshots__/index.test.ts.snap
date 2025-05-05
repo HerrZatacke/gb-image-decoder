@@ -1,441 +1,1761 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'crop' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'crop' and rotation +0 > generates expected dimensions 1`] = `
 {
   "height": 8,
   "width": 8,
 }
 `;
 
-exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'crop' > generates expected hash for fullParams 1`] = `"E4gg_zrMSxNiiOyGEYMJ6a76_gARFpQcspa_cSVGYHI"`;
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'crop' and rotation +0 > generates expected hash for fullParams 1`] = `"7pr-V_YLSwpFPKfG3npJ3B4vBMFgATXyl7GPv54-BF8"`;
 
-exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'crop' > generates expected hash for raw image data 1`] = `"QAyhcncjC9_1S0knxPMyfNZYvCyZtGyG9QGb073XvvY"`;
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'crop' and rotation +0 > generates expected hash for raw image data 1`] = `"QAyhcncjC9_1S0knxPMyfNZYvCyZtGyG9QGb073XvvY"`;
 
-exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'keep' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'crop' and rotation 1 > generates expected dimensions 1`] = `
 {
   "height": 8,
   "width": 8,
 }
 `;
 
-exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'keep' > generates expected hash for fullParams 1`] = `"dsNCRi_ONKDLKXEf38lxXBXgZa892QLtr86IWxpI0r0"`;
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'crop' and rotation 1 > generates expected hash for fullParams 1`] = `"osGv5pyHbXk5osS60fJ-ePz9UFoDW0fMcf9yW2NSLXk"`;
 
-exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'keep' > generates expected hash for raw image data 1`] = `"QAyhcncjC9_1S0knxPMyfNZYvCyZtGyG9QGb073XvvY"`;
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'crop' and rotation 1 > generates expected hash for raw image data 1`] = `"ySBOHkUtYcOiEHx9gCI36s3_WAojywxITUHlsdhApd8"`;
 
-exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_black' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'crop' and rotation 2 > generates expected dimensions 1`] = `
 {
   "height": 8,
   "width": 8,
 }
 `;
 
-exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_black' > generates expected hash for fullParams 1`] = `"hwc8JkGBk0M34pRKKXGfxEv7aq85KGZ1KdHY4rUEnnE"`;
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'crop' and rotation 2 > generates expected hash for fullParams 1`] = `"fMSG9Ne3qY4fwYVU3JYigbu4X98rCE4ywa75EtUANDE"`;
 
-exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_black' > generates expected hash for raw image data 1`] = `"QAyhcncjC9_1S0knxPMyfNZYvCyZtGyG9QGb073XvvY"`;
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'crop' and rotation 2 > generates expected hash for raw image data 1`] = `"md49kLvXzQvfrnPANsa8YficlqGCU-ASVFb94VDRfuE"`;
 
-exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_white' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'crop' and rotation 3 > generates expected dimensions 1`] = `
 {
   "height": 8,
   "width": 8,
 }
 `;
 
-exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_white' > generates expected hash for fullParams 1`] = `"12Ytnmju9Y1qdurUkycCZsEP1kb7T4QLqUZ5RHpAlOA"`;
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'crop' and rotation 3 > generates expected hash for fullParams 1`] = `"2n9amvKtZonOaYb0_G35cGisFDI17N-qzZ-IPZ0PKs8"`;
 
-exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_white' > generates expected hash for raw image data 1`] = `"QAyhcncjC9_1S0knxPMyfNZYvCyZtGyG9QGb073XvvY"`;
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'crop' and rotation 3 > generates expected hash for raw image data 1`] = `"Z3F-4TunYx4Ybt33QE-oVor32vZEhP8ATkcqbOgKnBY"`;
 
-exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'crop' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'keep' and rotation +0 > generates expected dimensions 1`] = `
+{
+  "height": 8,
+  "width": 8,
+}
+`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'keep' and rotation +0 > generates expected hash for fullParams 1`] = `"e3xFX1ry515U9tCqDlvRGtFFvBvXDr7H0kHDADZyXLU"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'keep' and rotation +0 > generates expected hash for raw image data 1`] = `"QAyhcncjC9_1S0knxPMyfNZYvCyZtGyG9QGb073XvvY"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'keep' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 8,
+  "width": 8,
+}
+`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'keep' and rotation 1 > generates expected hash for fullParams 1`] = `"nRYyKSx5IwfbNzT7VXjzuT8qwWFhzOeh5MEqE1WW5dg"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'keep' and rotation 1 > generates expected hash for raw image data 1`] = `"ySBOHkUtYcOiEHx9gCI36s3_WAojywxITUHlsdhApd8"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'keep' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 8,
+  "width": 8,
+}
+`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'keep' and rotation 2 > generates expected hash for fullParams 1`] = `"HDGfmfO3kqov8ivVCvRp_Cdg6hMsTgFTSfQpkk22X3Q"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'keep' and rotation 2 > generates expected hash for raw image data 1`] = `"md49kLvXzQvfrnPANsa8YficlqGCU-ASVFb94VDRfuE"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'keep' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 8,
+  "width": 8,
+}
+`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'keep' and rotation 3 > generates expected hash for fullParams 1`] = `"9XZH1CzwRqYhj4OvTwCDZPVv3HR9GlgXMg6QdDTkoiE"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'keep' and rotation 3 > generates expected hash for raw image data 1`] = `"Z3F-4TunYx4Ybt33QE-oVor32vZEhP8ATkcqbOgKnBY"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_black' and rotation +0 > generates expected dimensions 1`] = `
+{
+  "height": 8,
+  "width": 8,
+}
+`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_black' and rotation +0 > generates expected hash for fullParams 1`] = `"qE3_HkSbOsWCEic27YUaK20PdL_HujtG63oS27r6zbg"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_black' and rotation +0 > generates expected hash for raw image data 1`] = `"QAyhcncjC9_1S0knxPMyfNZYvCyZtGyG9QGb073XvvY"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_black' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 8,
+  "width": 8,
+}
+`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_black' and rotation 1 > generates expected hash for fullParams 1`] = `"JctqBE3kCVCWC-uGlVKaj-PPGh0MYdDKB943qQ7Q3Zk"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_black' and rotation 1 > generates expected hash for raw image data 1`] = `"ySBOHkUtYcOiEHx9gCI36s3_WAojywxITUHlsdhApd8"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_black' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 8,
+  "width": 8,
+}
+`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_black' and rotation 2 > generates expected hash for fullParams 1`] = `"ERwmzDzpkc3uQLVrC6r6KTQuciv8KvJFfcnEA2DkaZg"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_black' and rotation 2 > generates expected hash for raw image data 1`] = `"md49kLvXzQvfrnPANsa8YficlqGCU-ASVFb94VDRfuE"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_black' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 8,
+  "width": 8,
+}
+`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_black' and rotation 3 > generates expected hash for fullParams 1`] = `"SXBhu9U4S2FEVOINXMkbs0X4u7Gn2IhFIauRWrU_nY8"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_black' and rotation 3 > generates expected hash for raw image data 1`] = `"Z3F-4TunYx4Ybt33QE-oVor32vZEhP8ATkcqbOgKnBY"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_white' and rotation +0 > generates expected dimensions 1`] = `
+{
+  "height": 8,
+  "width": 8,
+}
+`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_white' and rotation +0 > generates expected hash for fullParams 1`] = `"x59aGWD0-fBd7WZVECLpAj9nqwFqTRuRWXssPKMPl4Q"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_white' and rotation +0 > generates expected hash for raw image data 1`] = `"QAyhcncjC9_1S0knxPMyfNZYvCyZtGyG9QGb073XvvY"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_white' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 8,
+  "width": 8,
+}
+`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_white' and rotation 1 > generates expected hash for fullParams 1`] = `"xlq3fG3IJqltmyX_IBR1RLT_O4NCRkNueOF-UrBu-EI"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_white' and rotation 1 > generates expected hash for raw image data 1`] = `"ySBOHkUtYcOiEHx9gCI36s3_WAojywxITUHlsdhApd8"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_white' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 8,
+  "width": 8,
+}
+`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_white' and rotation 2 > generates expected hash for fullParams 1`] = `"PR8jYosiKY81k9z0Q9UHSqUikTtxY7o4hhRXMtuy9XY"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_white' and rotation 2 > generates expected hash for raw image data 1`] = `"md49kLvXzQvfrnPANsa8YficlqGCU-ASVFb94VDRfuE"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_white' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 8,
+  "width": 8,
+}
+`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_white' and rotation 3 > generates expected hash for fullParams 1`] = `"dWjWDbY67lZKWSkL0I6iuAmSUWBp4-MTIGbwaHKY_Ic"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 1 with frameMode 'square_white' and rotation 3 > generates expected hash for raw image data 1`] = `"Z3F-4TunYx4Ybt33QE-oVor32vZEhP8ATkcqbOgKnBY"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'crop' and rotation +0 > generates expected dimensions 1`] = `
 {
   "height": 16,
   "width": 16,
 }
 `;
 
-exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'crop' > generates expected hash for fullParams 1`] = `"mULfTy8GGemmWPUzkKCWiJPHhgIxUdyTqiKkBDJ2vMk"`;
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'crop' and rotation +0 > generates expected hash for fullParams 1`] = `"3PQCWYY78tP-Cao0sTeUor6CL2vyO9qioG0sJqUqXwI"`;
 
-exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'crop' > generates expected hash for raw image data 1`] = `"msf0sBpXrpevste27bDFHtIj_nLjHIUJisMs0UM99wM"`;
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'crop' and rotation +0 > generates expected hash for raw image data 1`] = `"msf0sBpXrpevste27bDFHtIj_nLjHIUJisMs0UM99wM"`;
 
-exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'keep' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'crop' and rotation 1 > generates expected dimensions 1`] = `
 {
   "height": 16,
   "width": 16,
 }
 `;
 
-exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'keep' > generates expected hash for fullParams 1`] = `"K5aam9RUae35mLonZxa8L2gOM89upIoof16QU-YiYZ0"`;
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'crop' and rotation 1 > generates expected hash for fullParams 1`] = `"ojDcLPsgyzZzd5A1kCc0M6lIofD6aWhkJQ_fvMYNGGE"`;
 
-exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'keep' > generates expected hash for raw image data 1`] = `"msf0sBpXrpevste27bDFHtIj_nLjHIUJisMs0UM99wM"`;
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'crop' and rotation 1 > generates expected hash for raw image data 1`] = `"F7XB6Jzpgktdhn0Ie_fknnU1W0YXXqPwOaBVC-ijCrk"`;
 
-exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_black' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'crop' and rotation 2 > generates expected dimensions 1`] = `
 {
   "height": 16,
   "width": 16,
 }
 `;
 
-exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_black' > generates expected hash for fullParams 1`] = `"TqiG8MFxA0drZMigglS3cxwsRaX_nf4yqHuivOJU6I0"`;
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'crop' and rotation 2 > generates expected hash for fullParams 1`] = `"ZR4So8oQb1daKe3pTdzEG8Mey1TZIFXHeKSq46qCLjU"`;
 
-exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_black' > generates expected hash for raw image data 1`] = `"msf0sBpXrpevste27bDFHtIj_nLjHIUJisMs0UM99wM"`;
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'crop' and rotation 2 > generates expected hash for raw image data 1`] = `"yaoiOJk-VTgiN1pm_bzPkmNl_71fKNFmfT274IkyUok"`;
 
-exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_white' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'crop' and rotation 3 > generates expected dimensions 1`] = `
 {
   "height": 16,
   "width": 16,
 }
 `;
 
-exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_white' > generates expected hash for fullParams 1`] = `"YD-LZwIlUV_sVmTgsFu98rAhN9cKGXEBviBPy00Hdx4"`;
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'crop' and rotation 3 > generates expected hash for fullParams 1`] = `"bc0cRTm6VXOswKKszh9HmKF4CmVMGu29frJKW7a4Jus"`;
 
-exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_white' > generates expected hash for raw image data 1`] = `"msf0sBpXrpevste27bDFHtIj_nLjHIUJisMs0UM99wM"`;
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'crop' and rotation 3 > generates expected hash for raw image data 1`] = `"ri9uJLkkBUgEqHhgBd0kEtOVCPoCQROOAE_XSqOfjB8"`;
 
-exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'crop' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'keep' and rotation +0 > generates expected dimensions 1`] = `
+{
+  "height": 16,
+  "width": 16,
+}
+`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'keep' and rotation +0 > generates expected hash for fullParams 1`] = `"y85G_nR92I7h_J0dHzWb2tQkuYMmucG2lS5Uiv7ittA"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'keep' and rotation +0 > generates expected hash for raw image data 1`] = `"msf0sBpXrpevste27bDFHtIj_nLjHIUJisMs0UM99wM"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'keep' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 16,
+  "width": 16,
+}
+`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'keep' and rotation 1 > generates expected hash for fullParams 1`] = `"zGjiRkwbspUrJTWorxIT56AmZ3a9qX7R190-UpSk7K0"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'keep' and rotation 1 > generates expected hash for raw image data 1`] = `"F7XB6Jzpgktdhn0Ie_fknnU1W0YXXqPwOaBVC-ijCrk"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'keep' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 16,
+  "width": 16,
+}
+`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'keep' and rotation 2 > generates expected hash for fullParams 1`] = `"bZC0uvPs1Bm2W7a2cbMB9oKLL7kac16VSeshY9u12JQ"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'keep' and rotation 2 > generates expected hash for raw image data 1`] = `"yaoiOJk-VTgiN1pm_bzPkmNl_71fKNFmfT274IkyUok"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'keep' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 16,
+  "width": 16,
+}
+`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'keep' and rotation 3 > generates expected hash for fullParams 1`] = `"-jmb2ywgi5Yu4uFo83q1iqHdooPzJPsQaMvVjn89RgE"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'keep' and rotation 3 > generates expected hash for raw image data 1`] = `"ri9uJLkkBUgEqHhgBd0kEtOVCPoCQROOAE_XSqOfjB8"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_black' and rotation +0 > generates expected dimensions 1`] = `
+{
+  "height": 16,
+  "width": 16,
+}
+`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_black' and rotation +0 > generates expected hash for fullParams 1`] = `"8Rj_viYOcJ_oR-6gz0Yq5yC7UMX55xpeewF_3E63zX8"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_black' and rotation +0 > generates expected hash for raw image data 1`] = `"msf0sBpXrpevste27bDFHtIj_nLjHIUJisMs0UM99wM"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_black' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 16,
+  "width": 16,
+}
+`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_black' and rotation 1 > generates expected hash for fullParams 1`] = `"Tp0D74bAeWYHN1m366-GHbr_tU8-KpwscfgFrJEyDIo"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_black' and rotation 1 > generates expected hash for raw image data 1`] = `"F7XB6Jzpgktdhn0Ie_fknnU1W0YXXqPwOaBVC-ijCrk"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_black' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 16,
+  "width": 16,
+}
+`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_black' and rotation 2 > generates expected hash for fullParams 1`] = `"9sUIiz_XpMhNsNSIbYm5BwpFBqKK7yGoUStHsJ_8F_c"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_black' and rotation 2 > generates expected hash for raw image data 1`] = `"yaoiOJk-VTgiN1pm_bzPkmNl_71fKNFmfT274IkyUok"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_black' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 16,
+  "width": 16,
+}
+`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_black' and rotation 3 > generates expected hash for fullParams 1`] = `"hS6D6YEhANQYrlAUVSLM_4oeOBv9oDlO5GDuX-bmoMc"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_black' and rotation 3 > generates expected hash for raw image data 1`] = `"ri9uJLkkBUgEqHhgBd0kEtOVCPoCQROOAE_XSqOfjB8"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_white' and rotation +0 > generates expected dimensions 1`] = `
+{
+  "height": 16,
+  "width": 16,
+}
+`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_white' and rotation +0 > generates expected hash for fullParams 1`] = `"IsLBcfKRnFPbB5mSGwadXKFnjjQedXLBosppLnf_ZKA"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_white' and rotation +0 > generates expected hash for raw image data 1`] = `"msf0sBpXrpevste27bDFHtIj_nLjHIUJisMs0UM99wM"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_white' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 16,
+  "width": 16,
+}
+`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_white' and rotation 1 > generates expected hash for fullParams 1`] = `"rq86dG5z-0f_lqXRBExIiT-D4MEoD5roMWWmRA98mro"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_white' and rotation 1 > generates expected hash for raw image data 1`] = `"F7XB6Jzpgktdhn0Ie_fknnU1W0YXXqPwOaBVC-ijCrk"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_white' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 16,
+  "width": 16,
+}
+`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_white' and rotation 2 > generates expected hash for fullParams 1`] = `"HpGW9DgtjRaFWH3BdMxw4mpE5OOhXJTH5kbc56K-rq8"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_white' and rotation 2 > generates expected hash for raw image data 1`] = `"yaoiOJk-VTgiN1pm_bzPkmNl_71fKNFmfT274IkyUok"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_white' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 16,
+  "width": 16,
+}
+`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_white' and rotation 3 > generates expected hash for fullParams 1`] = `"1JYZ0w0HM0ObPSI4of0n5XZpOS2Gkt5bmCmhkk5zEHY"`;
+
+exports[`Monochrome image generation > using '1x1' raw data scaled by 2 with frameMode 'square_white' and rotation 3 > generates expected hash for raw image data 1`] = `"ri9uJLkkBUgEqHhgBd0kEtOVCPoCQROOAE_XSqOfjB8"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'crop' and rotation +0 > generates expected dimensions 1`] = `
 {
   "height": 112,
   "width": 128,
 }
 `;
 
-exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'crop' > generates expected hash for fullParams 1`] = `"RNDS6ek9BzanNKh7CegtB7Rg263g97OrhNolNBATW_E"`;
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'crop' and rotation +0 > generates expected hash for fullParams 1`] = `"D3b4LMYv7pO0dF27i1u8AS-X_LvrkZ7nCLLgmszZl08"`;
 
-exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'crop' > generates expected hash for raw image data 1`] = `"3Ji8l9z9MdGIuoxoDgV5yEI-iU9YdjelUTuh4eOJzwo"`;
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'crop' and rotation +0 > generates expected hash for raw image data 1`] = `"3Ji8l9z9MdGIuoxoDgV5yEI-iU9YdjelUTuh4eOJzwo"`;
 
-exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'keep' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'crop' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 128,
+  "width": 112,
+}
+`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'crop' and rotation 1 > generates expected hash for fullParams 1`] = `"3_-vlgtTPHWMbNonm-TuSdHSgal1JVdyAG4CxM7oSes"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'crop' and rotation 1 > generates expected hash for raw image data 1`] = `"ERnDAPVlYFxCvx12dJhAtfQeuZBWj76cZdEyEMEH67w"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'crop' and rotation 2 > generates expected dimensions 1`] = `
 {
   "height": 112,
   "width": 128,
 }
 `;
 
-exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'keep' > generates expected hash for fullParams 1`] = `"jnRNWJliZ9iyZdJ2t5uurbRrAMzYjdPLxIV-GnIpIMM"`;
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'crop' and rotation 2 > generates expected hash for fullParams 1`] = `"0_HvaZTcKdTkqubY67Uo_A4j_DXGA_CbvJcuVg1hayM"`;
 
-exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'keep' > generates expected hash for raw image data 1`] = `"3Ji8l9z9MdGIuoxoDgV5yEI-iU9YdjelUTuh4eOJzwo"`;
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'crop' and rotation 2 > generates expected hash for raw image data 1`] = `"coGBBYV10pcgDnKaNa1yz6W3mnAZyVcv9fXHG-QwuHM"`;
 
-exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_black' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'crop' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 128,
+  "width": 112,
+}
+`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'crop' and rotation 3 > generates expected hash for fullParams 1`] = `"fdBRwbXIJ2QdA6klVxVl86CJsJZVzXhDTJB66xZbgWM"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'crop' and rotation 3 > generates expected hash for raw image data 1`] = `"q7Q6cJdHaRS1BOZ6-wq3B3mzwLwMfcDCgGx2MmIAJRg"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'keep' and rotation +0 > generates expected dimensions 1`] = `
 {
   "height": 112,
   "width": 128,
 }
 `;
 
-exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_black' > generates expected hash for fullParams 1`] = `"IWKiv8e28KeXW38qn_LJFGsFHdqB5Ma53tAy-rPTLTk"`;
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'keep' and rotation +0 > generates expected hash for fullParams 1`] = `"hqai4puNtVYHmzJKBtV5dhhcGYqfITNtL3y_9joLY2E"`;
 
-exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_black' > generates expected hash for raw image data 1`] = `"3Ji8l9z9MdGIuoxoDgV5yEI-iU9YdjelUTuh4eOJzwo"`;
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'keep' and rotation +0 > generates expected hash for raw image data 1`] = `"3Ji8l9z9MdGIuoxoDgV5yEI-iU9YdjelUTuh4eOJzwo"`;
 
-exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_white' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'keep' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 128,
+  "width": 112,
+}
+`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'keep' and rotation 1 > generates expected hash for fullParams 1`] = `"WqG7n-VK4y42pJ_TmzFUBj5aics3qIeK0sDOxMtkqq8"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'keep' and rotation 1 > generates expected hash for raw image data 1`] = `"ERnDAPVlYFxCvx12dJhAtfQeuZBWj76cZdEyEMEH67w"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'keep' and rotation 2 > generates expected dimensions 1`] = `
 {
   "height": 112,
   "width": 128,
 }
 `;
 
-exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_white' > generates expected hash for fullParams 1`] = `"tZTSApdaM3C-7kHfWWo7n3O0Fevh31mzQdhlukSHHKc"`;
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'keep' and rotation 2 > generates expected hash for fullParams 1`] = `"Gtshqrz-q94QI2W9i0ufUg5s_abH0Guy1Cl2uQuZSZY"`;
 
-exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_white' > generates expected hash for raw image data 1`] = `"3Ji8l9z9MdGIuoxoDgV5yEI-iU9YdjelUTuh4eOJzwo"`;
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'keep' and rotation 2 > generates expected hash for raw image data 1`] = `"coGBBYV10pcgDnKaNa1yz6W3mnAZyVcv9fXHG-QwuHM"`;
 
-exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'crop' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'keep' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 128,
+  "width": 112,
+}
+`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'keep' and rotation 3 > generates expected hash for fullParams 1`] = `"IHleFRdiKRJL6Jj5FfOWKmjWJBC3DzxSrgIyGBstwkA"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'keep' and rotation 3 > generates expected hash for raw image data 1`] = `"q7Q6cJdHaRS1BOZ6-wq3B3mzwLwMfcDCgGx2MmIAJRg"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_black' and rotation +0 > generates expected dimensions 1`] = `
+{
+  "height": 112,
+  "width": 128,
+}
+`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_black' and rotation +0 > generates expected hash for fullParams 1`] = `"HikTQeIfrWssHgJ9cSDxUnddDLmN3FgOHKu9svEvCDI"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_black' and rotation +0 > generates expected hash for raw image data 1`] = `"3Ji8l9z9MdGIuoxoDgV5yEI-iU9YdjelUTuh4eOJzwo"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_black' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 128,
+  "width": 112,
+}
+`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_black' and rotation 1 > generates expected hash for fullParams 1`] = `"-YYoVpS4cJKynmhxY6Lk1V7SbLRr-kCoaoYiw3DDEto"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_black' and rotation 1 > generates expected hash for raw image data 1`] = `"ERnDAPVlYFxCvx12dJhAtfQeuZBWj76cZdEyEMEH67w"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_black' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 112,
+  "width": 128,
+}
+`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_black' and rotation 2 > generates expected hash for fullParams 1`] = `"59mBOVNFRcVZWU641kylnxFq9YNcaTAjsD2rqwDg-Us"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_black' and rotation 2 > generates expected hash for raw image data 1`] = `"coGBBYV10pcgDnKaNa1yz6W3mnAZyVcv9fXHG-QwuHM"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_black' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 128,
+  "width": 112,
+}
+`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_black' and rotation 3 > generates expected hash for fullParams 1`] = `"xwD5JtGLJbqmikbxmU7FEfJKnxM1XGbR_s5HQUXyqUo"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_black' and rotation 3 > generates expected hash for raw image data 1`] = `"q7Q6cJdHaRS1BOZ6-wq3B3mzwLwMfcDCgGx2MmIAJRg"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_white' and rotation +0 > generates expected dimensions 1`] = `
+{
+  "height": 112,
+  "width": 128,
+}
+`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_white' and rotation +0 > generates expected hash for fullParams 1`] = `"nbd2iDMZJDa3U7yeg7IIyGjyU9WmX_SJizgkv9ndmhk"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_white' and rotation +0 > generates expected hash for raw image data 1`] = `"3Ji8l9z9MdGIuoxoDgV5yEI-iU9YdjelUTuh4eOJzwo"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_white' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 128,
+  "width": 112,
+}
+`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_white' and rotation 1 > generates expected hash for fullParams 1`] = `"m7ndfMxNhd_5EPt4bW8QCrVc4UpTO5OVvWlEM-BcFKU"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_white' and rotation 1 > generates expected hash for raw image data 1`] = `"ERnDAPVlYFxCvx12dJhAtfQeuZBWj76cZdEyEMEH67w"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_white' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 112,
+  "width": 128,
+}
+`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_white' and rotation 2 > generates expected hash for fullParams 1`] = `"IWEIcViqzZkxXCM-SdYzRUbka7mEatcuWdNa82ni8vg"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_white' and rotation 2 > generates expected hash for raw image data 1`] = `"coGBBYV10pcgDnKaNa1yz6W3mnAZyVcv9fXHG-QwuHM"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_white' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 128,
+  "width": 112,
+}
+`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_white' and rotation 3 > generates expected hash for fullParams 1`] = `"xvS2rAehcNVJ_kzxj7-fcyT5envXFCW0Dv8OfLX07qE"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 1 with frameMode 'square_white' and rotation 3 > generates expected hash for raw image data 1`] = `"q7Q6cJdHaRS1BOZ6-wq3B3mzwLwMfcDCgGx2MmIAJRg"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'crop' and rotation +0 > generates expected dimensions 1`] = `
 {
   "height": 224,
   "width": 256,
 }
 `;
 
-exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'crop' > generates expected hash for fullParams 1`] = `"ZESm8JGt_6iafdoHIRwjuwmuda0bcAFeLp9vi8z2x9E"`;
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'crop' and rotation +0 > generates expected hash for fullParams 1`] = `"3rW5CQs_9tag8ccH1MFQMLiYP6oSzxhf5RihLO2_Ql8"`;
 
-exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'crop' > generates expected hash for raw image data 1`] = `"Llk6O7PIsG9qeUnqhr007P4Jzc2l_yRlgnoaj2THjrs"`;
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'crop' and rotation +0 > generates expected hash for raw image data 1`] = `"Llk6O7PIsG9qeUnqhr007P4Jzc2l_yRlgnoaj2THjrs"`;
 
-exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'keep' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'crop' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 256,
+  "width": 224,
+}
+`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'crop' and rotation 1 > generates expected hash for fullParams 1`] = `"Ws98gqR4x2ochli8TBxT8HE17weKBfyshYnsh7n0NOE"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'crop' and rotation 1 > generates expected hash for raw image data 1`] = `"tHAS9zKZBGENa0-VYvNCNKaLaNWgvgVbe2AQcmK1G9A"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'crop' and rotation 2 > generates expected dimensions 1`] = `
 {
   "height": 224,
   "width": 256,
 }
 `;
 
-exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'keep' > generates expected hash for fullParams 1`] = `"ZAaTP8iGvD-qkjOEbx_ItNXMHEikjbhqmgQEnF01CZc"`;
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'crop' and rotation 2 > generates expected hash for fullParams 1`] = `"kT7klbkHnyqe93KbemdwJ9H9rgoYptEJm6HTtLvpJ8s"`;
 
-exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'keep' > generates expected hash for raw image data 1`] = `"Llk6O7PIsG9qeUnqhr007P4Jzc2l_yRlgnoaj2THjrs"`;
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'crop' and rotation 2 > generates expected hash for raw image data 1`] = `"XJYXps6mHaN_-4wUt8gJjmYJiq-fqRNY3A2Z7oCvy40"`;
 
-exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_black' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'crop' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 256,
+  "width": 224,
+}
+`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'crop' and rotation 3 > generates expected hash for fullParams 1`] = `"CyvGWAfm9fbSvSDm7f7jR9Xik96A1AiEZUYjnYYSLUU"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'crop' and rotation 3 > generates expected hash for raw image data 1`] = `"PufcTiSfbyX5_2Ox0EjLFctRacPUQJt_g8lweZZNKVg"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'keep' and rotation +0 > generates expected dimensions 1`] = `
 {
   "height": 224,
   "width": 256,
 }
 `;
 
-exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_black' > generates expected hash for fullParams 1`] = `"uE5b1nYznQPYD1tWBxOBDo7DHR70nTUxsKTKcwyeO7s"`;
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'keep' and rotation +0 > generates expected hash for fullParams 1`] = `"bq9YzMAuaMDGwu87wiytEdjzgY6CGiqRnaDUlJnJosM"`;
 
-exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_black' > generates expected hash for raw image data 1`] = `"Llk6O7PIsG9qeUnqhr007P4Jzc2l_yRlgnoaj2THjrs"`;
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'keep' and rotation +0 > generates expected hash for raw image data 1`] = `"Llk6O7PIsG9qeUnqhr007P4Jzc2l_yRlgnoaj2THjrs"`;
 
-exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_white' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'keep' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 256,
+  "width": 224,
+}
+`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'keep' and rotation 1 > generates expected hash for fullParams 1`] = `"4Kl_aFIjHlij9jiWLzhA8-uoMpnQxuRpA0qTpRdt0DI"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'keep' and rotation 1 > generates expected hash for raw image data 1`] = `"tHAS9zKZBGENa0-VYvNCNKaLaNWgvgVbe2AQcmK1G9A"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'keep' and rotation 2 > generates expected dimensions 1`] = `
 {
   "height": 224,
   "width": 256,
 }
 `;
 
-exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_white' > generates expected hash for fullParams 1`] = `"PMuMtITWUZtSgYytrZ-nGN5MJ1JnvKcIOnlIsKLoTKY"`;
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'keep' and rotation 2 > generates expected hash for fullParams 1`] = `"zyzn_CTRD60NJghijhJj5e49IK74xUlJ6tjXlOPJQ20"`;
 
-exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_white' > generates expected hash for raw image data 1`] = `"Llk6O7PIsG9qeUnqhr007P4Jzc2l_yRlgnoaj2THjrs"`;
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'keep' and rotation 2 > generates expected hash for raw image data 1`] = `"XJYXps6mHaN_-4wUt8gJjmYJiq-fqRNY3A2Z7oCvy40"`;
 
-exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'crop' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'keep' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 256,
+  "width": 224,
+}
+`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'keep' and rotation 3 > generates expected hash for fullParams 1`] = `"nYF8LgV7wxraRXZXpsADzOaAoGKFymCSaURCj57v3l4"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'keep' and rotation 3 > generates expected hash for raw image data 1`] = `"PufcTiSfbyX5_2Ox0EjLFctRacPUQJt_g8lweZZNKVg"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_black' and rotation +0 > generates expected dimensions 1`] = `
+{
+  "height": 224,
+  "width": 256,
+}
+`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_black' and rotation +0 > generates expected hash for fullParams 1`] = `"ilvBAbJa7Ps8SgWTco2FvOD4Zhep9NUmo3a2G-vmTWs"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_black' and rotation +0 > generates expected hash for raw image data 1`] = `"Llk6O7PIsG9qeUnqhr007P4Jzc2l_yRlgnoaj2THjrs"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_black' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 256,
+  "width": 224,
+}
+`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_black' and rotation 1 > generates expected hash for fullParams 1`] = `"YvgT07MojxIPSOBdk1t15oqpnfPCNn-Iiuq2jI3ITRo"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_black' and rotation 1 > generates expected hash for raw image data 1`] = `"tHAS9zKZBGENa0-VYvNCNKaLaNWgvgVbe2AQcmK1G9A"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_black' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 224,
+  "width": 256,
+}
+`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_black' and rotation 2 > generates expected hash for fullParams 1`] = `"87PzuRopfq5ZdTNJTPNKaqkEVxom_KIwf9qt08gcjP8"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_black' and rotation 2 > generates expected hash for raw image data 1`] = `"XJYXps6mHaN_-4wUt8gJjmYJiq-fqRNY3A2Z7oCvy40"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_black' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 256,
+  "width": 224,
+}
+`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_black' and rotation 3 > generates expected hash for fullParams 1`] = `"ng8K7pBxEkypdktCJRExhZBLoIliAX5YfvjcrP6RENA"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_black' and rotation 3 > generates expected hash for raw image data 1`] = `"PufcTiSfbyX5_2Ox0EjLFctRacPUQJt_g8lweZZNKVg"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_white' and rotation +0 > generates expected dimensions 1`] = `
+{
+  "height": 224,
+  "width": 256,
+}
+`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_white' and rotation +0 > generates expected hash for fullParams 1`] = `"9Ty3HD1AK_GFJFf5G53KkzQb0-lD7ETRf9Cm--82e9s"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_white' and rotation +0 > generates expected hash for raw image data 1`] = `"Llk6O7PIsG9qeUnqhr007P4Jzc2l_yRlgnoaj2THjrs"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_white' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 256,
+  "width": 224,
+}
+`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_white' and rotation 1 > generates expected hash for fullParams 1`] = `"faZ6ZDz898ZUUKKXrYE2trtvXun9b5ov_iReGJbqLKk"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_white' and rotation 1 > generates expected hash for raw image data 1`] = `"tHAS9zKZBGENa0-VYvNCNKaLaNWgvgVbe2AQcmK1G9A"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_white' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 224,
+  "width": 256,
+}
+`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_white' and rotation 2 > generates expected hash for fullParams 1`] = `"0QSQ_zp1Ls9Qjtjt2jhashD8WH2at3PHxvwgpE7QU_c"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_white' and rotation 2 > generates expected hash for raw image data 1`] = `"XJYXps6mHaN_-4wUt8gJjmYJiq-fqRNY3A2Z7oCvy40"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_white' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 256,
+  "width": 224,
+}
+`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_white' and rotation 3 > generates expected hash for fullParams 1`] = `"w-tugcxyXtI-b9I-xD0P71Fvykct1lns-ui0tH81Mm4"`;
+
+exports[`Monochrome image generation > using '16x14' raw data scaled by 2 with frameMode 'square_white' and rotation 3 > generates expected hash for raw image data 1`] = `"PufcTiSfbyX5_2Ox0EjLFctRacPUQJt_g8lweZZNKVg"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'crop' and rotation +0 > generates expected dimensions 1`] = `
 {
   "height": 112,
   "width": 128,
 }
 `;
 
-exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'crop' > generates expected hash for fullParams 1`] = `"2W4aCPXLSMPez26cXvDAoEmYXo3UvMIxvhT0UjY2v9Y"`;
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'crop' and rotation +0 > generates expected hash for fullParams 1`] = `"Fb-4yGbRYBCn_7FREUlw8faZ0DgtUdDHW-6bDuedhN0"`;
 
-exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'crop' > generates expected hash for raw image data 1`] = `"3Ji8l9z9MdGIuoxoDgV5yEI-iU9YdjelUTuh4eOJzwo"`;
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'crop' and rotation +0 > generates expected hash for raw image data 1`] = `"3Ji8l9z9MdGIuoxoDgV5yEI-iU9YdjelUTuh4eOJzwo"`;
 
-exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'keep' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'crop' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 128,
+  "width": 112,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'crop' and rotation 1 > generates expected hash for fullParams 1`] = `"-N1se-tpRegLLDCfg8Pq42uNxP3I4CGRN_0qD6-7Vv4"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'crop' and rotation 1 > generates expected hash for raw image data 1`] = `"ERnDAPVlYFxCvx12dJhAtfQeuZBWj76cZdEyEMEH67w"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'crop' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 112,
+  "width": 128,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'crop' and rotation 2 > generates expected hash for fullParams 1`] = `"qHA7ZtsAfoKCSg3Huikyyr_j789TSz_5ZQzrIs9TVMY"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'crop' and rotation 2 > generates expected hash for raw image data 1`] = `"coGBBYV10pcgDnKaNa1yz6W3mnAZyVcv9fXHG-QwuHM"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'crop' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 128,
+  "width": 112,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'crop' and rotation 3 > generates expected hash for fullParams 1`] = `"yPreek46mXleCH8eA-mGWdRAPPW1aVDhXZaK67DDYrs"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'crop' and rotation 3 > generates expected hash for raw image data 1`] = `"q7Q6cJdHaRS1BOZ6-wq3B3mzwLwMfcDCgGx2MmIAJRg"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'keep' and rotation +0 > generates expected dimensions 1`] = `
 {
   "height": 144,
   "width": 160,
 }
 `;
 
-exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'keep' > generates expected hash for fullParams 1`] = `"gK-1qIQGWCFoIcrI6nKjCq9k-bIBVyt91iTTvtC7kvo"`;
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'keep' and rotation +0 > generates expected hash for fullParams 1`] = `"5nD3LU3mQI5yk5Zzjx1uy34ofOJj92_fj4bEg9MzJIQ"`;
 
-exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'keep' > generates expected hash for raw image data 1`] = `"Rf5TW0Hde7EMGshk5YScnxF5-ufLdOFS0Wx2DAeRiqY"`;
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'keep' and rotation +0 > generates expected hash for raw image data 1`] = `"Rf5TW0Hde7EMGshk5YScnxF5-ufLdOFS0Wx2DAeRiqY"`;
 
-exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_black' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'keep' and rotation 1 > generates expected dimensions 1`] = `
 {
   "height": 160,
-  "width": 160,
+  "width": 144,
 }
 `;
 
-exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_black' > generates expected hash for fullParams 1`] = `"TLXTnRF89sSwGCaWvl2aOmJUhY4WKyT9gXSBe2X--9w"`;
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'keep' and rotation 1 > generates expected hash for fullParams 1`] = `"K0B0BZiiDjmBVOtnCMV6uP8VIAJCW2U2cB88xUWRDa0"`;
 
-exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_black' > generates expected hash for raw image data 1`] = `"s0xmlbOBS5Yk4hL-I-9bHJ-35fOxsIaZlS-v50i90VA"`;
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'keep' and rotation 1 > generates expected hash for raw image data 1`] = `"XzJwx5UVTkTL4o3vz7t4Y5QEoYlPZXbAdo1BBDuiDn8"`;
 
-exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_white' > generates expected dimensions 1`] = `
-{
-  "height": 160,
-  "width": 160,
-}
-`;
-
-exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_white' > generates expected hash for fullParams 1`] = `"6FQgYFAl1I31hdSViZAdzzXfZZMZnOqIi8kVWHECkLo"`;
-
-exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_white' > generates expected hash for raw image data 1`] = `"z_G_UnmGg6tZwj9D5VUrPrm7eaPdmM7rLOepuVJW_WY"`;
-
-exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'crop' > generates expected dimensions 1`] = `
-{
-  "height": 224,
-  "width": 256,
-}
-`;
-
-exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'crop' > generates expected hash for fullParams 1`] = `"XKzc3ItDwTz3jHN28zGumQ0EJbU1dbNKAGkqp3M8zqM"`;
-
-exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'crop' > generates expected hash for raw image data 1`] = `"Llk6O7PIsG9qeUnqhr007P4Jzc2l_yRlgnoaj2THjrs"`;
-
-exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'keep' > generates expected dimensions 1`] = `
-{
-  "height": 288,
-  "width": 320,
-}
-`;
-
-exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'keep' > generates expected hash for fullParams 1`] = `"erzm9J9qFGnz4NQc-fVGHZ4KmQ1b2gzjWW8feAEiqiE"`;
-
-exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'keep' > generates expected hash for raw image data 1`] = `"9BqK69GCv_YdHfaTASXmQl1hidNrJFsDogqlXXElrEg"`;
-
-exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_black' > generates expected dimensions 1`] = `
-{
-  "height": 320,
-  "width": 320,
-}
-`;
-
-exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_black' > generates expected hash for fullParams 1`] = `"rvfW8E2Vxe8E77y4iQGa01qM0P8rTi65upL1aAoRqow"`;
-
-exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_black' > generates expected hash for raw image data 1`] = `"0uFTl3f4CPFgTzTgBleXC0sJ_eU7UNGEI3IkUpr-2w0"`;
-
-exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_white' > generates expected dimensions 1`] = `
-{
-  "height": 320,
-  "width": 320,
-}
-`;
-
-exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_white' > generates expected hash for fullParams 1`] = `"8jiBCblyf7eofxJ-HM0jfO-QteQf0HM7XnLIAmk1jlw"`;
-
-exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_white' > generates expected hash for raw image data 1`] = `"SdgqKCcOQqxNNJplYFLGFflcCGoUOHk_4jOx8TfRZqM"`;
-
-exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'crop' > generates expected dimensions 1`] = `
-{
-  "height": 112,
-  "width": 128,
-}
-`;
-
-exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'crop' > generates expected hash for fullParams 1`] = `"ticHO3CD27m9CTJg1RECxVVnMuvj163XGSmrbWreLq4"`;
-
-exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'crop' > generates expected hash for raw image data 1`] = `"3Ji8l9z9MdGIuoxoDgV5yEI-iU9YdjelUTuh4eOJzwo"`;
-
-exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'keep' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'keep' and rotation 2 > generates expected dimensions 1`] = `
 {
   "height": 144,
   "width": 160,
 }
 `;
 
-exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'keep' > generates expected hash for fullParams 1`] = `"CDZDnp61KtaT17bgGfHcmDdZ-y59WV_NCV8b8Vwpjbs"`;
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'keep' and rotation 2 > generates expected hash for fullParams 1`] = `"fHmjsdS-_FDEe3zfFSiv69i0UpwpPhbDShW4LpE1Koo"`;
 
-exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'keep' > generates expected hash for raw image data 1`] = `"q9epLa4Jnn6oO1IBEA3FFqAx_XOK3THk2a3awbvcQuE"`;
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'keep' and rotation 2 > generates expected hash for raw image data 1`] = `"dxwAuxwxxKo0rr6tXci1YcjxLL7RyDHkVTsbHcGR27E"`;
 
-exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_black' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'keep' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 160,
+  "width": 144,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'keep' and rotation 3 > generates expected hash for fullParams 1`] = `"0FpoVB-88ho_0wL1eFIepG2EH_jSlu55d8dkyI1uiK0"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'keep' and rotation 3 > generates expected hash for raw image data 1`] = `"3QZxL0dukPjsXhk-zWPKmwIASvNjoUv4zzbE7-O9LG0"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_black' and rotation +0 > generates expected dimensions 1`] = `
 {
   "height": 160,
   "width": 160,
 }
 `;
 
-exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_black' > generates expected hash for fullParams 1`] = `"nJMuah2uCUDWOcVlgZ__dTKjUAmiMYFgrUIblhAs7Zk"`;
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_black' and rotation +0 > generates expected hash for fullParams 1`] = `"wivMcR0yGjrUM9cQQxfzzLXSnmTe8QuFAuQIdIe92iQ"`;
 
-exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_black' > generates expected hash for raw image data 1`] = `"hvc0jpeumMUcbCXYPrjmRZJ_1qLeSLxsek5Tk4A3GFw"`;
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_black' and rotation +0 > generates expected hash for raw image data 1`] = `"s0xmlbOBS5Yk4hL-I-9bHJ-35fOxsIaZlS-v50i90VA"`;
 
-exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_white' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_black' and rotation 1 > generates expected dimensions 1`] = `
 {
   "height": 160,
   "width": 160,
 }
 `;
 
-exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_white' > generates expected hash for fullParams 1`] = `"ETpIm_cyhkycw-xuBIi0MtI66CKnZpu6LzP1qyVWSk8"`;
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_black' and rotation 1 > generates expected hash for fullParams 1`] = `"orxc7fSmCtkIC-JyORTlDmYcosBL2cTMs4z3CPXqOUE"`;
 
-exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_white' > generates expected hash for raw image data 1`] = `"7TBIva7Qd-Y0VlwBwPdgGs1cdFFhe2u9708fpu4CmGs"`;
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_black' and rotation 1 > generates expected hash for raw image data 1`] = `"y6gKb3VwuGH2tzefvV-nKlV_LaIkck7yP6VeTSEBfk4"`;
 
-exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'crop' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_black' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 160,
+  "width": 160,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_black' and rotation 2 > generates expected hash for fullParams 1`] = `"B4Oc91F1cBHH_Y2a_wVZkh5eKxpNMR8x2HwfgxY--xQ"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_black' and rotation 2 > generates expected hash for raw image data 1`] = `"b5MDZ0erd34sRH_F86RreU7OjSop1UVDYqVeZGK1JBo"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_black' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 160,
+  "width": 160,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_black' and rotation 3 > generates expected hash for fullParams 1`] = `"vujypR4tAM_4T-HMhWMMMJMjGDArTkLtqr4o5OjWGC4"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_black' and rotation 3 > generates expected hash for raw image data 1`] = `"rojaAN-hQE6nUZbzcJPNjV2BQA2_tbKNvKYSxhlAY8M"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_white' and rotation +0 > generates expected dimensions 1`] = `
+{
+  "height": 160,
+  "width": 160,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_white' and rotation +0 > generates expected hash for fullParams 1`] = `"vLYrhbds-CCTNe1VK8ob1oTFUykiZwAAmzRg3-oAmdc"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_white' and rotation +0 > generates expected hash for raw image data 1`] = `"z_G_UnmGg6tZwj9D5VUrPrm7eaPdmM7rLOepuVJW_WY"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_white' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 160,
+  "width": 160,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_white' and rotation 1 > generates expected hash for fullParams 1`] = `"bbWp_Lw32b7uak6E1jeicKJEmB3oLelZJO_QG-Irjpg"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_white' and rotation 1 > generates expected hash for raw image data 1`] = `"-xFHW9pxyAdwtV0FcRFti-ZrNfN49_eD139Rc3tSX-o"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_white' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 160,
+  "width": 160,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_white' and rotation 2 > generates expected hash for fullParams 1`] = `"zE4ApLNOphYoNGlApfrVpr5zB13wxkq7JPpNSp7xfZo"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_white' and rotation 2 > generates expected hash for raw image data 1`] = `"hTcXyvBUNaoDZoe1p63X5NkBhcz-g4gyJmlGuPdI-wA"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_white' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 160,
+  "width": 160,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_white' and rotation 3 > generates expected hash for fullParams 1`] = `"i31qlMnvPc3XtxVaQHlLQZFtm01zx2L2aqcjjWz4qUo"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 1 with frameMode 'square_white' and rotation 3 > generates expected hash for raw image data 1`] = `"VMOHywzyjk9fOroQeS8Tpo9gZHurAbRumirFe2VN6J8"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'crop' and rotation +0 > generates expected dimensions 1`] = `
 {
   "height": 224,
   "width": 256,
 }
 `;
 
-exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'crop' > generates expected hash for fullParams 1`] = `"0Jx-SZXgc_l-7vCNRRhIytCevDuKQg5rh3SBmTR6nAk"`;
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'crop' and rotation +0 > generates expected hash for fullParams 1`] = `"gE9F84NXoebN6UZAcG7EMa_3PNI9SPemXNbWNfYzksI"`;
 
-exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'crop' > generates expected hash for raw image data 1`] = `"Llk6O7PIsG9qeUnqhr007P4Jzc2l_yRlgnoaj2THjrs"`;
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'crop' and rotation +0 > generates expected hash for raw image data 1`] = `"Llk6O7PIsG9qeUnqhr007P4Jzc2l_yRlgnoaj2THjrs"`;
 
-exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'keep' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'crop' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 256,
+  "width": 224,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'crop' and rotation 1 > generates expected hash for fullParams 1`] = `"Oji5DQwpOZeDzUi3uy8hRLUp8vvj09Nv-8LQzgDBMBc"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'crop' and rotation 1 > generates expected hash for raw image data 1`] = `"tHAS9zKZBGENa0-VYvNCNKaLaNWgvgVbe2AQcmK1G9A"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'crop' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 224,
+  "width": 256,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'crop' and rotation 2 > generates expected hash for fullParams 1`] = `"aD_opRZTc0yM7WaE1sgg70f6u8bSdzDrzwihe7SHc70"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'crop' and rotation 2 > generates expected hash for raw image data 1`] = `"XJYXps6mHaN_-4wUt8gJjmYJiq-fqRNY3A2Z7oCvy40"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'crop' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 256,
+  "width": 224,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'crop' and rotation 3 > generates expected hash for fullParams 1`] = `"wQYua12CZuNJa_eL69LMX20yovZ9-VfdCIDODpqpy0A"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'crop' and rotation 3 > generates expected hash for raw image data 1`] = `"PufcTiSfbyX5_2Ox0EjLFctRacPUQJt_g8lweZZNKVg"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'keep' and rotation +0 > generates expected dimensions 1`] = `
 {
   "height": 288,
   "width": 320,
 }
 `;
 
-exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'keep' > generates expected hash for fullParams 1`] = `"fbqB1FwQFyePSw-6NmH1ktz1j9EOyffKHiRR8Nt5SXY"`;
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'keep' and rotation +0 > generates expected hash for fullParams 1`] = `"_z8u_IJyc-ekxlc83rvBGV4WNmOVgAFwVRogXRBjKyc"`;
 
-exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'keep' > generates expected hash for raw image data 1`] = `"8-nM-7OgtLmKM6G0VAx1pHCsc_wjnCQhahOu47xUSiI"`;
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'keep' and rotation +0 > generates expected hash for raw image data 1`] = `"9BqK69GCv_YdHfaTASXmQl1hidNrJFsDogqlXXElrEg"`;
 
-exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_black' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'keep' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 288,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'keep' and rotation 1 > generates expected hash for fullParams 1`] = `"6xQNWUAIvgRddfPWB2kuVsT_HpYUEDlL9985-fzJY4w"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'keep' and rotation 1 > generates expected hash for raw image data 1`] = `"_21CR-cY1E6VqhErYYD9wpUUDV8ANVb6cyJ1GsLijTk"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'keep' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 288,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'keep' and rotation 2 > generates expected hash for fullParams 1`] = `"n6_WKPNb8vSyMfj2G-lPZjdsvYV6_CU1zAHO19rbGiY"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'keep' and rotation 2 > generates expected hash for raw image data 1`] = `"vZaFkqFH7ggCRths38CiiScbX-M_jg5Nb1nrPhvxx-k"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'keep' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 288,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'keep' and rotation 3 > generates expected hash for fullParams 1`] = `"UuwB2FueONYSe60-QZmoOCh_7A0CX2-SeBOAnng324g"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'keep' and rotation 3 > generates expected hash for raw image data 1`] = `"IO2Xq_ogYogvspmItR6ordrrJxDL0tnu5RRl2qT5oFs"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_black' and rotation +0 > generates expected dimensions 1`] = `
 {
   "height": 320,
   "width": 320,
 }
 `;
 
-exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_black' > generates expected hash for fullParams 1`] = `"dH7AELre8TvKplMGQB6c-wo18dac-0yW17QtWr2P7ic"`;
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_black' and rotation +0 > generates expected hash for fullParams 1`] = `"u3mNkHLXhtL1GQbwF13wXE2hQ_zaVTwVEuVpFfq5OwM"`;
 
-exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_black' > generates expected hash for raw image data 1`] = `"tIa4SBSQw-u_qEyvWSwZCDqyot8qdZnaNfG_R9_ZTzM"`;
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_black' and rotation +0 > generates expected hash for raw image data 1`] = `"0uFTl3f4CPFgTzTgBleXC0sJ_eU7UNGEI3IkUpr-2w0"`;
 
-exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_white' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_black' and rotation 1 > generates expected dimensions 1`] = `
 {
   "height": 320,
   "width": 320,
 }
 `;
 
-exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_white' > generates expected hash for fullParams 1`] = `"A_cWC0-lhYMu1b3I1EY7-GFj_zavvVcxAYLY8pImkLw"`;
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_black' and rotation 1 > generates expected hash for fullParams 1`] = `"3W4aM3lRCQWxpVZvD5Xsdr1nyeUNJSc9kdkHlVzYAvc"`;
 
-exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_white' > generates expected hash for raw image data 1`] = `"mXLQ_1cISWWmdFuR-Eu96dpTKWewRLUaG77WUr4ZTmU"`;
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_black' and rotation 1 > generates expected hash for raw image data 1`] = `"0HObeVwdEiREyYul6BvQr6Cp5wlkD0ytgim9WXT-ItQ"`;
 
-exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'crop' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_black' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_black' and rotation 2 > generates expected hash for fullParams 1`] = `"ccRUQRKSNrqSbpJgjjTbm5C7ISv5TrxfztOkDwTFxvk"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_black' and rotation 2 > generates expected hash for raw image data 1`] = `"fq1_PT-QfGacvOz5eey5RGIgAtZ9hG8nv1KV_B5wb0k"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_black' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_black' and rotation 3 > generates expected hash for fullParams 1`] = `"p8pWN0QAoFQ2nKfHpO5-mkbc2wVjo2jQFx_VHLnI3SI"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_black' and rotation 3 > generates expected hash for raw image data 1`] = `"aImSSibi60S2FbzzMdU4RWL0QKCSKd-8j5cFEnno7OY"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_white' and rotation +0 > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_white' and rotation +0 > generates expected hash for fullParams 1`] = `"RZ61fmU67fmv5AestdDuPR5aJhIYAUBq_T10yIa8ULQ"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_white' and rotation +0 > generates expected hash for raw image data 1`] = `"SdgqKCcOQqxNNJplYFLGFflcCGoUOHk_4jOx8TfRZqM"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_white' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_white' and rotation 1 > generates expected hash for fullParams 1`] = `"dOeDurzzNRTdH8CwvdyMEMPeyWIuER2TwNJn9ztbmV0"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_white' and rotation 1 > generates expected hash for raw image data 1`] = `"exXLndnk3jCjvm6uTVX2cxq9iVwlM54_45Efc3GH02s"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_white' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_white' and rotation 2 > generates expected hash for fullParams 1`] = `"quiA8t65pVMZ0edONck3ee8kF058NRcXi0WA6MuHjN4"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_white' and rotation 2 > generates expected hash for raw image data 1`] = `"9rXKj1hQj57x4Y6iU6cR3z1egFG_8HU39KCxvtsnDG0"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_white' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_white' and rotation 3 > generates expected hash for fullParams 1`] = `"qmQHg64Ow7kx2WpgHmcPRd_H3u1JXd-3Iiogze5UHo8"`;
+
+exports[`Monochrome image generation > using '20x18' raw data scaled by 2 with frameMode 'square_white' and rotation 3 > generates expected hash for raw image data 1`] = `"P4XGkNyppYtMQyf-pRvZy_AHLzYmTSBza4sKOLxMH-g"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'crop' and rotation +0 > generates expected dimensions 1`] = `
 {
   "height": 112,
   "width": 128,
 }
 `;
 
-exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'crop' > generates expected hash for fullParams 1`] = `"WOlxLGl9nEl3rf8LB7XmOfuCwKVAKYpun4c6hxxSyHc"`;
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'crop' and rotation +0 > generates expected hash for fullParams 1`] = `"TvyRy0yLhJiIGpkHQvZ06Iq2AvTs_rlmzR2TsNur_Rg"`;
 
-exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'crop' > generates expected hash for raw image data 1`] = `"3Ji8l9z9MdGIuoxoDgV5yEI-iU9YdjelUTuh4eOJzwo"`;
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'crop' and rotation +0 > generates expected hash for raw image data 1`] = `"3Ji8l9z9MdGIuoxoDgV5yEI-iU9YdjelUTuh4eOJzwo"`;
 
-exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'keep' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'crop' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 128,
+  "width": 112,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'crop' and rotation 1 > generates expected hash for fullParams 1`] = `"PjU4GUm2aJMnZpSStFVMacSqq8ElpUoErONlXdfwcGM"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'crop' and rotation 1 > generates expected hash for raw image data 1`] = `"ERnDAPVlYFxCvx12dJhAtfQeuZBWj76cZdEyEMEH67w"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'crop' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 112,
+  "width": 128,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'crop' and rotation 2 > generates expected hash for fullParams 1`] = `"9TNpK-fGam89GGdLoT45rwe-hl-k1IeZAdxj-Lkgj_U"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'crop' and rotation 2 > generates expected hash for raw image data 1`] = `"coGBBYV10pcgDnKaNa1yz6W3mnAZyVcv9fXHG-QwuHM"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'crop' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 128,
+  "width": 112,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'crop' and rotation 3 > generates expected hash for fullParams 1`] = `"kjs9UB3Zu_onNe66kx2Zy0m2C9Em3kJ-NELnWvWcnVY"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'crop' and rotation 3 > generates expected hash for raw image data 1`] = `"q7Q6cJdHaRS1BOZ6-wq3B3mzwLwMfcDCgGx2MmIAJRg"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'keep' and rotation +0 > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'keep' and rotation +0 > generates expected hash for fullParams 1`] = `"CYdsOimuGOj8aKK6OvekhQ_WM__in0KmLaxBLLlXHdI"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'keep' and rotation +0 > generates expected hash for raw image data 1`] = `"q9epLa4Jnn6oO1IBEA3FFqAx_XOK3THk2a3awbvcQuE"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'keep' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 160,
+  "width": 144,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'keep' and rotation 1 > generates expected hash for fullParams 1`] = `"7D5gGEa5FYVngRQpXwqwFtKsju3_CsNSq-9tk6yxjyE"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'keep' and rotation 1 > generates expected hash for raw image data 1`] = `"OTC4WFyBiZbfE-Z0D9n2TE4zv6qk_9ybu6cg4tKfqYI"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'keep' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 144,
+  "width": 160,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'keep' and rotation 2 > generates expected hash for fullParams 1`] = `"W78ZZt9zhn9lvnFGOmIxqjEop8KBpjgseLqQyPPvMDA"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'keep' and rotation 2 > generates expected hash for raw image data 1`] = `"3xvPx5gCdh4iuy_u-uRj7g5_aJni0XPnVBskf4HVQSI"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'keep' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 160,
+  "width": 144,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'keep' and rotation 3 > generates expected hash for fullParams 1`] = `"nHu4mYmUWJAFGBNBloRHJGKluN05KEpeHKve7kKzZ3g"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'keep' and rotation 3 > generates expected hash for raw image data 1`] = `"lKGkLJ1vXvJHQrmY5iwvlS0qMC5hLXA8m5V5IEBSvpk"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_black' and rotation +0 > generates expected dimensions 1`] = `
+{
+  "height": 160,
+  "width": 160,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_black' and rotation +0 > generates expected hash for fullParams 1`] = `"w4Wg0RcLovDI8F0Q4bk7L3kXwNg6ixuUtgZiuy4H0Jk"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_black' and rotation +0 > generates expected hash for raw image data 1`] = `"hvc0jpeumMUcbCXYPrjmRZJ_1qLeSLxsek5Tk4A3GFw"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_black' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 160,
+  "width": 160,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_black' and rotation 1 > generates expected hash for fullParams 1`] = `"Zvdgghl43RIForfNoO4S2Y8YRFLKguyKmW4HPSrJkFo"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_black' and rotation 1 > generates expected hash for raw image data 1`] = `"XkWnlfhNUre7i23NpXaffxaPuP3y8s4sbJZpemx6ZzU"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_black' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 160,
+  "width": 160,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_black' and rotation 2 > generates expected hash for fullParams 1`] = `"7NV43n5eIwP8ktG4QLtVZlaMlnwKPLF98mfgxnAnmQk"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_black' and rotation 2 > generates expected hash for raw image data 1`] = `"v7VZ--KN45doowAI4i36QTUgh5ztIQEKddxJDBKZac8"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_black' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 160,
+  "width": 160,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_black' and rotation 3 > generates expected hash for fullParams 1`] = `"JwQoA1E_7rSPUWR1_89S9EONw_JqiTIy7StU5xrIe6c"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_black' and rotation 3 > generates expected hash for raw image data 1`] = `"r0tn4pd1R7-eOjN2AjPLjNscapN2DyC9rKhGRdSRKLo"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_white' and rotation +0 > generates expected dimensions 1`] = `
+{
+  "height": 160,
+  "width": 160,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_white' and rotation +0 > generates expected hash for fullParams 1`] = `"uAuZAJiXopkaDfC-fzWokCCUo8J24bqiaymS6jD0Sqo"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_white' and rotation +0 > generates expected hash for raw image data 1`] = `"7TBIva7Qd-Y0VlwBwPdgGs1cdFFhe2u9708fpu4CmGs"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_white' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 160,
+  "width": 160,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_white' and rotation 1 > generates expected hash for fullParams 1`] = `"5KfSdueASdnIKMQ_wQ41_MoKn75DIWkeGLTFTH8aQNg"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_white' and rotation 1 > generates expected hash for raw image data 1`] = `"aI9KAOcQzmdDC7J6VOjsNX_IYAw22NpgoxvgZh7bfGw"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_white' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 160,
+  "width": 160,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_white' and rotation 2 > generates expected hash for fullParams 1`] = `"ilhtpznjMsefX4VK26tQDyMHSyveATgTeqWrVlfNTyk"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_white' and rotation 2 > generates expected hash for raw image data 1`] = `"mFmzTW7IKq-IEhUI6aCQGEl6inq24DFpxb-AYWBGn2o"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_white' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 160,
+  "width": 160,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_white' and rotation 3 > generates expected hash for fullParams 1`] = `"6orpw6zUybwIKXWtjloWTWyEitNEID2cPjFRnr6UmWI"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 1 with frameMode 'square_white' and rotation 3 > generates expected hash for raw image data 1`] = `"-HbK0ksukEaU_byiNGwarCnrmxdfOH9D1MwUs5dMmiE"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'crop' and rotation +0 > generates expected dimensions 1`] = `
+{
+  "height": 224,
+  "width": 256,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'crop' and rotation +0 > generates expected hash for fullParams 1`] = `"XJ9oIlfk4hl0Hgd1ij3JdhXJbeT5VAPd2o3cWuneTyo"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'crop' and rotation +0 > generates expected hash for raw image data 1`] = `"Llk6O7PIsG9qeUnqhr007P4Jzc2l_yRlgnoaj2THjrs"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'crop' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 256,
+  "width": 224,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'crop' and rotation 1 > generates expected hash for fullParams 1`] = `"4B4dMz8rTwXFZTMI0DEQoDLiJKUfyoXUXMxT7B55C7s"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'crop' and rotation 1 > generates expected hash for raw image data 1`] = `"tHAS9zKZBGENa0-VYvNCNKaLaNWgvgVbe2AQcmK1G9A"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'crop' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 224,
+  "width": 256,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'crop' and rotation 2 > generates expected hash for fullParams 1`] = `"8A8_og9rQCu_4AwPW7NhTGjcET43_84PZgTnYqYnb7M"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'crop' and rotation 2 > generates expected hash for raw image data 1`] = `"XJYXps6mHaN_-4wUt8gJjmYJiq-fqRNY3A2Z7oCvy40"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'crop' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 256,
+  "width": 224,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'crop' and rotation 3 > generates expected hash for fullParams 1`] = `"nZBhI13HW-CNoWEWW8cxhvUNz0GPR1Xow0diV6tp-8M"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'crop' and rotation 3 > generates expected hash for raw image data 1`] = `"PufcTiSfbyX5_2Ox0EjLFctRacPUQJt_g8lweZZNKVg"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'keep' and rotation +0 > generates expected dimensions 1`] = `
+{
+  "height": 288,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'keep' and rotation +0 > generates expected hash for fullParams 1`] = `"KdLrzVDFWJYhQk2UAw96Zj6A-5PBDbTkEuEVsMikqJg"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'keep' and rotation +0 > generates expected hash for raw image data 1`] = `"8-nM-7OgtLmKM6G0VAx1pHCsc_wjnCQhahOu47xUSiI"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'keep' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 288,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'keep' and rotation 1 > generates expected hash for fullParams 1`] = `"P9M9n2rlkNrNX4prJbnvVgFjW80cVq6VFthgQ-D8r8s"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'keep' and rotation 1 > generates expected hash for raw image data 1`] = `"evWJ44QarePKfVGEXK4u9ySrwM4CO56u80LM5cHx9T4"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'keep' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 288,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'keep' and rotation 2 > generates expected hash for fullParams 1`] = `"5fVIfDxBvyQulW90rzuWg8zhHSrnnZJC2nATWx6216Y"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'keep' and rotation 2 > generates expected hash for raw image data 1`] = `"4mxAf4zU5vnjN1O2Q3vSmKC8G34kOFedYeQsSz2HfkI"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'keep' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 288,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'keep' and rotation 3 > generates expected hash for fullParams 1`] = `"uEgErDmryN2pfptStwXV9bT74RrHu5w150B7TObAbeE"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'keep' and rotation 3 > generates expected hash for raw image data 1`] = `"o6iiy4gWgaNF9p-U1LTHTGs7bZfJs0VD9_dXFjK0txg"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_black' and rotation +0 > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_black' and rotation +0 > generates expected hash for fullParams 1`] = `"can-mRVd2I934o3WsBAYCjFSa6-wIMj3HncgYwJVNoI"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_black' and rotation +0 > generates expected hash for raw image data 1`] = `"tIa4SBSQw-u_qEyvWSwZCDqyot8qdZnaNfG_R9_ZTzM"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_black' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_black' and rotation 1 > generates expected hash for fullParams 1`] = `"GIwYR2_DStGm3Z1TbQRwX0zi2NrL0pXaq4H5pQvfa00"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_black' and rotation 1 > generates expected hash for raw image data 1`] = `"0HvEbHKZY2Wd0j9uqYIntp6ekx8_9T4qxUFfrhcVzpM"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_black' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_black' and rotation 2 > generates expected hash for fullParams 1`] = `"zYb733boO1nZYvQCAHjPKFE8-14UZvR9-Hi2GbqwC6I"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_black' and rotation 2 > generates expected hash for raw image data 1`] = `"qvLOkd-hKUt9P3rhBh5G8T-jvnB6uwCSF7CdLpGSPWo"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_black' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_black' and rotation 3 > generates expected hash for fullParams 1`] = `"fZhtxrR11PdHMCA1A-FC3FOB3M9ER2fvBdRKLF-p5oE"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_black' and rotation 3 > generates expected hash for raw image data 1`] = `"nnXu8cGB0t7uFg4D9S6AG4hgCAb_UNg2lnQzUM-uC-I"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_white' and rotation +0 > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_white' and rotation +0 > generates expected hash for fullParams 1`] = `"XP4WnwWL0w37LKUVJtPqegV90mcFsR4OSSgkRj-UyQQ"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_white' and rotation +0 > generates expected hash for raw image data 1`] = `"mXLQ_1cISWWmdFuR-Eu96dpTKWewRLUaG77WUr4ZTmU"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_white' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_white' and rotation 1 > generates expected hash for fullParams 1`] = `"GLR6gFKWNa9-ZMAzU8NY5l6d0J4SA21SN2xx1DdmIbQ"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_white' and rotation 1 > generates expected hash for raw image data 1`] = `"5WRiCJjrWFEzh3AUg6XS7dOJo9bIS5-XPNwPVXRea2E"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_white' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_white' and rotation 2 > generates expected hash for fullParams 1`] = `"0HNeArlYZpX61Cx4HcVcbzmCjsj_erEd0BAtVlzsXiw"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_white' and rotation 2 > generates expected hash for raw image data 1`] = `"mS5Qf5sYEccq5D8YF2eAu5CGx9ImS12f5O6CLCvM9S0"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_white' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_white' and rotation 3 > generates expected hash for fullParams 1`] = `"xb1qZ9-eWaqve6dqqb5AnXjbNEJXy3mDmMvewbC7Deo"`;
+
+exports[`Monochrome image generation > using '20x18_1' raw data scaled by 2 with frameMode 'square_white' and rotation 3 > generates expected hash for raw image data 1`] = `"FgJHS5EkrBs02LLeL1fbcJB9SWOkAS8yhE70K1_tov0"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'crop' and rotation +0 > generates expected dimensions 1`] = `
+{
+  "height": 112,
+  "width": 128,
+}
+`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'crop' and rotation +0 > generates expected hash for fullParams 1`] = `"YsupCuj368-Dj1XbxlJqbBWK5ayCg9oCHmZsSidBBsw"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'crop' and rotation +0 > generates expected hash for raw image data 1`] = `"3Ji8l9z9MdGIuoxoDgV5yEI-iU9YdjelUTuh4eOJzwo"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'crop' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 128,
+  "width": 112,
+}
+`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'crop' and rotation 1 > generates expected hash for fullParams 1`] = `"8C7CkMQyvg-zVue42XPjIPx_hF7ZTsNU9HUI3U49XZM"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'crop' and rotation 1 > generates expected hash for raw image data 1`] = `"ERnDAPVlYFxCvx12dJhAtfQeuZBWj76cZdEyEMEH67w"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'crop' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 112,
+  "width": 128,
+}
+`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'crop' and rotation 2 > generates expected hash for fullParams 1`] = `"uVS2Oa2jIkvabLyHrxSbrd1FfW35ykXBBxNepW2jwEk"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'crop' and rotation 2 > generates expected hash for raw image data 1`] = `"coGBBYV10pcgDnKaNa1yz6W3mnAZyVcv9fXHG-QwuHM"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'crop' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 128,
+  "width": 112,
+}
+`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'crop' and rotation 3 > generates expected hash for fullParams 1`] = `"RL_yzp48LT7mfACCPiPta4lKDezlSqPpkKzLaR6iN5w"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'crop' and rotation 3 > generates expected hash for raw image data 1`] = `"q7Q6cJdHaRS1BOZ6-wq3B3mzwLwMfcDCgGx2MmIAJRg"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'keep' and rotation +0 > generates expected dimensions 1`] = `
 {
   "height": 344,
   "width": 160,
 }
 `;
 
-exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'keep' > generates expected hash for fullParams 1`] = `"lv1uFSdC8ei9uA8hLVX0JH1oPIQeChD4-3LtDwPxuOg"`;
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'keep' and rotation +0 > generates expected hash for fullParams 1`] = `"JCCquoZaEwkiAh95bTMuefeqyXtR8TiEJeg0vmgWvdA"`;
 
-exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'keep' > generates expected hash for raw image data 1`] = `"MBjViGs0H4M_ywMxnovGH23BWDDyF8h3Am07JW56lNM"`;
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'keep' and rotation +0 > generates expected hash for raw image data 1`] = `"MBjViGs0H4M_ywMxnovGH23BWDDyF8h3Am07JW56lNM"`;
 
-exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_black' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'keep' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 160,
+  "width": 344,
+}
+`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'keep' and rotation 1 > generates expected hash for fullParams 1`] = `"rjEyin_d9d8j-ylxEkPXUWe26IZw_laT3n2X2Y-qfqs"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'keep' and rotation 1 > generates expected hash for raw image data 1`] = `"8eT0rtrVRx-iGKV_DZujB5EyJtw8T_7F-uk_Piqtm78"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'keep' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 344,
+  "width": 160,
+}
+`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'keep' and rotation 2 > generates expected hash for fullParams 1`] = `"wLH5lVMqkpc-rk0tHmPOPm0tOmysmtsKpUG9Q1Pdjic"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'keep' and rotation 2 > generates expected hash for raw image data 1`] = `"EGfLybFv26YNQrRrO9xwa2lnFlVrbHCzH-7cMfSCAxA"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'keep' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 160,
+  "width": 344,
+}
+`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'keep' and rotation 3 > generates expected hash for fullParams 1`] = `"eK7Ltq3oCsPOqnGxzXIU1Zky-1aTUWo-e7cOmyMBCHo"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'keep' and rotation 3 > generates expected hash for raw image data 1`] = `"H4AwT-bDYdxCWSgBhOupQPHc3XZeKczns45TDxJZv9E"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_black' and rotation +0 > generates expected dimensions 1`] = `
 {
   "height": 160,
   "width": 160,
 }
 `;
 
-exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_black' > generates expected hash for fullParams 1`] = `"PV8YMZW8OCtPyvxsRYh1Fl2Vfh3Z8Rlu-2sPgMA82g0"`;
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_black' and rotation +0 > generates expected hash for fullParams 1`] = `"zQkybHGqxC8oaLA1blNeLDXcdzdYO30NNIMaEi8aBcU"`;
 
-exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_black' > generates expected hash for raw image data 1`] = `"5V0mkYghuPPiU5WtZU1TUKSlmPIWPlP5EGcW-qiYLmI"`;
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_black' and rotation +0 > generates expected hash for raw image data 1`] = `"5V0mkYghuPPiU5WtZU1TUKSlmPIWPlP5EGcW-qiYLmI"`;
 
-exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_white' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_black' and rotation 1 > generates expected dimensions 1`] = `
 {
   "height": 160,
   "width": 160,
 }
 `;
 
-exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_white' > generates expected hash for fullParams 1`] = `"JAPUBvPSY0lm3zbEQVenQALdz2NNyTmPKDyv8yImAhU"`;
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_black' and rotation 1 > generates expected hash for fullParams 1`] = `"TdbU7U3TrkCbsKqb73jkD_hxNkw3Xe791xMcY57h48E"`;
 
-exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_white' > generates expected hash for raw image data 1`] = `"5V0mkYghuPPiU5WtZU1TUKSlmPIWPlP5EGcW-qiYLmI"`;
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_black' and rotation 1 > generates expected hash for raw image data 1`] = `"qKP4ROuYwRZaC9e8_Qwm13TsUOlL_Ue9lRLYEavN8OY"`;
 
-exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'crop' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_black' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 160,
+  "width": 160,
+}
+`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_black' and rotation 2 > generates expected hash for fullParams 1`] = `"93vCXbv04A-zoYRXKs0gLQDv9wgGVwWuSo-phmSgo8Y"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_black' and rotation 2 > generates expected hash for raw image data 1`] = `"zqjizzo_AQ1eWInr3DnSFG-Uz7arM5d8mLQ62Vr7-30"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_black' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 160,
+  "width": 160,
+}
+`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_black' and rotation 3 > generates expected hash for fullParams 1`] = `"-v0oiXkHuaRvtfeZyqf5z1Y_32E9mzY__fARkPxq5QA"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_black' and rotation 3 > generates expected hash for raw image data 1`] = `"yVIPsB74VCBTaaz1tm2c3070pUlxiXr7cANcnFvT8pc"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_white' and rotation +0 > generates expected dimensions 1`] = `
+{
+  "height": 160,
+  "width": 160,
+}
+`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_white' and rotation +0 > generates expected hash for fullParams 1`] = `"cx0WjLeZE0FAjydrU5b6ylUk0dWqIv3za2fcOHwsufE"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_white' and rotation +0 > generates expected hash for raw image data 1`] = `"5V0mkYghuPPiU5WtZU1TUKSlmPIWPlP5EGcW-qiYLmI"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_white' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 160,
+  "width": 160,
+}
+`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_white' and rotation 1 > generates expected hash for fullParams 1`] = `"H3v4hEH92ijnkCa6XD_a2kS_IkLawuDGaqjKdq-wVkw"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_white' and rotation 1 > generates expected hash for raw image data 1`] = `"qKP4ROuYwRZaC9e8_Qwm13TsUOlL_Ue9lRLYEavN8OY"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_white' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 160,
+  "width": 160,
+}
+`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_white' and rotation 2 > generates expected hash for fullParams 1`] = `"O-dP6tYkxLMv6FUj_XTF7hZWc9Zw9Puj24R6iX7lUKc"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_white' and rotation 2 > generates expected hash for raw image data 1`] = `"zqjizzo_AQ1eWInr3DnSFG-Uz7arM5d8mLQ62Vr7-30"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_white' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 160,
+  "width": 160,
+}
+`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_white' and rotation 3 > generates expected hash for fullParams 1`] = `"gvHhGFjDym2bCWBkJKbTFd1u7wh6KJSbGFKr8_e_fz0"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 1 with frameMode 'square_white' and rotation 3 > generates expected hash for raw image data 1`] = `"yVIPsB74VCBTaaz1tm2c3070pUlxiXr7cANcnFvT8pc"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'crop' and rotation +0 > generates expected dimensions 1`] = `
 {
   "height": 224,
   "width": 256,
 }
 `;
 
-exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'crop' > generates expected hash for fullParams 1`] = `"7vGNOVS3q_XWr1KF9gCHT32PgXL0dPrWi3dD3--XLgw"`;
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'crop' and rotation +0 > generates expected hash for fullParams 1`] = `"ZhikoxUr5ayeCa85B4x5EgclTpbEiicfPHOjKkiB4wU"`;
 
-exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'crop' > generates expected hash for raw image data 1`] = `"Llk6O7PIsG9qeUnqhr007P4Jzc2l_yRlgnoaj2THjrs"`;
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'crop' and rotation +0 > generates expected hash for raw image data 1`] = `"Llk6O7PIsG9qeUnqhr007P4Jzc2l_yRlgnoaj2THjrs"`;
 
-exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'keep' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'crop' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 256,
+  "width": 224,
+}
+`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'crop' and rotation 1 > generates expected hash for fullParams 1`] = `"m7LHI1BSkMNevRW8YRiGcd4pRBPCHy8ITSX7BJtf_vI"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'crop' and rotation 1 > generates expected hash for raw image data 1`] = `"tHAS9zKZBGENa0-VYvNCNKaLaNWgvgVbe2AQcmK1G9A"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'crop' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 224,
+  "width": 256,
+}
+`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'crop' and rotation 2 > generates expected hash for fullParams 1`] = `"-z3cQz7ICRB532em4j3R0sMpB3JZYaXRQJohzDn0vec"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'crop' and rotation 2 > generates expected hash for raw image data 1`] = `"XJYXps6mHaN_-4wUt8gJjmYJiq-fqRNY3A2Z7oCvy40"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'crop' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 256,
+  "width": 224,
+}
+`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'crop' and rotation 3 > generates expected hash for fullParams 1`] = `"0MLvGdiH-Nv48L7VZBCPqzruiSVPL0MWPoM-sAJsHe4"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'crop' and rotation 3 > generates expected hash for raw image data 1`] = `"PufcTiSfbyX5_2Ox0EjLFctRacPUQJt_g8lweZZNKVg"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'keep' and rotation +0 > generates expected dimensions 1`] = `
 {
   "height": 688,
   "width": 320,
 }
 `;
 
-exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'keep' > generates expected hash for fullParams 1`] = `"J9McF833c42a7oeDxurcINNoiDpGESy-oargg3rxpe8"`;
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'keep' and rotation +0 > generates expected hash for fullParams 1`] = `"CtlFWg0ui41TJRozOGPL-cv5dGkw8D0QyvzaTVsjFw8"`;
 
-exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'keep' > generates expected hash for raw image data 1`] = `"Sqqh9OI6dAEMyqaPfENwqf4PKONOGXgRdLegwpkYoQ4"`;
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'keep' and rotation +0 > generates expected hash for raw image data 1`] = `"Sqqh9OI6dAEMyqaPfENwqf4PKONOGXgRdLegwpkYoQ4"`;
 
-exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_black' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'keep' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 688,
+}
+`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'keep' and rotation 1 > generates expected hash for fullParams 1`] = `"vYB_lsvdNw7uyWonbsV-mMHXoT96FaMICepiRIdcQpU"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'keep' and rotation 1 > generates expected hash for raw image data 1`] = `"qo8_YN7gO_q21PUBoXx003W9mqgTji7YpkQmT0T6_tU"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'keep' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 688,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'keep' and rotation 2 > generates expected hash for fullParams 1`] = `"CnAioEJvsRgjA9NluqPrhuu8D2WxXiHAff8-ycDd8Ug"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'keep' and rotation 2 > generates expected hash for raw image data 1`] = `"gBxgraw6FtpaheMxGNKVxzxNml-yAjswRT961VXaOhs"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'keep' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 688,
+}
+`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'keep' and rotation 3 > generates expected hash for fullParams 1`] = `"4TjVSky7hAPjyLRHWzXognxPJsheosSEmALM7fZTzXA"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'keep' and rotation 3 > generates expected hash for raw image data 1`] = `"aa9n6UhrPVwKDi_kWGtiiX3icrUyg5UPuzdN_Hl_1Pg"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_black' and rotation +0 > generates expected dimensions 1`] = `
 {
   "height": 320,
   "width": 320,
 }
 `;
 
-exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_black' > generates expected hash for fullParams 1`] = `"VYW5YdkUUk-G89cbEuzODCn6qXDg_7_nGDllURkcRUk"`;
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_black' and rotation +0 > generates expected hash for fullParams 1`] = `"nrENYRDDQsFd-ljzhknc_T9Ud0wc9ScjC2wcK-KALuk"`;
 
-exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_black' > generates expected hash for raw image data 1`] = `"oxOsdPNd49QOvfd2gsPTb2n4rufNJPggAxTgni_CuHM"`;
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_black' and rotation +0 > generates expected hash for raw image data 1`] = `"oxOsdPNd49QOvfd2gsPTb2n4rufNJPggAxTgni_CuHM"`;
 
-exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_white' > generates expected dimensions 1`] = `
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_black' and rotation 1 > generates expected dimensions 1`] = `
 {
   "height": 320,
   "width": 320,
 }
 `;
 
-exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_white' > generates expected hash for fullParams 1`] = `"I3I4N-fart31HgIJjOf2dhG2365TGSQAqs5Od3IZz_s"`;
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_black' and rotation 1 > generates expected hash for fullParams 1`] = `"hcXnR_uSotxP2KsZfWwkNW_SFqyTjjwUvBg8_497UM8"`;
 
-exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_white' > generates expected hash for raw image data 1`] = `"oxOsdPNd49QOvfd2gsPTb2n4rufNJPggAxTgni_CuHM"`;
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_black' and rotation 1 > generates expected hash for raw image data 1`] = `"Kt9VuP1OZWpJQ89fgQOssHynEYXxQwOUS9WjnNT-qCM"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_black' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_black' and rotation 2 > generates expected hash for fullParams 1`] = `"mFfMU9-6ivvDPWHBAvoBodAYhegaDTZXIl8RRExTyh4"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_black' and rotation 2 > generates expected hash for raw image data 1`] = `"Py6CO0wKKqQw2cQ94pFSUHugriPMESTGJoeOlzTIleE"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_black' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_black' and rotation 3 > generates expected hash for fullParams 1`] = `"IZt3iVdd988EnkkSDCzj6Pny1jqv8_skotecdH30bRQ"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_black' and rotation 3 > generates expected hash for raw image data 1`] = `"F-pr7ybgngwifd7IG4qoebr_LdRZuF32e2VfWows974"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_white' and rotation +0 > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_white' and rotation +0 > generates expected hash for fullParams 1`] = `"BaKnAjxPlafRWXMwLkPBAaGNnjYt7oi9ftRa--WTAiY"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_white' and rotation +0 > generates expected hash for raw image data 1`] = `"oxOsdPNd49QOvfd2gsPTb2n4rufNJPggAxTgni_CuHM"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_white' and rotation 1 > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_white' and rotation 1 > generates expected hash for fullParams 1`] = `"w44D9b4fpNj3GAfIuPFaRXpZqSpnKb4LTbrjgpTfJt0"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_white' and rotation 1 > generates expected hash for raw image data 1`] = `"Kt9VuP1OZWpJQ89fgQOssHynEYXxQwOUS9WjnNT-qCM"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_white' and rotation 2 > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_white' and rotation 2 > generates expected hash for fullParams 1`] = `"vUmHDPJkuPsfKmcgX2E-qBrdsyNzhhzn1UeKXYGLz0A"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_white' and rotation 2 > generates expected hash for raw image data 1`] = `"Py6CO0wKKqQw2cQ94pFSUHugriPMESTGJoeOlzTIleE"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_white' and rotation 3 > generates expected dimensions 1`] = `
+{
+  "height": 320,
+  "width": 320,
+}
+`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_white' and rotation 3 > generates expected hash for fullParams 1`] = `"EyyGhvOa6fGmNucb_KuAX1R3vDNfmlnaMgYa-RptfSU"`;
+
+exports[`Monochrome image generation > using '20x86' raw data scaled by 2 with frameMode 'square_white' and rotation 3 > generates expected hash for raw image data 1`] = `"F-pr7ybgngwifd7IG4qoebr_LdRZuF32e2VfWows974"`;

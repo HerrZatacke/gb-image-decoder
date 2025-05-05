@@ -1,5 +1,5 @@
 import { BlendMode } from './constants/blendModes';
-import { ChannelKey, ExportFrameMode } from './constants/enums';
+import { ChannelKey, ExportFrameMode, Rotation } from './constants/enums';
 
 /*
   Each channel should contain 360 tiles for a 160x144 image
@@ -48,6 +48,7 @@ export interface BaseImageCreationParams<TilesType> {
   imageStartLine?: number,
   tilesPerLine?: number,
   scaleFactor?: number,
+  rotation?: Rotation,
   handleExportFrame?: ExportFrameMode,
 }
 

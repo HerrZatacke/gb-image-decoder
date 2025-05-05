@@ -3,9 +3,9 @@ import {
   BWPalette,
   CropResult,
   FullMonochromeImageCreationParams,
+  IndexedTilePixels,
   MonochromeImageContext,
   MonochromeImageCreationParams,
-  IndexedTilePixels,
   PixelDimensions,
   RawOutput,
 } from '../Types';
@@ -18,13 +18,15 @@ import {
   TILES_PER_LINE,
   WHITE_LINE,
 } from '../constants/base';
-import { ExportFrameMode } from '../constants/enums';
+import { ExportFrameMode, Rotation } from '../constants/enums';
 import { decodeTile } from '../functions/decodeTile';
 import { getRGBValue } from '../functions/getRGBValue';
 import { tileIndexIsPartOfFrame } from '../functions/tileIndexIsPartOfFrame';
 import { UrlCache } from '../UrlCache';
 import { dataUrlFromRawOutput } from '../functions/dataUrlFromRawOutput';
 import { createCanvasElement } from '../functions/canvasHelpers';
+import { scaleRawImageData } from '../functions/scaleRawImageData';
+import { rotateImageData } from '../functions/rotateRawImageData';
 
 const padLines: Record<string, string[]> = {
   [ExportFrameMode.FRAMEMODE_SQUARE_BLACK]: BLACK_LINE,
@@ -204,44 +206,9 @@ const getFullParams = (params: MonochromeImageCreationParams): FullMonochromeIma
   imageStartLine: typeof params.imageStartLine === 'number' ? params.imageStartLine : FRAME_WIDTH,
   tilesPerLine: params.tilesPerLine || TILES_PER_LINE,
   scaleFactor: params.scaleFactor || 1,
+  rotation: params.rotation || Rotation.DEG_0,
   handleExportFrame: params.handleExportFrame || ExportFrameMode.FRAMEMODE_KEEP,
 });
-
-export const scaleRawImageData = (data: Uint8ClampedArray, width: number, height: number, scale: number): RawOutput => {
-  const newWidth = width * scale;
-  const newHeight = height * scale;
-  const scaled = new Uint8ClampedArray(newWidth * newHeight * 4);
-
-  for (let y = 0; y < height; y += 1) {
-    for (let x = 0; x < width; x += 1) {
-      const srcIndex = ((y * width) + x) * 4;
-      const r = data[srcIndex];
-      const g = data[srcIndex + 1];
-      const b = data[srcIndex + 2];
-      const a = data[srcIndex + 3];
-
-      for (let dy = 0; dy < scale; dy += 1) {
-        for (let dx = 0; dx < scale; dx += 1) {
-          const destX = (x * scale) + dx;
-          const destY = (y * scale) + dy;
-          const destIndex = ((destY * newWidth) + destX) * 4;
-          scaled[destIndex] = r;
-          scaled[destIndex + 1] = g;
-          scaled[destIndex + 2] = b;
-          scaled[destIndex + 3] = a;
-        }
-      }
-    }
-  }
-
-  return {
-    data: scaled,
-    dimensions: {
-      width: newWidth,
-      height: newHeight,
-    },
-  };
-};
 
 export const getRawMonochromeImageData = (params: FullMonochromeImageCreationParams): RawOutput => {
   const {
@@ -252,6 +219,7 @@ export const getRawMonochromeImageData = (params: FullMonochromeImageCreationPar
     tilesPerLine,
     handleExportFrame,
     scaleFactor,
+    rotation,
   } = params;
 
   const imageContext: MonochromeImageContext = {
@@ -285,7 +253,15 @@ export const getRawMonochromeImageData = (params: FullMonochromeImageCreationPar
     renderTile(rawImageData, newTile, index, updatedContext);
   });
 
-  return scaleRawImageData(rawImageData, width, height, scaleFactor);
+  const {
+    data: rotatedData,
+    dimensions: {
+      width: rWidth,
+      height: rHeight,
+    },
+  } = rotateImageData(rawImageData, width, height, rotation);
+
+  return scaleRawImageData(rotatedData, rWidth, rHeight, scaleFactor);
 };
 
 export const getMonochromeImageUrl = async (

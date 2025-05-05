@@ -2,7 +2,7 @@ import { hash as objectHash } from 'ohash';
 import {
   BWPalette,
   CanvasCreator,
-  FullRGBNImageCreationParams,
+  FullRGBNImageCreationParams, MonochromeImageCreationParams,
   PixelDimensions,
   RawOutput,
   RGBNImageCreationParams,
@@ -15,6 +15,7 @@ import { BlendMode, blendModeNewName } from '../constants/blendModes';
 import { UrlCache } from '../UrlCache';
 import { dataUrlFromRawOutput } from '../functions/dataUrlFromRawOutput';
 import { createCanvasElement } from '../functions/canvasHelpers';
+import { blobFromRawOutput } from '../functions/blobFromRawOutout';
 
 const getFullParams = (params: RGBNImageCreationParams): FullRGBNImageCreationParams => ({
   tiles: params.tiles,
@@ -181,4 +182,16 @@ export const getRGBNImageUrl = async (
   const rawOutput = getRawRGBNImageData(fullParams, canvasCreator);
 
   return dataUrlFromRawOutput(rawOutput, fullParams.scaleFactor, hash, canvasCreator);
+};
+
+
+export const getRGBNImageBlob = async (
+  params: RGBNImageCreationParams,
+  fileType: string,
+  canvasCreator = createCanvasElement,
+): Promise<Blob> => {
+  const fullParams = getFullParams(params);
+  const rawOutput = getRawRGBNImageData(fullParams, canvasCreator);
+
+  return blobFromRawOutput(rawOutput, fullParams.scaleFactor, canvasCreator, fileType);
 };

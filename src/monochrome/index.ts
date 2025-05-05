@@ -27,6 +27,7 @@ import { dataUrlFromRawOutput } from '../functions/dataUrlFromRawOutput';
 import { createCanvasElement } from '../functions/canvasHelpers';
 import { scaleRawImageData } from '../functions/scaleRawImageData';
 import { rotateImageData } from '../functions/rotateRawImageData';
+import { blobFromRawOutput } from '../functions/blobFromRawOutout';
 
 const padLines: Record<string, string[]> = {
   [ExportFrameMode.FRAMEMODE_SQUARE_BLACK]: BLACK_LINE,
@@ -281,4 +282,15 @@ export const getMonochromeImageUrl = async (
   const rawOutput = getRawMonochromeImageData(fullParams);
 
   return dataUrlFromRawOutput(rawOutput, fullParams.scaleFactor, hash, canvasCreator);
+};
+
+export const getMonochromeImageBlob = async (
+  params: MonochromeImageCreationParams,
+  fileType: string,
+  canvasCreator = createCanvasElement,
+): Promise<Blob> => {
+  const fullParams = getFullParams(params);
+  const rawOutput = getRawMonochromeImageData(fullParams);
+
+  return blobFromRawOutput(rawOutput, fullParams.scaleFactor, canvasCreator, fileType);
 };

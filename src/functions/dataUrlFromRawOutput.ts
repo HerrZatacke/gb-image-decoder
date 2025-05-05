@@ -1,28 +1,9 @@
 import { UrlCache } from '../UrlCache';
 import { CanvasCreator, RawOutput } from '../Types';
-
-const toObjectUrl = async (canvas: HTMLCanvasElement): Promise<string> => (
-  new Promise((resolve, reject) => {
-    canvas.toBlob((blob) => {
-      if (!blob) {
-        reject(new Error('Could not generate Blob from canvas'));
-        return;
-      }
-
-      try {
-        resolve(URL.createObjectURL(blob));
-      } catch (error) {
-        reject(error);
-      }
-    });
-  })
-);
+import { blobFromRawOutput } from './blobFromRawOutout';
 
 export const dataUrlFromRawOutput = async (
-  {
-    data,
-    dimensions: { width, height },
-  }: RawOutput,
+  rawOutput: RawOutput,
   scaleFactor: number,
   hash: string,
   canvasCreator: CanvasCreator,
@@ -30,14 +11,10 @@ export const dataUrlFromRawOutput = async (
   const urlCache = new UrlCache();
 
   urlCache.setUrl(hash, new Promise((resolve) => {
-    const canvas = canvasCreator();
-    canvas.width = width * scaleFactor;
-    canvas.height = height * scaleFactor;
-    const context = canvas.getContext('2d') as CanvasRenderingContext2D;
-    const imageData = new ImageData(data, canvas.width, canvas.height);
-    context?.putImageData(imageData, 0, 0);
-
-    resolve(toObjectUrl(canvas));
+    blobFromRawOutput(rawOutput, scaleFactor, canvasCreator)
+      .then(((blob) => {
+        resolve(URL.createObjectURL(blob));
+      }));
   }));
 
   const url = await urlCache.getUrl(hash);

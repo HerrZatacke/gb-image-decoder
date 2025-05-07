@@ -1,6 +1,6 @@
 {
   "name": "gb-image-decoder",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Decoder classes for GameBoy-encoded images",
   "repository": "",
   "license": "MIT",

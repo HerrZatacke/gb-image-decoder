@@ -5,13 +5,12 @@ export const blobFromRawOutput = async (
     data,
     dimensions: { width, height },
   }: RawOutput,
-  scaleFactor: number,
   canvasCreator: CanvasCreator,
   type = 'image/png',
 ): Promise<Blob> => {
   const canvas = canvasCreator();
-  canvas.width = width * scaleFactor;
-  canvas.height = height * scaleFactor;
+  canvas.width = width;
+  canvas.height = height;
   const context = canvas.getContext('2d') as CanvasRenderingContext2D;
   const imageData = new ImageData(data, canvas.width, canvas.height);
   context?.putImageData(imageData, 0, 0);

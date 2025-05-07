@@ -4,14 +4,13 @@ import { blobFromRawOutput } from './blobFromRawOutout';
 
 export const dataUrlFromRawOutput = async (
   rawOutput: RawOutput,
-  scaleFactor: number,
   hash: string,
   canvasCreator: CanvasCreator,
 ): Promise<string> => {
   const urlCache = new UrlCache();
 
   urlCache.setUrl(hash, new Promise((resolve) => {
-    blobFromRawOutput(rawOutput, scaleFactor, canvasCreator)
+    blobFromRawOutput(rawOutput, canvasCreator)
       .then(((blob) => {
         resolve(URL.createObjectURL(blob));
       }));

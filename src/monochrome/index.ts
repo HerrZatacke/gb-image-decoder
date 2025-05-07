@@ -281,7 +281,7 @@ export const getMonochromeImageUrl = async (
 
   const rawOutput = getRawMonochromeImageData(fullParams);
 
-  return dataUrlFromRawOutput(rawOutput, fullParams.scaleFactor, hash, canvasCreator);
+  return dataUrlFromRawOutput(rawOutput, hash, canvasCreator);
 };
 
 export const getMonochromeImageBlob = async (
@@ -292,5 +292,5 @@ export const getMonochromeImageBlob = async (
   const fullParams = getFullParams(params);
   const rawOutput = getRawMonochromeImageData(fullParams);
 
-  return blobFromRawOutput(rawOutput, fullParams.scaleFactor, canvasCreator, fileType);
+  return blobFromRawOutput(rawOutput, canvasCreator, fileType);
 };

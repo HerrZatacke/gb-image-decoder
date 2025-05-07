@@ -181,7 +181,7 @@ export const getRGBNImageUrl = async (
 
   const rawOutput = getRawRGBNImageData(fullParams, canvasCreator);
 
-  return dataUrlFromRawOutput(rawOutput, fullParams.scaleFactor, hash, canvasCreator);
+  return dataUrlFromRawOutput(rawOutput, hash, canvasCreator);
 };
 
 
@@ -193,5 +193,5 @@ export const getRGBNImageBlob = async (
   const fullParams = getFullParams(params);
   const rawOutput = getRawRGBNImageData(fullParams, canvasCreator);
 
-  return blobFromRawOutput(rawOutput, fullParams.scaleFactor, canvasCreator, fileType);
+  return blobFromRawOutput(rawOutput, canvasCreator, fileType);
 };
